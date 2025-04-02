@@ -1,0 +1,38 @@
+$primary-font: "Gilry", sans-serif;
+
+:root {
+  --primary-50: #f8f3ef;
+  --primary-100: #e8dacc;
+  --primary-200: #ddc9b4;
+  --primary-300: #cdb092;
+  --primary-400: #c4a17d;
+  --primary-500: #b5895c;
+  --primary-600: #a57d54;
+  --primary-700: #816141;
+  --primary-800: #644b33;
+  --primary-900: #4c3a27;
+}
+
+@font-face {
+  font-family: "Gilry";
+  src: url("/assets/fonts/SVN-Gilry/SVN-Gilroy Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilry";
+  src: url("/assets/fonts/SVN-Gilry/SVN-Gilroy SemiBold.otf") format("opentype");
+  font-weight: 600; 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilry";
+  src: url("/assets/fonts/SVN-Gilry/SVN-Gilroy Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

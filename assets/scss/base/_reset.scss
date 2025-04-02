@@ -1,0 +1,21 @@
+* {
+  font-family: $primary-font;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a8abb4;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-500);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #76777a;
+}

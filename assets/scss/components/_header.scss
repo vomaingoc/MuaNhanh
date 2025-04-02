@@ -1,0 +1,135 @@
+.sticky_header {
+  &.is_sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+.main-menu {
+  > ul {
+    > li {
+      &:hover {
+        > ul {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+        }
+        > a {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+      a {
+        &.active {
+          &::before {
+            width: 100%;
+          }
+        }
+        &::before {
+          content: "";
+          width: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          background-color: var(--primary-500);
+          transition: width 0.2s ease-in-out;
+        }
+      }
+      > ul {
+        li {
+          &:hover {
+            > a {
+              color: var(--primary-500);
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+$toggle-size: 24px;
+$bar-size: calc($toggle-size / 8);
+$bar-space: calc(($toggle-size - ($bar-size * 5)) / 2);
+$bar2-top: $bar-size + $bar-space;
+$bar3-top: $bar2-top * 2;
+#burgerMenu {
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  &.open {
+    span {
+      background-color: #fff;
+    }
+    span:nth-child(1) {
+      transform: rotate(45deg);
+      top: calc(($toggle-size / 32) * -1 + $bar-size);
+      left: $bar-size;
+    }
+    span:nth-child(2) {
+      width: 0%; 
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: calc( $bar3-top + ($toggle-size / 32) + $bar-size );
+      left: $bar-size;
+    }
+  }
+  span {
+    background-color: black;
+    width: 100%;
+    height: $bar-size;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+    left: 0;
+    content: "";
+    // transition time and time function
+    transition: 0.2s ease-in-out;
+  }
+  span:nth-child(1) {
+    top: $bar-size;
+    transform-origin: left center;
+  }
+  span:nth-child(2) {
+    top: $bar2-top + $bar-size;
+    transform-origin: left center;
+  }
+  span:nth-child(3) {
+    top: $bar3-top + $bar-size;
+    transform-origin: left center;
+  }
+}
+#nav-overlay {
+  position: absolute;
+  top: calc($toggle-size / 2);
+  left: calc($toggle-size / 2);
+
+  z-index: -1;
+
+  background: var(--primary-500);
+
+  border-radius: 50%;
+
+  transition: 1s;
+  transform: scale3d(0, 0, 0);
+  &.open {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#mobileMenu {
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.25s;
+  }
+}
