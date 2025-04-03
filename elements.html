@@ -11,13 +11,11 @@
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png" /> -->
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="assets/lib/animation/animate.min.css" /> -->
-     
-    <link
-      rel="stylesheet"
-      href="assets/lib/fancybox/jquery.fancybox.min.css"
-    />
+
+    <link rel="stylesheet" href="assets/lib/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css" />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/main.min.css" />
   </head>
 
@@ -42,22 +40,22 @@
       <div>
         <h3 class="mb-4">Tag elements</h3>
         <button
-          class="tag bg-white rounded-full shadow-md px-3 py-1 flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100"
+          class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]"
         >
-          Mặt tiền
+          <span class="relative top-[1px]">Mặt tiền</span>
           <img
             class="ml-2"
-            src="assets/images/icon/local_fire_department.png"
+            src="assets/images/icon/local_fire_department.svg"
             alt="close"
           />
         </button>
         <button
-          class="tag bg-white rounded-full shadow-md px-3 py-1 flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100"
+          class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]"
         >
-          Đường nội bộ
+          <span class="relative top-[1px]">Đường nội bộ</span>
           <img
-            class="ml-2"
-            src="assets/images/icon/where_to_vote.png"
+            class="ml-0 w-[12px] md:w-[20px]"
+            src="assets/images/icon/where_to_vote.svg"
             alt="close"
           />
         </button>
@@ -70,7 +68,7 @@
             class="filter-box flex flex-row items-center justify-between w-full"
           >
             <li class="flex flex-col py-1 relative">
-              <span class="font-bold">Vị trí</span>
+              <span class="font-semibold">Vị trí</span>
               <span class="text-[#B3B3B3]">Tất cả</span>
               <ul
                 class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
@@ -84,7 +82,7 @@
               </ul>
             </li>
             <li class="flex flex-col py-1 relative">
-              <span class="font-bold">Tỉnh / Thành phố</span>
+              <span class="font-semibold">Tỉnh / Thành phố</span>
               <span class="text-[#B3B3B3]">TP. HCM</span>
               <ul
                 class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
@@ -102,7 +100,7 @@
               </ul>
             </li>
             <li class="flex flex-col py-1 relative">
-              <span class="font-bold">Quận/Huyện</span>
+              <span class="font-semibold">Quận/Huyện</span>
               <span class="text-[#B3B3B3]">Tất cả</span>
               <ul
                 class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
@@ -120,7 +118,7 @@
               </ul>
             </li>
             <li class="flex flex-col py-1 relative">
-              <span class="font-bold">Phường</span>
+              <span class="font-semibold">Phường</span>
               <span class="text-[#B3B3B3]">Tất cả</span>
               <ul
                 class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
@@ -138,13 +136,13 @@
               </ul>
             </li>
             <li class="flex flex-col py-1 relative">
-              <span class="font-bold">Mức giá</span>
+              <span class="font-semibold">Mức giá</span>
               <span class="text-[#B3B3B3]">Tất cả</span>
               <div
                 class="range-price absolute opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all"
               >
                 <div class="text-center py-4 px-3 border-b-2 border-gray-300">
-                  <span class="font-bold">Mức giá</span>
+                  <span class="font-semibold">Mức giá</span>
                 </div>
                 <div class="flex flex-col items-center">
                   <div
@@ -300,13 +298,13 @@
               </div>
             </li>
             <li class="flex flex-col py-1">
-              <span class="font-bold">Tìm kiếm</span>
+              <span class="font-semibold">Tìm kiếm</span>
               <span class="text-[#B3B3B3]">Tìm nơi bạn muốn</span>
             </li>
           </ul>
           <!-- Tìm kiếm -->
           <div
-            class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full"
+            class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full aspect-square"
           >
             <i class="zmdi zmdi-search"></i>
           </div>

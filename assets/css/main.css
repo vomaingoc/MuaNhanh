@@ -13,28 +13,35 @@
 }
 
 @font-face {
-  font-family: "Gilry";
-  src: url("../fonts/SVN-Gilry/SVN-Gilroy Medium.otf") format("opentype");
+  font-family: "Gilroy";
+  src: url("../fonts/SVN-Gilry/SVN-Gilroy Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilry";
+  font-family: "Gilroy";
+  src: url("../fonts/SVN-Gilry/SVN-Gilroy Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/SVN-Gilry/SVN-Gilroy SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilry";
+  font-family: "Gilroy";
   src: url("../fonts/SVN-Gilry/SVN-Gilroy Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 * {
-  font-family: "Gilry", sans-serif;
+  font-family: "Gilroy", sans-serif;
 }
 
 /* width */
@@ -6903,10 +6910,6 @@
   cursor: pointer;
 }
 
-.bg-primary-500 {
-  background-color: var(--primary-500);
-}
-
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -7362,4 +7365,8 @@ input[type=range]::-webkit-slider-thumb {
   width: 100%;
   border-radius: 20px;
   margin: 20px 0px;
+}
+
+i.text-\[6px\] {
+  font-size: 6px;
 }/*# sourceMappingURL=main.css.map */
