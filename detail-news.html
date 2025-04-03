@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/lib/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/main.min.css" />
   </head>
 
@@ -35,7 +36,7 @@
         <div class="mx-auto flex justify-between items-center px-6">
           <!-- Menu Desktop -->
           <nav class="main-menu hidden md:flex w-2/5">
-            <ul class="flex flex-row items-center justify-between w-full">
+            <ul class="flex flex-row items-center justify-start gap-[20px] w-full">
               <li class="py-3">
                 <a href="index.html" class="relative py-2">Trang chủ</a>
               </li>
@@ -174,7 +175,9 @@
             <div
               class="flex items-center justify-center rounded-full bg-primary-500 text-white p-5 size-10 aspect-square"
             >
-              <a><i class="zmdi zmdi-search"></i></a>
+              <a href="javascript:void(0)" onclick="toggleFilterMobile()"
+                ><i class="zmdi zmdi-search"></i
+              ></a>
             </div>
             <div class="flex flex-row items-center justify-center mx-6">
               <div class="mr-3">
@@ -208,7 +211,7 @@
             </button>
           </div>
 
-          <!-- Nút menu mobile -->
+          <!-- Button menu mobile -->
           <div class="md:hidden relative block z-50 ml-auto">
             <!-- Menu Mobile -->
             <div
@@ -814,17 +817,17 @@
           </div>
         </div>
         <!-- related product -->
-        <div class="py-12 bg-[#F5F5F5]">
+        <div class="md:py-12 py-6 bg-[#F5F5F5]">
           <div class="container mx-auto md:px-0 px-5">
             <div
-              class="flex md:flex-row flex-col md:items-center items-center md:justify-between justify-start mb-10"
+              class="flex md:flex-row flex-col md:items-center items-center md:justify-between justify-start md:mb-10 md-4"
             >
               <h1
                 class="font-semibold md:text-4xl text-2xl md:w-1/2 w-full md:mb-0 mb-3 md:text-start text-center"
               >
                 Có thể bạn quan tâm
               </h1>
-              <div class="pb-2 border-b-2 border-black">
+              <div class="pb-2 border-b-2 border-black hidden sm:block">
                 <a href=""
                   >Xem tất cả <i class="zmdi zmdi-long-arrow-right"></i
                 ></a>
@@ -832,10 +835,10 @@
             </div>
             <div>
               <div class="swiper productSlider">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper ">
                   <div class="swiper-slide">
                     <div
-                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0 pb-6"
+                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0"
                     >
                       <a href="detail-product.html" class="md:hidden block"
                         ><h3
@@ -847,8 +850,11 @@
                         </h3></a
                       >
                       <div class="flex md:flex-col flex-row">
-                        <div class="overflow-hidden rounded-2xl relative">
-                          <a href="detail-product.html">
+                        <div class="overflow-hidden relative w-[30%] sm:w-auto a">
+                          <a
+                            href="detail-product.html"
+                            class="spect-square rounded-2xl"
+                          >
                             <img
                               src="assets/images/card/pro1.png"
                               alt=""
@@ -948,7 +954,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div
-                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0 pb-6"
+                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0"
                     >
                       <a href="detail-product.html" class="md:hidden block"
                         ><h3
@@ -960,8 +966,11 @@
                         </h3></a
                       >
                       <div class="flex md:flex-col flex-row">
-                        <div class="overflow-hidden rounded-2xl relative">
-                          <a href="detail-product.html">
+                        <div class="overflow-hidden relative w-[30%] sm:w-auto a">
+                          <a
+                            href="detail-product.html"
+                            class="spect-square rounded-2xl"
+                          >
                             <img
                               src="assets/images/card/pro2.png"
                               alt=""
@@ -1063,7 +1072,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div
-                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0 pb-6"
+                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0"
                     >
                       <a href="detail-product.html" class="md:hidden block"
                         ><h3
@@ -1075,8 +1084,11 @@
                         </h3></a
                       >
                       <div class="flex md:flex-col flex-row">
-                        <div class="overflow-hidden rounded-2xl relative">
-                          <a href="detail-product.html">
+                        <div class="overflow-hidden relative w-[30%] sm:w-auto a">
+                          <a
+                            href="detail-product.html"
+                            class="spect-square rounded-2xl"
+                          >
                             <img
                               src="assets/images/card/pro1.png"
                               alt=""
@@ -1176,7 +1188,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div
-                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0 pb-6"
+                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0"
                     >
                       <a href="detail-product.html" class="md:hidden block"
                         ><h3
@@ -1188,8 +1200,11 @@
                         </h3></a
                       >
                       <div class="flex md:flex-col flex-row">
-                        <div class="overflow-hidden rounded-2xl relative">
-                          <a href="detail-product.html">
+                        <div class="overflow-hidden relative w-[30%] sm:w-auto a">
+                          <a
+                            href="detail-product.html"
+                            class="spect-square rounded-2xl"
+                          >
                             <img
                               src="assets/images/card/pro2.png"
                               alt=""
@@ -1204,7 +1219,7 @@
                                 >Đường nội bộ</span
                               >
                               <img
-                                class="ml-2"
+                                class="ml-0 w-[12px] md:w-[20px]"
                                 src="assets/images/icon/where_to_vote.svg"
                                 alt="close"
                               />
@@ -1291,7 +1306,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div
-                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0 pb-6"
+                      class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:pb-0"
                     >
                       <a href="detail-product.html" class="md:hidden block"
                         ><h3
@@ -1303,8 +1318,11 @@
                         </h3></a
                       >
                       <div class="flex md:flex-col flex-row">
-                        <div class="overflow-hidden rounded-2xl relative">
-                          <a href="detail-product.html">
+                        <div class="overflow-hidden relative w-[30%] sm:w-auto a">
+                          <a
+                            href="detail-product.html"
+                            class="spect-square rounded-2xl"
+                          >
                             <img
                               src="assets/images/card/pro1.png"
                               alt=""
@@ -1542,17 +1560,17 @@
               chung cư mini và căn hộ dịch vụ.
             </p>
             <!-- Mạng xã hội -->
-            <div class="flex space-x-3 mt-4">
-              <a href="#" class="text-gray-600 hover:text-black"
+            <div class="flex space-x-3 mt-4 text-[24px] text-[#767676]">
+              <a href="#" class="hover:text-black"
                 ><i class="zmdi zmdi-facebook-box"></i
               ></a>
-              <a href="#" class="text-gray-600 hover:text-black"
+              <a href="#" class="hover:text-black"
                 ><i class="zmdi zmdi-linkedin-box"></i
               ></a>
-              <a href="#" class="text-gray-600 hover:text-black"
+              <a href="#" class="hover:text-black"
                 ><i class="zmdi zmdi-google-plus-box"></i
               ></a>
-              <a href="#" class="text-gray-600 hover:text-black"
+              <a href="#" class="hover:text-black"
                 ><i class="zmdi zmdi-instagram"></i
               ></a>
             </div>
