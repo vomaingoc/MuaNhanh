@@ -1,5 +1,5 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -144,21 +144,21 @@
             <div
               class="z-20 hidden md:flex w-1/2 flex-col items-center bg-primary-500 py-4 rounded-bl-4xl rounded-br-4xl -mb-6"
             >
-              <img src="/assets/images/logo/logo.png" class="mb-3" alt="logo" />
-              <img src="/assets/images/logo/text.png" alt="" />
+              <img src="../assets/images/logo/logo.png" class="mb-3" alt="Mua Nhanh" loading="lazy"/>
+              <img src="../assets/images/logo/text.png" alt="Mua Nhanh" />
             </div>
             <div
               class="flex md:hidden w-2/3 flex-row items-center justify-center py-2"
             >
               <img
-                src="/assets/images/logo/logo-color.png"
+                src="../assets/images/logo/logo-color.png"
                 class="mr-3 w-full"
-                alt="logo"
+                alt="Mua Nhanh" loading="lazy"
               />
               <img
-                src="/assets/images/logo/text-color.png"
+                src="../assets/images/logo/text-color.png"
                 class="w-full"
-                alt=""
+                alt="Mua Nhanh" loading="lazy"
               />
             </div>
           </div>
@@ -168,7 +168,7 @@
             <div
               class="flex items-center justify-center rounded-full bg-primary-500 text-white p-5 size-10"
             >
-              <a href=""><i class="zmdi zmdi-search"></i></a>
+              <a ><i class="zmdi zmdi-search"></i></a>
             </div>
             <div class="flex flex-row items-center justify-center mx-6">
               <div class="mr-3">
@@ -352,455 +352,740 @@
       </header>
       <main id="main_page">
         <!-- breadcrumb -->
-        <div class="container mx-auto pt-12 px-5 md:px-0">
+        <div class="container mx-auto md:pt-12 pt-10 hidden md:block">
           <ul class="bread_crumb flex flex-row items-center">
             <li class="text-[#757575]"><a href="#">Trang chủ</a></li>
             <li class="text-[#757575]">
               <a href="#">Kết quả tìm kiếm</a>
             </li>
             <li class="text-[#757575] active">
-              <a href="#">Chi tiết</a>
+              <a href="#">Tòa nhà MT Lạc Long Quân, Quận Tân Bình</a>
             </li>
           </ul>
         </div>
-
-        <!-- detail product -->
-        <div class="md:py-12 py-5 px-5 md:px-0">
-          <div class="container mx-auto">
-            <!-- detail -->
-            <div class="flex md:flex-row flex-col md:py-10 py-5">
-              <div class="md:w-2/3 w-full md:pr-14 pr-0">
-                <div class="space-y-3 intro-section">
-                  <h1 class="text-3xl font-bold">
-                    Giấy dán tường hoàn hảo cho phòng tắm - lựa chọn thay thế
-                    sang trọng cho thạch cao và gạch men
-                  </h1>
-                  <span class="text-[#5A5A5A]"
-                    >Giấy dán tường hay giấy dán tường ảnh cho phòng tắm? Điều
-                    đó có thể không? Chắc chắn, tất nhiên! Nó chỉ phụ thuộc vào
-                    hình nền phù hợp và tay nghề phù hợp.
-                  </span>
-                </div>
-                <div class="flex flex-row items-center my-5 text-[#5A5A5A]">
-                  <span class="mr-3"><i class="zmdi zmdi-account-o"></i></span>
-                  <span>Admin</span>
-                  <span class="mx-5">|</span>
-                  <span class="mr-3"><i class="zmdi zmdi-time"></i></span>
-                  <span>16:31 - 25/06/2023</span>
-                </div>
-                <p class="text-[#5A5A5A]">
-                  Bạn có thể tìm hiểu những điều cần chú ý khi thiết kế phòng
-                  tắm mơ ước của mình và những lựa chọn đa dạng mà bạn có với
-                  giấy dán tường và giấy dán tường ảnh trong phòng tắm tại đây:
-                </p>
-                <!-- Mục lục -->
-                <div
-                  class="bg-white rounded-xl border-solid border-[1px] border-[#D9D9D9] p-4 md:w-80 w-full mt-5"
+        <!-- filter -->
+        <div
+          class="hidden container mx-auto py-10 md:flex items-center justify-center"
+        >
+          <div
+            class="flex items-center w-2/3 gap-2 bg-white px-2 py-2 rounded-full shadow-md"
+          >
+            <ul
+              class="filter-box flex flex-row items-center justify-between w-full"
+            >
+              <li class="flex flex-col py-1 relative">
+                <span class="font-bold">Vị trí</span>
+                <span class="text-[#B3B3B3]">Tất cả</span>
+                <ul
+                  class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
                 >
-                  <h2 class="text-xl font-bold mb-2">Mục lục</h2>
-
-                  <!-- Accordion Item 1 -->
-                  <div class="border-b border-[#D9D9D9] pb-2">
-                    <button
-                      class="flex justify-between w-full p-3 font-semibold text-left cursor-pointer"
-                      onclick="toggleAccordion(1)"
+                  <li class="py-2 px-3"><span>Vị trí 1</span></li>
+                  <li class="py-2 px-3"><span>Vị trí 2</span></li>
+                  <li class="py-2 px-3"><span>Vị trí 3</span></li>
+                  <li class="py-2 px-3"><span>Vị trí 4</span></li>
+                  <li class="py-2 px-3"><span>Vị trí 5</span></li>
+                  <li class="py-2 px-3"><span>Vị trí 6</span></li>
+                </ul>
+              </li>
+              <li class="flex flex-col py-1 relative">
+                <span class="font-bold">Tỉnh / Thành phố</span>
+                <span class="text-[#B3B3B3]">TP. HCM</span>
+                <ul
+                  class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
+                >
+                  <li class="py-2 px-3"><span>Hà Nội</span></li>
+                  <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+                  <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+                  <li class="py-2 px-3"><span>Hải Phòng</span></li>
+                  <li class="py-2 px-3"><span>Cần Thơ</span></li>
+                  <li class="py-2 px-3"><span>An Giang</span></li>
+                  <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+                  <li class="py-2 px-3"><span>Bắc Giang</span></li>
+                  <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+                  <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+                </ul>
+              </li>
+              <li class="flex flex-col py-1 relative">
+                <span class="font-bold">Quận/Huyện</span>
+                <span class="text-[#B3B3B3]">Tất cả</span>
+                <ul
+                  class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
+                >
+                  <li class="py-2 px-3"><span>Hà Nội</span></li>
+                  <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+                  <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+                  <li class="py-2 px-3"><span>Hải Phòng</span></li>
+                  <li class="py-2 px-3"><span>Cần Thơ</span></li>
+                  <li class="py-2 px-3"><span>An Giang</span></li>
+                  <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+                  <li class="py-2 px-3"><span>Bắc Giang</span></li>
+                  <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+                  <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+                </ul>
+              </li>
+              <li class="flex flex-col py-1 relative">
+                <span class="font-bold">Phường</span>
+                <span class="text-[#B3B3B3]">Tất cả</span>
+                <ul
+                  class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
+                >
+                  <li class="py-2 px-3"><span>Hà Nội</span></li>
+                  <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+                  <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+                  <li class="py-2 px-3"><span>Hải Phòng</span></li>
+                  <li class="py-2 px-3"><span>Cần Thơ</span></li>
+                  <li class="py-2 px-3"><span>An Giang</span></li>
+                  <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+                  <li class="py-2 px-3"><span>Bắc Giang</span></li>
+                  <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+                  <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+                </ul>
+              </li>
+              <li class="flex flex-col py-1 relative">
+                <span class="font-bold">Mức giá</span>
+                <span class="text-[#B3B3B3]">Tất cả</span>
+                <div
+                  class="range-price absolute opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all"
+                >
+                  <div class="text-center py-4 px-3 border-b-2 border-gray-300">
+                    <span class="font-bold">Mức giá</span>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <div
+                      class="flex flex-row items-center justify-between px-3 pt-2 w-full"
                     >
-                      Tiêu đề 1
-                      <span id="icon-1" class="transform transition-transform"
-                        ><i class="zmdi zmdi-chevron-down"></i
-                      ></span>
-                    </button>
-                    <div id="content-1" class="hidden pl-4 text-gray-500">
-                      <a href="#title1" class="py-1"
-                        >TẠI SAO NÊN CHỌN GIẤY DÁN TƯỜNG CHO PHÒNG TẮM</a
+                      <span class="mb-1"
+                        >Từ:
+                        <span id="minValue" class="text-primary-500"
+                          >0 triệu</span
+                        ></span
                       >
-                      <a href="#" class="py-1">Nội dung 2</a>
-                      <a href="#" class="py-1">Nội dung 3</a>
-                      <a href="#" class="py-1">Nội dung 4</a>
+                      <span class="mb-1"
+                        >Đến:
+                        <span id="maxValue" class="text-primary-500"
+                          >8 tỷ</span
+                        ></span
+                      >
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between px-3 py-2"
+                    >
+                      <input
+                        type="text"
+                        id="minValueInput"
+                        class="w-full border-2 border-gray-300 rounded-md px-2 py-1 text-center"
+                        placeholder="0"
+                      />
+                      <i class="zmdi zmdi-long-arrow-right mx-4"></i>
+                      <input
+                        type="text"
+                        id="maxValueInput"
+                        class="w-full border-2 border-gray-300 rounded-md px-2 py-1 text-center"
+                        placeholder="0"
+                      />
                     </div>
                   </div>
+                  <div class="relative mt-4 mx-3 mb-8">
+                    <!-- Thanh màu -->
+                    <div
+                      class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"
+                    ></div>
+                    <div
+                      id="progress"
+                      class="absolute top-1/2 h-2 bg-primary-500 rounded-full"
+                    ></div>
 
-                  <!-- Accordion Item 2 -->
-                  <div class="border-b border-[#D9D9D9] pb-2">
-                    <button
-                      class="flex justify-between w-full p-3 font-semibold text-left cursor-pointer"
-                      onclick="toggleAccordion(2)"
-                    >
-                      Tiêu đề 2
-                      <span id="icon-2" class="transform transition-transform"
-                        ><i class="zmdi zmdi-chevron-down"></i
-                      ></span>
-                    </button>
-                    <div id="content-2" class="hidden pl-4 text-gray-500">
-                      <a href="#" class="py-1">Nội dung A</a>
-                      <a href="#" class="py-1">Nội dung B</a>
+                    <!-- Slider Inputs -->
+                    <input
+                      type="range"
+                      id="minSlider"
+                      min="0"
+                      max="8000000000"
+                      step="10000000"
+                      value="4000000000"
+                      class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
+                    />
+
+                    <input
+                      type="range"
+                      id="maxSlider"
+                      min="0"
+                      max="8000000000"
+                      step="10000000"
+                      value="6000000000"
+                      class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
+                    />
+                  </div>
+                  <div class="p-3">
+                    <div class="space-y-2">
+                      <label
+                        class="flex items-center justify-between gap-2 cursor-pointer"
+                      >
+                        <span class="text-black font-semibold"
+                          >Tất cả mức giá</span
+                        >
+                        <div>
+                          <input
+                            type="radio"
+                            name="price"
+                            class="hidden peer"
+                          />
+                          <span
+                            class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
+                          >
+                            <span
+                              class="w-2.5 h-2.5 bg-white rounded-full"
+                            ></span>
+                          </span>
+                        </div>
+                      </label>
+
+                      <label
+                        class="flex items-center justify-between gap-2 cursor-pointer"
+                        ><span class="text-black font-semibold">Dưới 1 tỷ</span>
+                        <div>
+                          <input
+                            type="radio"
+                            name="price"
+                            class="hidden peer"
+                          />
+                          <span
+                            class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
+                          >
+                            <span
+                              class="w-2.5 h-2.5 bg-white rounded-full"
+                            ></span>
+                          </span>
+                        </div>
+                      </label>
+
+                      <label
+                        class="flex items-center justify-between gap-2 cursor-pointer"
+                        ><span class="text-black font-semibold"
+                          >500 triệu - 5 tỷ</span
+                        >
+                        <input type="radio" name="price" class="hidden peer" />
+                        <span
+                          class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
+                        >
+                          <span
+                            class="w-2.5 h-2.5 bg-white rounded-full"
+                          ></span>
+                        </span>
+                      </label>
+
+                      <label
+                        class="flex items-center justify-between gap-2 cursor-pointer"
+                        ><span class="text-black font-semibold">5 - 15 tỷ</span>
+                        <input type="radio" name="price" class="hidden peer" />
+                        <span
+                          class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
+                        >
+                          <span
+                            class="w-2.5 h-2.5 bg-white rounded-full"
+                          ></span>
+                        </span>
+                      </label>
+
+                      <label
+                        class="flex items-center justify-between gap-2 cursor-pointer"
+                        ><span class="text-black font-semibold"
+                          >Trên 15 tỷ</span
+                        >
+                        <input type="radio" name="price" class="hidden peer" />
+                        <span
+                          class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
+                        >
+                          <span
+                            class="w-2.5 h-2.5 bg-white rounded-full"
+                          ></span>
+                        </span>
+                      </label>
                     </div>
                   </div>
-
-                  <!-- Accordion Item 3 -->
-                  <div class="pb-2">
+                  <div
+                    class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between"
+                  >
+                    <a
+                      href="javascript:void(0)"
+                      class="underline font-semibold text-[18px]"
+                      >Đặt lại <i class="zmdi zmdi-rotate-right"></i
+                    ></a>
                     <button
-                      class="flex justify-between w-full p-3 font-semibold text-left cursor-pointer"
-                      onclick="toggleAccordion(3)"
+                      class="main-btn py-2.5 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300"
                     >
-                      Tiêu đề 3
-                      <span id="icon-3" class="transform transition-transform"
-                        ><i class="zmdi zmdi-chevron-down"></i
-                      ></span>
+                      Tìm kiếm
                     </button>
-                    <div id="content-3" class="hidden pl-4 text-gray-500">
-                      <a href="#" class="py-1">Chi tiết 1</a>
-                      <a href="#" class="py-1">Chi tiết 2</a>
+                  </div>
+                </div>
+              </li>
+              <li class="flex flex-col py-1">
+                <span class="font-bold">Tìm kiếm</span>
+                <span class="text-[#B3B3B3]">Tìm nơi bạn muốn</span>
+              </li>
+            </ul>
+            <!-- Tìm kiếm -->
+            <div
+              class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full"
+            >
+              <a href=""><i class="zmdi zmdi-search"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- detail product -->
+        <div class="py-0 sm:py-12">
+          <div class="container mx-auto">
+            <div
+              class="px-5 md:px-0 flex md:flex-row flex-col md:items-center items-start md:justify-between justify-start"
+            >
+              <h1 class="font-bold text-3xl md:mb-0 mb-3 hidden md:block">
+                Tòa nhà MT Lạc Long Quân, Quận Tân Bình
+              </h1>
+              <div class="flex flex-row items-center justify-center hidden sm:block">
+                <span class="mr-2">Chia sẻ: </span>
+                <div class="flex space-x-3">
+                  <a href="#" class="text-gray-600 hover:text-black"
+                    ><i class="zmdi zmdi-facebook-box"></i
+                  ></a>
+                  <a href="#" class="text-gray-600 hover:text-black"
+                    ><i class="zmdi zmdi-linkedin-box"></i
+                  ></a>
+                  <a href="#" class="text-gray-600 hover:text-black"
+                    ><i class="zmdi zmdi-google-plus-box"></i
+                  ></a>
+                  <a href="#" class="text-gray-600 hover:text-black"
+                    ><i class="zmdi zmdi-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- album -->
+            <div class="md:grid hidden grid-cols-4 py-5 md:gap-5 gap-3">
+              <div class="col-span-2 row-span-2">
+                <a
+                  class="cursor-zoom-in z-50"
+                  data-fancybox="images"
+                  data-caption=""
+                  href="../assets/images/card/image.png"
+                >
+                  <img
+                    src="../assets/images/card/image.png"
+                    alt=""
+                    class="w-full"
+                  />
+                </a>
+              </div>
+              <div>
+                <a
+                  class="cursor-zoom-in z-50"
+                  data-fancybox="images"
+                  data-caption=""
+                  href="../assets/images/card/image-1.png"
+                >
+                  <img
+                    src="../assets/images/card/image-1.png"
+                    alt=""
+                    class="w-full"
+                  />
+                </a>
+              </div>
+              <div>
+                <a
+                  class="cursor-zoom-in z-50"
+                  data-fancybox="images"
+                  data-caption=""
+                  href="../assets/images/card/image-2.png"
+                >
+                  <img
+                    src="../assets/images/card/image-2.png"
+                    alt=""
+                    class="w-full"
+                  />
+                </a>
+              </div>
+              <div>
+                <a
+                  class="cursor-zoom-in z-50"
+                  data-fancybox="images"
+                  data-caption=""
+                  href="../assets/images/card/image-3.png"
+                >
+                  <img
+                    src="../assets/images/card/image-3.png"
+                    alt=""
+                    class="w-full"
+                  />
+                </a>
+              </div>
+              <div>
+                <a
+                  class="cursor-zoom-in z-50"
+                  data-fancybox="images"
+                  data-caption=""
+                  href="../assets/images/card/image-4.png"
+                >
+                  <img
+                    src="../assets/images/card/image-4.png"
+                    alt=""
+                    class="w-full"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- album slide mobile-->
+            <div class="md:hidden block mt-3">
+              <div class="swiper albumSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a
+                      class="cursor-zoom-in z-50"
+                      data-fancybox="images"
+                      data-caption=""
+                      href="../assets/images/card/image.png"
+                    >
+                      <img
+                        src="../assets/images/card/image.png"
+                        alt=""
+                        class="w-full"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      class="cursor-zoom-in z-50"
+                      data-fancybox="images"
+                      data-caption=""
+                      href="../assets/images/card/image-1.png"
+                    >
+                      <img
+                        src="../assets/images/card/image-1.png"
+                        alt=""
+                        class="w-full"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      class="cursor-zoom-in z-50"
+                      data-fancybox="images"
+                      data-caption=""
+                      href="../assets/images/card/image-2.png"
+                    >
+                      <img
+                        src="../assets/images/card/image-2.png"
+                        alt=""
+                        class="w-full"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      class="cursor-zoom-in z-50"
+                      data-fancybox="images"
+                      data-caption=""
+                      href="../assets/images/card/image-3.png"
+                    >
+                      <img
+                        src="../assets/images/card/image-3.png"
+                        alt=""
+                        class="w-full"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <!-- detail -->
+            <div class="flex md:flex-row flex-col md:py-10 py-5 px-5 md:px-0">
+              <div class="md:w-2/3 w-full md:pr-14 pr-0">
+                <div class="space-y-3">
+                  <button
+                    class="tag bg-white rounded-full shadow-md px-3 py-1 flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100"
+                  >
+                    Mặt tiền
+                    <img
+                      class="ml-2"
+                      src="../assets/images/icon/local_fire_department.png"
+                      alt="close"
+                    />
+                  </button>
+                  <h3 class="text-3xl font-bold">
+                    Tòa nhà MT Lạc Long Quân, Quận Tân Bình
+                  </h3>
+                  <span
+                    ><b>Địa chỉ:</b> MT Lạc Long Quân, Phường 10, Quận Tân
+                    Bình</span
+                  >
+                </div>
+                <div
+                  class="border-b border-gray-300 border-t my-5 py-6 grid grid-cols-2 gap-3 md:flex md:flex-row md:items-center md:justify-between"
+                >
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 mr-3"
+                    >
+                      <img src="../assets/images/icon/paid.png" alt="" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Mức giá</span>
+                      <span class="font-bold">39 tỷ</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 mr-3"
+                    >
+                      <img src="../assets/images/icon/square_foot.png" alt="" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Diện tích</span>
+                      <span class="font-bold">1200 m<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 mr-3"
+                    >
+                      <img src="../assets/images/icon/home_work.png" alt="" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Kết cấu</span>
+                      <span class="font-bold">1 hầm 6 lầu</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 mr-3"
+                    >
+                      <img src="../assets/images/icon/assignment.png" alt="" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Giấy tờ pháp lý</span>
+                      <span class="font-bold">Sổ hồng</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 mr-3"
+                    >
+                      <img src="../assets/images/icon/meeting_room.png" alt="" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Tình trạng</span>
+                      <span class="font-bold">Phòng mới</span>
                     </div>
                   </div>
                 </div>
-                <div class="news-detail md:py-10 py-5 text-[#5A5A5A]">
-                  <img src="/assets/images/banner/news.png" alt="" />
-                  <p class="mt-5">
-                    Nếu bạn quyết định không sử dụng gạch hoặc hoa văn đơn điệu,
-                    bạn có thể đang tìm kiếm một bức tường nổi bật khổ lớn ngoạn
-                    mục - một bức tranh tường bắt mắt chính là thứ dành cho bạn.
-                    Giấy dán tường có thiết kế đa dạng làm bằng vải không dệt và
-                    nhựa vinyl là lý tưởng cho việc này
-                  </p>
-                  <p class="mt-5" id="title1">
-                    TẠI SAO NÊN CHỌN GIẤY DÁN TƯỜNG CHO PHÒNG TẮM <br />Đó có
-                    thể do sở thích của gia chủ, muốn tô điểm cho không gian thư
-                    giãn thứ hai ngoài phòng ngủ. Hoặc hiện nay, trang trí nhà
-                    cửa bằng giấy dán tường cũng là một xu hướng nổi bật. <br />
-                    <br />Nếu bạn đang lên kế hoạch xây dựng nhà cửa hoặc cải
-                    tạo lại, mà quyết định lựa chọn các thiết bị hiện đại. Chắc
-                    rằng, bạn cũng sẽ có tìm hiểu những sản phẩm trang trí đi
-                    kèm cũng hiện đại và có tính vượt thời gian. Thì giấy dán
-                    tường là một sự lựa chọn rất cạnh tranh với đá hay gạch.
-                    <br />
-                    <br />Phòng tắm gia đình nói riêng có thể diện tích không
-                    quá lớn, chỉ có các thiết bị cơ bản, nhưng bạn vẫn có thể tự
-                    thưởng cho mình một chút sang trọng dưới hình thức thiết kế
-                    tường đẹp. Ví dụ: một bức tường có các họa tiết, màu sắc bạn
-                    yêu thích hay tranh ảnh có họa tiết hoa đẹp tự nhiên thì
-                    sao? Sự lựa chọn bao gồm từ những bông hoa tinh tế có họa
-                    tiết cùng tông màu cho đến những họa tiết lá hoặc hoa lớn .
-                    <br />
-                    <br />Nếu bạn thích những thứ gọn gàng và tối giản để cân
-                    bằng với nhịp sống hối hả buổi sáng trong phòng tắm, bạn sẽ
-                    tìm thấy những ý tưởng phù hợp, chẳng hạn như giấy dán tường
-                    Scandinavia. <br />
-                    <br />Tuy nhiên, xu hướng được ưa chuộng nhất cho phòng tắm
-                    vẫn là phong cách biển với vô số biến thể của màu biển, màu
-                    sắc cổ điển như xanh lam, be và trắng, họa tiết sọc cổ điển
-                    hoặc vẻ ngoài mộc mạc, giống như ngôi nhà nông thôn bằng gỗ
-                    . Điều này mang cảm giác bãi biển thẳng vào phòng tắm của
-                    bạn - và việc tắm trong bồn tắm khiến bạn mơ về kỳ nghỉ đầy
-                    thư giãn bên bờ biển
-                  </p>
-                  <img src="/assets/images/banner/news.png" alt="" />
-                  <p class="mt-5">
-                    TẠI SAO GIẤY DÁN TƯỜNG LẠI PHỔ BIẾN TRONG PHÒNG TẮM? Xu
-                    hướng dán giấy dán tường trong phòng tắm hiện nay ngày càng
-                    trở nên phổ biến không chỉ ở nhà riêng mà còn ở các căn hộ
-                    chung cư. Các khách sạn lớn sang trọng lần đầu tiên thể hiện
-                    vẻ ngoài đầy phong cách, ấm cúng và hấp dẫn, nhưng các nhà
-                    hàng và tổ chức công cộng cũng ngày càng sử dụng nhiều giấy
-                    dán tường. Giấy dán tường trang nhã thay vì gạch lạnh tạo ra
-                    bầu không khí trang nhã hơn. Chúng mang lại những hoa văn và
-                    họa tiết liền mạch cho bức tường và đảm bảo một cái nhìn đặc
-                    biệt theo phong cách bạn mong muốn.
-                  </p>
-                  <p class="mt-5">
-                    LỰA CHỌN GIẤY DÁN TƯỜNG NÀO PHÙ HỢP CHO PHÒNG TẮM Bạn có
-                    nhiều lựa chọn ở đây vì có nhiều loại giấy dán tường có chất
-                    lượng khác nhau phù hợp để dán tường trong phòng tắm. Chúng
-                    bao gồm giấy dán tường không dệt , giấy dán tường vinyl và
-                    giấy dán tường sợi thủy tinh . Những giấy dán tường này bền,
-                    ổn định về kích thước, thoáng khí, chống mục nát, chịu được
-                    ánh sáng và nước và không dễ bị nấm mốc.
-                  </p>
-                  <p class="mt-5">
-                    GIẤY DÁN TƯỜNG KHÔNG DỆT Giấy dán tường không dệt, đúng như
-                    tên gọi, được làm bằng vải không dệt. Chúng có bề mặt và đế
-                    đều được làm bằng chất liệu vải không dệt. Bề mặt có màu,
-                    dập nổi hoặc có cấu trúc xốp. Giấy dán tường không dệt được
-                    làm từ bột giấy sợi dài, sợi dệt và chất kết dính. Chúng có
-                    cấu trúc giống như vải và do đó ổn định kích thước và chịu
-                    được ánh sáng. Trong giấy dán tường không dệt có bề mặt nhựa
-                    vinyl nhỏ gọn, các thành phần nhựa chủ yếu được làm từ nhựa
-                    PVC tái chế, giúp giấy dán tường trở thành vật trang trí
-                    tường chắc chắn, chống mài mòn và bền lâu, ngay cả trên bề
-                    mặt của giấy dán tường. Do chất liệu được sử dụng, giấy dán
-                    tường không dệt không dễ bị thấm nước và có thể dán giấy dán
-                    tường bằng kỹ thuật dán tường đơn giản . Giấy dán tường
-                    không dệt thích hợp cho phòng tắm được nhà sản xuất đánh dấu
-                    bằng các ký hiệu về khả năng chống giặt và chống mài mòn cao
-                    . Những hình nền này có bề mặt ổn định, thường được dán kín
-                    và dễ dàng làm sạch khỏi bụi bẩn. Thỉnh thoảng có nước bắn
-                    hoặc đọng lại cũng không thể gây ra bất kỳ hư hỏng nào cho
-                    giấy dán tường không dệt.
-                  </p>
-                </div>
-
-                <div class="border-gray-300 border-t py-10 end-article">
+                <div class="md:py-10 py-5">
+                  <div class="text-2xl mb-5 font-bold">Thông tin mô tả:</div>
                   <div>
-                    <div class="text-xl mb-5">Gắn thẻ:</div>
-                    <div class="flex flex-row flex-wrap items-center gap-3">
-                      <span
-                        class="bg-primary-50 text-primary-500 py-1 px-4 rounded-2xl"
-                        >Tin tức</span
+                    <p>
+                      Tòa nhà MT Lạc Long Quân, Quận Tân Bình Vị trí đắc địa:
+                      <br />
+                      <br />
+                      Chỉ 200m đến học viện Hàng không. Cách Lotte Cộng Hòa
+                      100m, Gần sân bay Tân Sơn Nhất. Vị trí thuận tiện giúp bạn
+                      dễ dàng di chuyển đến các địa điểm học tập và mua sắm.
+                      <br />
+                      <br />
+                      Giá ưu đãi: 160 Triệu/tháng/tháng khi đặt cọc trong tháng
+                      8.
+                      <br />
+                      <br />
+                      <b>Tiện nghi hiện đại:</b> Phòng trang bị đầy đủ máy lạnh,
+                      giường tầng, nệm và drap mới, đảm bảo giấc ngủ thoải mái
+                      sau ngày dài học tập. Tủ quần áo, tủ đồ riêng. Nhà vệ sinh
+                      riêng được trang bị máy nước nóng, mang lại sự tiện lợi và
+                      thoải mái tuyệt đối. WiFi tốc độ cao, cho phép bạn học tập
+                      và giải trí mà không lo gián đoạn. Bếp nấu ăn rộng rãi,
+                      sạch sẽ, đầy đủ tiện nghi giúp bạn tự do chế biến những
+                      bữa ăn ngon. Khu vực giặt giũ với máy giặt hiện đại và khu
+                      phơi đồ tiện lợi, giữ cho quần áo luôn sạch sẽ và thơm
+                      tho.
+                      <br />
+                      <br />
+                      <b>An ninh & thoải mái</b>: Hệ thống cửa khóa vân tay,
+                      camera an ninh 24/7, cùng với quản lý chuyên nghiệp, bạn
+                      hoàn toàn yên tâm về sự an toàn. Giờ giấc tự do, không
+                      gian sống luôn sạch sẽ và được chăm sóc cẩn thận, mang lại
+                      cảm giác như ở nhà. Có quản Lý tại chỗ 24/24 hỗ trợ khi
+                      cần thiết.
+                      <br />
+                      <br />
+                      <b>Bãi giữ xe rộng rãi:</b> Được trang bị bãi giữ xe rộng
+                      rãi, an toàn tuyệt đối, bạn không phải lo lắng về chỗ để
+                      xe. Liên hệ ngay để nhận giá ưu đãi:
+                      <br />
+                      <br />
+                      Đây là cơ hội vàng để bạn có một chỗ ở tiện nghi, an toàn
+                      và gần ngay Học viện Hàng không. Đừng bỏ lỡ!
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-2xl mb-5 font-bold">Xem trên bản đồ</div>
+                  <div class="w-full rounded-2xl overflow-hidden">
+                    <div style="position: relative">
+                      <div
+                        style="
+                          position: relative;
+                          padding-bottom: 75%;
+                          height: 0;
+                          overflow: hidden;
+                        "
                       >
-                      <span
-                        class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
-                        >Phong cách</span
-                      >
-                      <span
-                        class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
-                        >Xu hướng</span
-                      >
+                        <iframe
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 0;
+                          "
+                          loading="lazy"
+                          allowfullscreen
+                          src="https://maps.google.com/maps?q=T%E1%BA%A7ng+1%2C+T%C3%B2a+nh%C3%A0+TSG+Euroland%2C+%C4%90%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+V%C4%83n+L%E1%BB%99c%2C+Khu+%C4%91%C3%B4+th%E1%BB%8B+M%E1%BB%97+Lao%2C+H%C3%A0+%C4%90%C3%B4ng%2C+H%C3%A0+N%E1%BB%99i&output=embed"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
-                  <div class="mt-4 md:hidden block">
-                    <div class="text-xl mb-5">Chia sẻ:</div>
-                    <div class="flex flex-row items-center gap-x-3">
-                      <a
-                        href=""
-                        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-                        ><img src="/assets/images/icon/Union.png" alt=""
-                      /></a>
-                      <a
-                        href=""
-                        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-                        ><img src="/assets/images/icon/Facebook.png" alt=""
-                      /></a>
-                      <a
-                        href=""
-                        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-                        ><img src="/assets/images/icon/Instagram.png" alt=""
-                      /></a>
-                      <a
-                        href=""
-                        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-                        ><img src="/assets/images/icon/Twitter.png" alt=""
-                      /></a>
-                      <a
-                        href=""
-                        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-                        ><img src="/assets/images/icon/LinkedIn.png" alt=""
-                      /></a>
+                </div>
+                <div class="py-10">
+                  <div class="text-2xl mb-5 font-bold">Từ khóa tìm kiếm</div>
+                  <div class="flex flex-row flex-wrap items-center gap-3">
+                    <span
+                      class="bg-primary-50 text-primary-500 py-1 px-4 rounded-2xl"
+                      >Hoạt động công ty</span
+                    >
+                    <span
+                      class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
+                      >Thuê nhà giá tốt</span
+                    >
+                    <span
+                      class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
+                      >Thuê nhà Hồ Chí Minh</span
+                    >
+                    <span
+                      class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
+                      >Trung tâm thành phố</span
+                    >
+                    <span
+                      class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
+                      >Tòa nhà trung tâm Hồ Chí Minh</span
+                    >
+                    <span
+                      class="bg-[#F5F5F5] text-[#757575] py-1 px-4 rounded-2xl"
+                      >Tào nhà BÌnh Thạnh</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="border-b border-gray-300 border-t my-5 py-6 grid grid-cols-2 gap-3 md:flex md:flex-row md:items-center md:space-x-20"
+                >
+                  <div class="flex flex-row items-center">
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Ngày đăng</span>
+                      <span class="font-bold">29/09/2024</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Ngày hết hạn</span>
+                      <span class="font-bold">10/10/2024</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Loại tin</span>
+                      <span class="font-bold">Thuê căn hộ</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <div class="flex flex-col">
+                      <span class="text-[#757575]">Mã tin</span>
+                      <span class="font-bold">56789</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="md:w-1/3 w-full">
-                <div>
-                  <div class="swiper homeSlider relative">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="relative">
-                          <img
-                            class="w-full"
-                            src="/assets/images/banner/side-banner.png"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          class="w-full"
-                          src="/assets/images/banner/side-banner.png"
-                          alt=""
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          class="w-full"
-                          src="/assets/images/banner/side-banner.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div
-                      class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-10"
+              <div class="md:w-1/3 w-ful">
+                <div
+                  class="bg-primary-500 p-8 rounded-3xl w-full max-w-lg sm:max-w-2xl shadow-lg"
+                >
+                  <h2 class="text-white text-2xl font-bold text-center mb-6">
+                    HÃY ĐỂ CHÚNG TÔI GIÚP BẠN
+                  </h2>
+
+                  <form action="#" class="space-y-5">
+                    <input
+                      type="text"
+                      placeholder="Họ và tên *"
+                      class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="Số điện thoại *"
+                      class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Thời gian dự kiến nhận phòng"
+                      class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="Vấn đề bạn cần hỗ trợ"
+                      class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    />
+
+                    <button
+                      class="w-full bg-black text-white p-3 rounded-full font-bold"
                     >
-                      <svg
-                        width="130"
-                        height="169"
-                        viewBox="0 0 130 169"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.93316 112.658C-0.372519 102.154 -1.03862 91.5392 1.72922 80.8207C3.74408 73.0266 7.1201 65.8933 12.4117 59.7389C13.777 59.487 13.7563 60.5072 13.8763 61.3622C14.0914 62.9152 13.7191 64.4559 13.7397 66.0048C9.86311 72.2253 6.95046 78.8133 5.77548 86.1118C4.16607 96.124 5.39072 105.765 9.41215 115.066C9.51972 115.314 9.57763 115.583 9.66038 115.843C10.0493 117.966 10.3803 120.097 10.1279 122.257C10.0203 123.187 9.96654 124.335 8.44402 123.806C5.99889 120.39 4.55085 116.487 2.93731 112.662L2.93316 112.658Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M8.43991 123.802C9.29633 123.17 9.19289 122.237 9.18048 121.357C9.14738 119.498 9.22185 117.652 9.65627 115.839C12.2669 121.138 15.6471 125.909 19.6106 130.279C19.8712 131.625 20.2311 132.951 20.0822 134.351C19.987 135.239 19.7347 135.954 18.7335 136.132C17.3599 134.876 15.9822 133.62 14.6086 132.365C12.4903 129.556 10.0328 126.995 8.43991 123.806V123.802Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M47.2642 144.81C47.8599 144.785 48.5633 144.954 48.5012 143.95C48.464 143.335 48.5012 142.711 48.5012 142.092C48.5012 109.205 48.5012 76.3227 48.5012 43.4361C48.5012 40.9124 48.5095 40.9082 50.6898 42.1143C54.3017 44.1134 57.8556 46.2241 61.5419 48.0745C63.2382 48.9254 63.6436 50.0076 63.6436 51.7878C63.5899 81.5766 63.6023 111.365 63.5981 141.154C63.5981 141.637 63.5981 142.117 63.5981 142.6C63.6119 144.238 64.4118 144.865 65.9977 144.479C66.3287 144.401 66.6804 144.397 67.0238 144.359C69.2 144.971 69.5682 146.838 67.934 149.01C61.7984 150.687 55.5759 150.811 49.308 150.059C48.6253 149.977 47.9468 149.849 47.2642 149.741C45.9195 148.044 45.9195 146.272 47.2642 144.801V144.81Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M38.1 147.486C35.2122 146.639 32.5064 145.371 29.8875 143.905C28.6712 142.348 28.7622 140.502 28.8739 138.709C29.0766 135.438 29.0518 132.166 29.0435 128.891C28.9566 87.9664 29.2214 47.0378 28.9608 6.11333C28.9525 5.08898 29.0311 3.97789 29.147 2.91224C29.2835 1.64419 29.6021 1.21049 30.8184 1.50789C33.6359 2.88745 36.4079 4.35376 39.0392 6.07616C39.3577 28.7812 39.1261 51.4863 39.1674 74.1914C39.2088 97.3136 39.1923 120.436 39.1468 143.554C39.1468 144.905 39.6763 146.507 38.1 147.486Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M38.1 147.486C38.1166 138.069 38.1414 128.651 38.1455 119.234C38.1497 82.7331 38.1455 46.2365 38.1579 9.73573C38.1579 8.46355 37.8518 7.07986 39.0392 6.07616C43.1558 7.12942 43.6026 9.96704 43.5902 13.7836C43.4495 55.753 43.4991 97.7184 43.495 139.688C43.495 142.356 44.75 144.062 47.2599 144.805C47.2599 146.454 47.2599 148.097 47.2599 149.746C44.1321 149.299 41.0582 148.622 38.1 147.482L38.1 147.486Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M67.9299 149.019C67.7644 147.441 68.4305 145.702 67.0197 144.368C68.538 144.017 68.6787 142.963 68.6787 141.6C68.6373 122.72 68.6456 103.84 68.6539 84.9594C68.6539 84.0838 68.4884 83.1875 68.9725 82.0227C72.9401 84.2614 80.7761 88.6851 80.7761 88.6851C80.7761 88.6851 81.769 90.7379 81.7732 91.9192C81.8021 108.396 81.798 124.872 81.7773 141.344C81.7773 142.53 81.5332 143.624 80.8009 144.582C76.7298 146.693 72.5305 148.432 67.934 149.023L67.9299 149.019Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M30.8184 1.50789C30.1689 1.90441 29.9124 2.51157 29.8959 3.24679C29.8876 3.65983 29.8752 4.07288 29.8752 4.48592C29.8752 50.9576 29.8834 97.4334 29.8875 143.905C25.7709 141.885 22.0764 139.258 18.7335 136.127C19.5154 134.248 18.6921 132.133 19.6106 130.275C21.9192 132.435 24.3561 134.43 26.9501 136.243C28.0424 137.003 28.3858 136.689 28.3444 135.487C28.3237 134.868 28.3444 134.248 28.3444 133.633C28.3444 90.3992 28.3361 47.1617 28.3361 3.92831C28.3361 3.51527 28.2989 3.09809 28.3444 2.69331C28.423 1.96635 27.9762 0.937869 28.7002 0.590912C29.4573 0.231563 30.1772 1.02048 30.8185 1.512L30.8184 1.50789Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M105.889 69.3216C108.306 74.3731 110.358 79.5609 111.222 85.1205C113.287 98.3999 111.322 110.961 104.359 122.604C104.044 123.129 103.73 123.649 103.415 124.174C101.897 124.347 101.847 123.232 101.711 122.216C101.442 120.2 102.029 118.255 102.228 116.276C104.135 111.882 105.562 107.318 106.22 102.592C106.804 98.4247 107.093 94.2653 106.597 89.9697C106.121 85.8929 105.099 81.9855 104.313 78.0038C104.292 75.6164 103.97 73.2331 104.205 70.8457C104.301 69.8916 104.412 68.8176 105.889 69.3216Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M80.7968 144.578C80.7885 125.946 80.7802 107.313 80.7719 88.681C83.0185 89.2386 83.7922 90.5355 83.7674 92.956C83.635 106.888 83.697 120.82 83.7136 134.752C83.7136 135.396 83.366 136.309 84.0239 136.635C84.6817 136.962 85.2195 136.14 85.7532 135.76C87.2633 134.686 88.7197 133.542 90.2008 132.427C91.2351 132.278 91.4958 132.959 91.5951 133.761C91.7688 135.19 91.7481 136.611 91.1524 137.965C88.0039 140.642 84.5948 142.91 80.7968 144.574V144.578Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M91.1565 137.97C90.2546 136.222 91.1565 134.17 90.205 132.431C95.087 127.697 99.187 122.381 102.228 116.276C102.861 117.763 102.646 119.337 102.679 120.882C102.704 122.034 102.646 123.195 103.419 124.174C100.254 129.589 96.113 134.141 91.1565 137.97Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M105.889 69.3216C104.776 70.2757 105.273 71.5768 105.165 72.7416C105.004 74.5177 105.612 76.4135 104.313 78.0038C102.402 73.6916 100.532 69.3587 97.7307 65.5174C97.4535 65.1374 97.1638 64.7657 96.8825 64.3898C96.266 62.6302 96.1667 60.817 96.3943 58.9913C96.5101 58.0702 96.7749 57.1615 98.074 57.7646C101.189 61.2754 103.891 65.0631 105.893 69.3216L105.889 69.3216Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M13.7398 66.0007C12.8917 65.0465 12.9206 63.8776 12.9165 62.7128C12.9082 61.6926 12.9951 60.6559 12.4159 59.7348C15.3244 55.782 18.9073 52.5354 22.8377 49.5615C23.9961 52.6346 23.4541 55.3607 21.3069 57.335C18.4646 59.9496 16.127 62.9937 13.744 66.0007H13.7398Z"
-                          fill="#F8F3EF"
-                        />
-                        <path
-                          d="M98.0699 57.7646C97.1928 58.3635 97.3666 59.2928 97.2962 60.1561C97.1804 61.5687 97.0232 62.9772 96.8825 64.3857C95.3393 62.0478 93.4941 59.9124 91.2972 58.2354C88.2563 55.9141 88.5377 52.932 88.9017 49.4211C92.4763 51.9241 95.4717 54.6172 98.074 57.7646L98.0699 57.7646Z"
-                          fill="#F8F3EF"
-                        />
-                      </svg>
-                      <h1
-                        class="text-xl uppercase font-bold text-center text-white mt-5"
-                      >
-                        Trải nghiệm xứng tầm
-                      </h1>
-                      <button
-                        class="icon-btn py-3 px-6 mt-10 bg-white/20 text-white rounded-full hover:bg-primary-500 ease-in-out transition-all duration-300"
-                      >
-                        Liên hệ ngay
-                        <i class="zmdi zmdi-chevron-right ml-2"></i>
-                      </button>
-                    </div>
-                  </div>
+                      Gửi thông tin
+                    </button>
+                  </form>
                 </div>
-                <div class="mt-10">
-                  <h3 class="font-bold mb-5 text-2xl">Bài viết liên quan</h3>
-                  <div class="flex flex-row items-center justify-between mb-5">
-                    <div class="w-2/5 rounded-2xl overflow-hidden mr-3">
-                      <img src="/assets/images/card/news1.png" alt="" />
-                    </div>
-                    <div>
-                      <a href=""
-                        ><h3
-                          class="font-bold text-md hover:text-primary-500 ease-in-out transition-all duration-300"
-                        >
-                          Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
-                        </h3></a
-                      >
-                      <div
-                        class="flex flex-row items-center mt-2 text-gray-500"
-                      >
-                        <span>29/09/2023</span>
-                        <span class="mx-2">|</span>
-                        <span>Tin tức mới</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-row items-center justify-between mb-5">
-                    <div class="w-2/5 rounded-2xl overflow-hidden mr-3">
-                      <img src="/assets/images/card/news2.png" alt="" />
-                    </div>
-                    <div>
-                      <a href=""
-                        ><h3
-                          class="font-bold text-md hover:text-primary-500 ease-in-out transition-all duration-300"
-                        >
-                          Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
-                        </h3></a
-                      >
-                      <div
-                        class="flex flex-row items-center mt-2 text-gray-500"
-                      >
-                        <span>29/09/2023</span>
-                        <span class="mx-2">|</span>
-                        <span>Tin tức mới</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-row items-center justify-between mb-5">
-                    <div class="w-2/5 rounded-2xl overflow-hidden mr-3">
-                      <img src="/assets/images/card/news1.png" alt="" />
-                    </div>
-                    <div>
-                      <a href=""
-                        ><h3
-                          class="font-bold text-md hover:text-primary-500 ease-in-out transition-all duration-300"
-                        >
-                          Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
-                        </h3></a
-                      >
-                      <div
-                        class="flex flex-row items-center mt-2 text-gray-500"
-                      >
-                        <span>29/09/2023</span>
-                        <span class="mx-2">|</span>
-                        <span>Tin tức mới</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-row items-center justify-between mb-5">
-                    <div class="w-2/5 rounded-2xl overflow-hidden mr-3">
-                      <img src="/assets/images/card/news2.png" alt="" />
-                    </div>
-                    <div>
-                      <a href=""
-                        ><h3
-                          class="font-bold text-md hover:text-primary-500 ease-in-out transition-all duration-300"
-                        >
-                          Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
-                        </h3></a
-                      >
-                      <div
-                        class="flex flex-row items-center mt-2 text-gray-500"
-                      >
-                        <span>29/09/2023</span>
-                        <span class="mx-2">|</span>
-                        <span>Tin tức mới</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-row items-center justify-between mb-5">
-                    <div class="w-2/5 rounded-2xl overflow-hidden mr-3">
-                      <img src="/assets/images/card/news1.png" alt="" />
-                    </div>
-                    <div>
-                      <a href=""
-                        ><h3
-                          class="font-bold text-md hover:text-primary-500 ease-in-out transition-all duration-300"
-                        >
-                          Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
-                        </h3></a
-                      >
-                      <div
-                        class="flex flex-row items-center mt-2 text-gray-500"
-                      >
-                        <span>29/09/2023</span>
-                        <span class="mx-2">|</span>
-                        <span>Tin tức mới</span>
-                      </div>
-                    </div>
+                <div
+                  class="bg-[#F1F5F9] p-8 rounded-3xl w-full max-w-lg sm:max-w-2xl shadow-lg mt-5 text-black hidden sm:block"
+                >
+                  <h2 class="text-xl font-bold mb-6">
+                    Cho thuê nhà trọ, phòng trọ tại Quận Tân Bình
+                  </h2>
+                  <div class="flex flex-col gap-3">
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
+                    <a href="" class="hover:text-primary-500 hover:underline"
+                      >Phường 13 (91)</a
+                    >
                   </div>
                 </div>
               </div>
@@ -818,7 +1103,7 @@
               >
                 Có thể bạn quan tâm
               </h1>
-              <div class="pb-2 border-b-2 border-black">
+              <div class="pb-2 border-b-2 border-black hidden sm:block">
                 <a href=""
                   >Xem tất cả <i class="zmdi zmdi-long-arrow-right"></i
                 ></a>
@@ -842,7 +1127,7 @@
                         <div class="overflow-hidden rounded-2xl relative">
                           <a href="detail-product.html">
                             <img
-                              src="/assets/images/card/pro1.png"
+                              src="../assets/images/card/pro1.png"
                               alt=""
                               class="w-full"
                             />
@@ -854,7 +1139,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -880,7 +1165,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -897,7 +1182,7 @@
                             >
 
                             <div class="flex flex-row items-start">
-                              <div class="pt-[6px]">
+                              <div class="pt-[1px]">
                                 <svg
                                   width="15"
                                   height="18"
@@ -964,7 +1249,7 @@
                         <div class="overflow-hidden rounded-2xl relative">
                           <a href="detail-product.html">
                             <img
-                              src="/assets/images/card/pro2.png"
+                              src="../assets/images/card/pro2.png"
                               alt=""
                               class="w-full"
                             />
@@ -976,7 +1261,7 @@
                               Đường nội bộ
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/where_to_vote.png"
+                                src="../assets/images/icon/where_to_vote.png"
                                 alt="close"
                               />
                             </button>
@@ -1002,7 +1287,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1019,7 +1304,7 @@
                             >
 
                             <div class="flex flex-row items-start">
-                              <div class="pt-[6px]">
+                              <div class="pt-[1px]">
                                 <svg
                                   width="15"
                                   height="18"
@@ -1086,7 +1371,7 @@
                         <div class="overflow-hidden rounded-2xl relative">
                           <a href="detail-product.html">
                             <img
-                              src="/assets/images/card/pro1.png"
+                              src="../assets/images/card/pro1.png"
                               alt=""
                               class="w-full"
                             />
@@ -1098,7 +1383,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1124,7 +1409,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1141,7 +1426,7 @@
                             >
 
                             <div class="flex flex-row items-start">
-                              <div class="pt-[6px]">
+                              <div class="pt-[1px]">
                                 <svg
                                   width="15"
                                   height="18"
@@ -1208,7 +1493,7 @@
                         <div class="overflow-hidden rounded-2xl relative">
                           <a href="detail-product.html">
                             <img
-                              src="/assets/images/card/pro2.png"
+                              src="../assets/images/card/pro2.png"
                               alt=""
                               class="w-full"
                             />
@@ -1220,7 +1505,7 @@
                               Đường nội bộ
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/where_to_vote.png"
+                                src="../assets/images/icon/where_to_vote.png"
                                 alt="close"
                               />
                             </button>
@@ -1246,7 +1531,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1263,7 +1548,7 @@
                             >
 
                             <div class="flex flex-row items-start">
-                              <div class="pt-[6px]">
+                              <div class="pt-[1px]">
                                 <svg
                                   width="15"
                                   height="18"
@@ -1330,7 +1615,7 @@
                         <div class="overflow-hidden rounded-2xl relative">
                           <a href="detail-product.html">
                             <img
-                              src="/assets/images/card/pro1.png"
+                              src="../assets/images/card/pro1.png"
                               alt=""
                               class="w-full"
                             />
@@ -1342,7 +1627,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1368,7 +1653,7 @@
                               Mặt tiền
                               <img
                                 class="ml-2"
-                                src="/assets/images/icon/local_fire_department.png"
+                                src="../assets/images/icon/local_fire_department.png"
                                 alt="close"
                               />
                             </button>
@@ -1385,7 +1670,7 @@
                             >
 
                             <div class="flex flex-row items-start">
-                              <div class="pt-[6px]">
+                              <div class="pt-[1px]">
                                 <svg
                                   width="15"
                                   height="18"
@@ -1443,7 +1728,7 @@
           </div>
         </div>
         <!-- reason -->
-        <div class="container mx-auto py-12 px-5 md:px-0">
+        <div class="container mx-auto py-6 md:py-12 px-5 md:px-0">
           <div class="flex flex-col items-center justify-center">
             <h1 class="font-bold md:text-4xl text-2xl mb-3">
               Lý do chọn chúng tôi
@@ -1455,8 +1740,8 @@
               >
                 <div class="bg-primary-500 rounded-full p-4 mb-3">
                   <img
-                    src="/assets/images/icon/r1.png"
-                    alt=""
+                    src="../assets/images/icon/r1.png"
+                    alt="Giá cả cạnh tranh"
                     class="md:w-auto w-10"
                   />
                 </div>
@@ -1479,8 +1764,8 @@
               >
                 <div class="bg-primary-500 rounded-full p-4 mb-3">
                   <img
-                    src="/assets/images/icon/r2.png"
-                    alt=""
+                    src="../assets/images/icon/r2.png"
+                    alt="Chuyên nghiệp"
                     class="md:w-auto w-10"
                   />
                 </div>
@@ -1504,8 +1789,8 @@
               >
                 <div class="bg-primary-500 rounded-full p-4 mb-3">
                   <img
-                    src="/assets/images/icon/r3.png"
-                    alt=""
+                    src="../assets/images/icon/r3.png"
+                    alt="Chính sách hậu mãi tốt"
                     class="md:w-auto w-10"
                   />
                 </div>
@@ -1528,8 +1813,8 @@
               >
                 <div class="bg-primary-500 rounded-full p-4 mb-3">
                   <img
-                    src="/assets/images/icon/r4.png"
-                    alt=""
+                    src="../assets/images/icon/r4.png"
+                    alt="Dịch vụ chu đáo"
                     class="md:w-auto w-10"
                   />
                 </div>
@@ -1560,11 +1845,11 @@
           <div class="md:order-1 order-3">
             <div class="flex items-center">
               <img
-                src="/assets/images/logo/logo-color.png"
-                alt="Logo"
+                src="../assets/images/logo/logo-color.png"
+                alt="Mua Nhanh"
                 class="mr-2"
               />
-              <img src="/assets/images/logo/text-color.png" alt="Logo Text" />
+              <img src="../assets/images/logo/text-color.png" alt="Logo Text" />
             </div>
             <p class="mt-3 text-sm">
               <b>Thue Nhanh</b> cung cấp đa dạng loại phòng, bao gồm phòng trọ,
@@ -1673,116 +1958,14 @@
     <div class="chat-launcher hidden md:block">
       <div class="list-socials">
         <div class="list-socials__item shadow-md">
-          <a href="#"><img src="/assets/images/icon/zalo.png" alt="" /> </a>
+          <a href="#"><img src="../assets/images/icon/zalo.png" alt="" /> </a>
         </div>
         <div class="list-socials__item shadow-md">
-          <a href="#"><img src="/assets/images/icon/mess.png" alt="" /> </a>
+          <a href="#"><img src="../assets/images/icon/mess.png" alt="" /> </a>
         </div>
         <div class="list-socials__item shadow-md">
-          <a href="#"><img src="/assets/images/icon/hotline.png" alt="" /> </a>
+          <a href="#"><img src="../assets/images/icon/hotline.png" alt="" /> </a>
         </div>
-      </div>
-    </div>
-    <!-- side catalogue-->
-    <div
-      class="side-catalogue hidden md:block fixed left-6 top-1/6 transform -translate-y-1/6 "
-    >
-      <div
-        class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-xl flex items-center justify-center relative cursor-pointer group"
-      >
-        <img src="/assets/images/icon/format_list_bulleted.png" alt="" />
-        <div
-          class="group-hover:block hidden absolute left-9 -top-1 bg-white rounded-xl border-solid border-[1px] border-[#D9D9D9] px-4 py-3 w-50"
-        >
-          <h2 class="text-[16px] font-semibold mb-2">Mục lục</h2>
-
-          <!-- Accordion Item 1 -->
-          <div class="border-b border-[#D9D9D9] pb-2">
-            <button
-              class="flex justify-between w-full text-[14px] p-3 font-semibold text-left cursor-pointer"
-              onclick="toggleAccordionFixed(1)"
-            >
-              Tiêu đề 1
-              <span id="iconFixed-1" class="transform transition-transform"
-                ><i class="zmdi zmdi-chevron-down"></i
-              ></span>
-            </button>
-            <div id="contentFixed-1" class="hidden pl-4 text-gray-500">
-              <a href="#title1" class="py-1"
-                >TẠI SAO NÊN CHỌN GIẤY DÁN TƯỜNG CHO PHÒNG TẮM</a
-              >
-              <a href="#" class="py-1">Nội dung 2</a>
-              <a href="#" class="py-1">Nội dung 3</a>
-              <a href="#" class="py-1">Nội dung 4</a>
-            </div>
-          </div>
-
-          <!-- Accordion Item 2 -->
-          <div class="border-b border-[#D9D9D9] pb-2">
-            <button
-              class="flex justify-between w-full text-[14px] p-3 font-semibold text-left cursor-pointer"
-              onclick="toggleAccordionFixed(2)"
-            >
-              Tiêu đề 2
-              <span id="iconFixed-2" class="transform transition-transform"
-                ><i class="zmdi zmdi-chevron-down"></i
-              ></span>
-            </button>
-            <div id="contentFixed-2" class="hidden pl-4 text-gray-500">
-              <a href="#" class="py-1">Nội dung A</a>
-              <a href="#" class="py-1">Nội dung B</a>
-            </div>
-          </div>
-
-          <!-- Accordion Item 3 -->
-          <div class="pb-2">
-            <button
-              class="flex justify-between w-full text-[14px] p-3 font-semibold text-left cursor-pointer"
-              onclick="toggleAccordionFixed(3)"
-            >
-              Tiêu đề 3
-              <span id="iconFixed-3" class="transform transition-transform"
-                ><i class="zmdi zmdi-chevron-down"></i
-              ></span>
-            </button>
-            <div id="contentFixed-3" class="hidden pl-4 text-gray-500">
-              <a href="#" class="py-1">Chi tiết 1</a>
-              <a href="#" class="py-1">Chi tiết 2</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- side social -->
-    <div
-      class="side-social hidden md:block fixed left-6 top-1/2 transform -translate-y-1/2"
-    >
-      <div class="flex flex-col items-center space-y-3">
-        <a
-          href=""
-          class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-          ><img src="/assets/images/icon/Union.png" alt=""
-        /></a>
-        <a
-          href=""
-          class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-          ><img src="/assets/images/icon/Facebook.png" alt=""
-        /></a>
-        <a
-          href=""
-          class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-          ><img src="/assets/images/icon/Instagram.png" alt=""
-        /></a>
-        <a
-          href=""
-          class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-          ><img src="/assets/images/icon/Twitter.png" alt=""
-        /></a>
-        <a
-          href=""
-          class="w-10 h-10 bg-white border-[#D9D9D9] border-2 rounded-full flex items-center justify-center"
-          ><img src="/assets/images/icon/LinkedIn.png" alt=""
-        /></a>
       </div>
     </div>
     <!-- JS library -->
