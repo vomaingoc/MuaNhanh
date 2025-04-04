@@ -6969,11 +6969,15 @@ input[type=range]::-webkit-slider-thumb {
   bottom: 0;
 }
 .isMobile .chat-launcher .list-socials__item {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border-radius: 100%;
   margin-left: 10px;
   margin-right: 10px;
+}
+.isMobile .chat-launcher .list-socials__item:nth-child(2) {
+  width: 60px;
+  height: 60px;
 }
 .chat-launcher:before, .chat-launcher:after {
   font-family: "Material-Design-Iconic-Font";
