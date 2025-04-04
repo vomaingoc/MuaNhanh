@@ -1,5 +1,5 @@
 export default {
-  content: ["./*.html", "./html/**/*.html"], // Tailwind sẽ quét tất cả các file HTML trong thư mục
+  content: ["./*.html", "index.html"],
   theme: {
     extend: {
       colors: {
