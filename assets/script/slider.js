@@ -16,12 +16,7 @@ var swiper_product = new Swiper(".productSlider", {
   spaceBetween: 20,
   centeredSlides: true,
   autoHeight: true,
-  loop: true,
-
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
+  loop: true, 
   breakpoints: {
     450: {
       slidesPerView: 2,

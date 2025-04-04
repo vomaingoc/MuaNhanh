@@ -31,3 +31,10 @@
     left: auto;
   }
 }
+.swiper-slide-active{
+  .text-white{
+    @include mydevice(phone){
+      opacity: 1 !important;
+    }
+  }
+}
