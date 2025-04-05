@@ -7034,6 +7034,22 @@ input[type=range]::-webkit-slider-thumb {
   width: 100%;
 }
 
+@keyframes rotateLight {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@layer utilities {
+  .animate-rotate {
+    animation: rotateLight 2s ease-in-out infinite;
+  }
+}
 .sticky_header.is_sticky {
   position: fixed;
   top: 0;
