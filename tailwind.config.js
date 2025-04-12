@@ -15,6 +15,14 @@ export default {
           800: "var(--primary-800)",
           900: "var(--primary-900)",
         },
+        stone: {
+          50: "var(--stone-50)",
+          100: "var(--stone-100)",
+          200: "var(--stone-200)",
+        },
+        zinc: {
+          800: "var(--zinc-800)",
+        },
       },
     },
   },

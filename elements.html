@@ -1,323 +1,238 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home</title>
-    
-    <link rel="stylesheet" href="assets/lib/fancybox/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css" />
-    
-    <link rel="stylesheet" href="assets/css/output.css" />
-    <link rel="stylesheet" href="assets/css/main.min.css" />
-  </head>
 
-  <body>
-    <div id="main" class="p-4 bg-gray-400">
-      <div>
-        <h3 class="mb-4">Button elements</h3>
-        <button
-          class="main-btn py-3 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300"
-        >
-          Xem thêm
-        </button>
-        <button
-          class="icon-btn py-3 px-6 bg-black text-white rounded-full hover:bg-primary-500 ease-in-out transition-all duration-300"
-        >
-          Xem thêm <i class="zmdi zmdi-chevron-right ml-2"></i>
-        </button>
-        <button class="main-btn py-3 px-6 text-white rounded-full text-sm">
-          Xem thêm
-        </button>
-      </div>
-      <div>
-        <h3 class="mb-4">Tag elements</h3>
-        <button
-          class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]"
-        >
-          <span class="relative top-[1px]">Mặt tiền</span>
-          <img
-            class="ml-2"
-            src="assets/images/icon/local_fire_department.svg"
-            alt="close"
-          />
-        </button>
-        <button
-          class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]"
-        >
-          <span class="relative top-[1px]">Đường nội bộ</span>
-          <img
-            class="ml-0 w-[12px] md:w-[20px]"
-            src="assets/images/icon/where_to_vote.svg"
-            alt="close"
-          />
-        </button>
-      </div>
-      <div class="mt-10">
-        <div
-          class="flex items-center w-2/3 gap-2 bg-white px-2 py-2 rounded-full shadow-md"
-        >
-          <ul
-            class="filter-box flex flex-row items-center justify-between w-full"
-          >
-            <li class="flex flex-col py-1 relative">
-              <span class="font-semibold">Vị trí</span>
-              <span class="text-[#B3B3B3]">Tất cả</span>
-              <ul
-                class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
-              >
-                <li class="py-2 px-3"><span>Vị trí 1</span></li>
-                <li class="py-2 px-3"><span>Vị trí 2</span></li>
-                <li class="py-2 px-3"><span>Vị trí 3</span></li>
-                <li class="py-2 px-3"><span>Vị trí 4</span></li>
-                <li class="py-2 px-3"><span>Vị trí 5</span></li>
-                <li class="py-2 px-3"><span>Vị trí 6</span></li>
-              </ul>
-            </li>
-            <li class="flex flex-col py-1 relative">
-              <span class="font-semibold">Tỉnh / Thành phố</span>
-              <span class="text-[#B3B3B3]">TP. HCM</span>
-              <ul
-                class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
-              >
-                <li class="py-2 px-3"><span>Hà Nội</span></li>
-                <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
-                <li class="py-2 px-3"><span>Đà Nẵng</span></li>
-                <li class="py-2 px-3"><span>Hải Phòng</span></li>
-                <li class="py-2 px-3"><span>Cần Thơ</span></li>
-                <li class="py-2 px-3"><span>An Giang</span></li>
-                <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
-                <li class="py-2 px-3"><span>Bắc Giang</span></li>
-                <li class="py-2 px-3"><span>Bắc Kạn</span></li>
-                <li class="py-2 px-3"><span>Bạc Liêu</span></li>
-              </ul>
-            </li>
-            <li class="flex flex-col py-1 relative">
-              <span class="font-semibold">Quận/Huyện</span>
-              <span class="text-[#B3B3B3]">Tất cả</span>
-              <ul
-                class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
-              >
-                <li class="py-2 px-3"><span>Hà Nội</span></li>
-                <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
-                <li class="py-2 px-3"><span>Đà Nẵng</span></li>
-                <li class="py-2 px-3"><span>Hải Phòng</span></li>
-                <li class="py-2 px-3"><span>Cần Thơ</span></li>
-                <li class="py-2 px-3"><span>An Giang</span></li>
-                <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
-                <li class="py-2 px-3"><span>Bắc Giang</span></li>
-                <li class="py-2 px-3"><span>Bắc Kạn</span></li>
-                <li class="py-2 px-3"><span>Bạc Liêu</span></li>
-              </ul>
-            </li>
-            <li class="flex flex-col py-1 relative">
-              <span class="font-semibold">Phường</span>
-              <span class="text-[#B3B3B3]">Tất cả</span>
-              <ul
-                class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40"
-              >
-                <li class="py-2 px-3"><span>Hà Nội</span></li>
-                <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
-                <li class="py-2 px-3"><span>Đà Nẵng</span></li>
-                <li class="py-2 px-3"><span>Hải Phòng</span></li>
-                <li class="py-2 px-3"><span>Cần Thơ</span></li>
-                <li class="py-2 px-3"><span>An Giang</span></li>
-                <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
-                <li class="py-2 px-3"><span>Bắc Giang</span></li>
-                <li class="py-2 px-3"><span>Bắc Kạn</span></li>
-                <li class="py-2 px-3"><span>Bạc Liêu</span></li>
-              </ul>
-            </li>
-            <li class="flex flex-col py-1 relative">
-              <span class="font-semibold">Mức giá</span>
-              <span class="text-[#B3B3B3]">Tất cả</span>
-              <div
-                class="range-price absolute opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all"
-              >
-                <div class="text-center py-4 px-3 border-b-2 border-gray-300">
-                  <span class="font-semibold">Mức giá</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home</title>
+
+  <link rel="stylesheet" href="assets/lib/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="assets/css/output.css" />
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+</head>
+
+<body>
+  <div id="main" class="p-4 bg-gray-400">
+    <div>
+      <h3 class="mb-4">Button elements</h3>
+      <button
+        class="main-btn py-3 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300">
+        Xem thêm
+      </button>
+      <button
+        class="icon-btn py-3 px-6 bg-black text-white rounded-full hover:bg-primary-500 ease-in-out transition-all duration-300">
+        Xem thêm <i class="zmdi zmdi-chevron-right ml-2"></i>
+      </button>
+      <button class="main-btn py-3 px-6 text-white rounded-full text-sm">
+        Xem thêm
+      </button>
+    </div>
+    <div>
+      <h3 class="mb-4">Tag elements</h3>
+      <button
+        class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+        <span class="relative top-[1px]">Mặt tiền</span>
+        <img class="ml-2" src="assets/images/icon/local_fire_department.svg" alt="close" />
+      </button>
+      <button
+        class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+        <span class="relative top-[1px]">Đường nội bộ</span>
+        <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]" src="assets/images/icon/where_to_vote.svg"
+          alt="close" />
+      </button>
+    </div>
+    <div class="mt-10">
+      <div class="flex items-center w-2/3 gap-2 bg-white px-2 py-2 rounded-full shadow-md">
+        <ul class="filter-box flex flex-row items-center justify-between w-full">
+          <li class="flex flex-col py-1 relative">
+            <span class="font-semibold">Vị trí</span>
+            <span class="text-gray-400">Tất cả</span>
+            <ul
+              class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40">
+              <li class="py-2 px-3"><span>Vị trí 1</span></li>
+              <li class="py-2 px-3"><span>Vị trí 2</span></li>
+              <li class="py-2 px-3"><span>Vị trí 3</span></li>
+              <li class="py-2 px-3"><span>Vị trí 4</span></li>
+              <li class="py-2 px-3"><span>Vị trí 5</span></li>
+              <li class="py-2 px-3"><span>Vị trí 6</span></li>
+            </ul>
+          </li>
+          <li class="flex flex-col py-1 relative">
+            <span class="font-semibold">Tỉnh / Thành phố</span>
+            <span class="text-gray-400">TP. HCM</span>
+            <ul
+              class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40">
+              <li class="py-2 px-3"><span>Hà Nội</span></li>
+              <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+              <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+              <li class="py-2 px-3"><span>Hải Phòng</span></li>
+              <li class="py-2 px-3"><span>Cần Thơ</span></li>
+              <li class="py-2 px-3"><span>An Giang</span></li>
+              <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+              <li class="py-2 px-3"><span>Bắc Giang</span></li>
+              <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+              <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+            </ul>
+          </li>
+          <li class="flex flex-col py-1 relative">
+            <span class="font-semibold">Quận/Huyện</span>
+            <span class="text-gray-400">Tất cả</span>
+            <ul
+              class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40">
+              <li class="py-2 px-3"><span>Hà Nội</span></li>
+              <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+              <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+              <li class="py-2 px-3"><span>Hải Phòng</span></li>
+              <li class="py-2 px-3"><span>Cần Thơ</span></li>
+              <li class="py-2 px-3"><span>An Giang</span></li>
+              <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+              <li class="py-2 px-3"><span>Bắc Giang</span></li>
+              <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+              <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+            </ul>
+          </li>
+          <li class="flex flex-col py-1 relative">
+            <span class="font-semibold">Phường</span>
+            <span class="text-gray-400">Tất cả</span>
+            <ul
+              class="absolute opacity-0 invisible top-[44px] inset-x-0 bg-white shadow-md rounded-xl min-w-40 z-10 gap-2 overflow-y-scroll max-h-40">
+              <li class="py-2 px-3"><span>Hà Nội</span></li>
+              <li class="py-2 px-3"><span>Hồ Chí Minh</span></li>
+              <li class="py-2 px-3"><span>Đà Nẵng</span></li>
+              <li class="py-2 px-3"><span>Hải Phòng</span></li>
+              <li class="py-2 px-3"><span>Cần Thơ</span></li>
+              <li class="py-2 px-3"><span>An Giang</span></li>
+              <li class="py-2 px-3"><span>Bà Rịa - Vũng Tàu</span></li>
+              <li class="py-2 px-3"><span>Bắc Giang</span></li>
+              <li class="py-2 px-3"><span>Bắc Kạn</span></li>
+              <li class="py-2 px-3"><span>Bạc Liêu</span></li>
+            </ul>
+          </li>
+          <li class="flex flex-col py-1 relative">
+            <span class="font-semibold">Mức giá</span>
+            <span class="text-gray-400">Tất cả</span>
+            <div
+              class="range-price absolute opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all">
+              <div class="text-center py-4 px-3 border-b-2 border-gray-300">
+                <span class="font-semibold">Mức giá</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="flex flex-row items-center justify-between px-0 pt-2 w-full">
+                  <span class="mb-1">Từ:
+                    <span id="minValue" class="text-primary-500">0 triệu</span></span>
+                  <span class="mb-1">Đến:
+                    <span id="maxValue" class="text-primary-500">8 tỷ</span></span>
                 </div>
-                <div class="flex flex-col items-center">
-                  <div
-                    class="flex flex-row items-center justify-between px-0 pt-2 w-full"
-                  >
-                    <span class="mb-1"
-                      >Từ:
-                      <span id="minValue" class="text-primary-500"
-                        >0 triệu</span
-                      ></span
-                    >
-                    <span class="mb-1"
-                      >Đến:
-                      <span id="maxValue" class="text-primary-500"
-                        >8 tỷ</span
-                      ></span
-                    >
-                  </div>
-                  <div
-                    class="flex flex-row items-center justify-between px-0 py-2"
-                  >
-                    <input
-                      type="text"
-                      id="minValueInput"
-                      class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center"
-                      placeholder="0"
-                    />
-                    <i class="zmdi zmdi-long-arrow-right mx-4"></i>
-                    <input
-                      type="text"
-                      id="maxValueInput"
-                      class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center"
-                      placeholder="0"
-                    />
-                  </div>
-                </div>
-                <div class="relative mt-4 mx-0 mb-8">
-                  <!-- Thanh màu -->
-                  <div
-                    class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"
-                  ></div>
-                  <div
-                    id="progress"
-                    class="absolute top-1/2 h-2 bg-primary-500 rounded-full"
-                  ></div>
-
-                  <!-- Slider Inputs -->
-                  <input
-                    type="range"
-                    id="minSlider"
-                    min="0"
-                    max="8000000000"
-                    step="10000000"
-                    value="4000000000"
-                    class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
-                  />
-
-                  <input
-                    type="range"
-                    id="maxSlider"
-                    min="0"
-                    max="8000000000"
-                    step="10000000"
-                    value="6000000000"
-                    class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
-                  />
-                </div>
-                <div class="py-3 px-3">
-                  <div class="space-y-2">
-                    <label
-                      class="flex items-center justify-between gap-2 cursor-pointer"
-                    >
-                      <span class="text-black font-semibold"
-                        >Tất cả mức giá</span
-                      >
-                      <div>
-                        <input type="radio" name="price" class="hidden peer" />
-                        <span
-                          class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
-                        >
-                          <span
-                            class="w-2.5 h-2.5 bg-white rounded-full"
-                          ></span>
-                        </span>
-                      </div>
-                    </label>
-
-                    <label
-                      class="flex items-center justify-between gap-2 cursor-pointer"
-                      ><span class="text-black font-medium">Dưới 1 tỷ</span>
-                      <div>
-                        <input type="radio" name="price" class="hidden peer" />
-                        <span
-                          class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
-                        >
-                          <span
-                            class="w-2.5 h-2.5 bg-white rounded-full"
-                          ></span>
-                        </span>
-                      </div>
-                    </label>
-
-                    <label
-                      class="flex items-center justify-between gap-2 cursor-pointer"
-                      ><span class="text-black font-medium"
-                        >500 triệu - 5 tỷ</span
-                      >
-                      <input type="radio" name="price" class="hidden peer" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
-                      >
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
-                      </span>
-                    </label>
-
-                    <label
-                      class="flex items-center justify-between gap-2 cursor-pointer"
-                      ><span class="text-black font-medium">5 - 15 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
-                      >
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
-                      </span>
-                    </label>
-
-                    <label
-                      class="flex items-center justify-between gap-2 cursor-pointer"
-                      ><span class="text-black font-medium">Trên 15 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500"
-                      >
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="underline font-semibold text-[18px]"
-                    >Đặt lại <i class="zmdi zmdi-rotate-right"></i
-                  ></a>
-                  <button
-                    class="main-btn py-2.5 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300"
-                  >
-                    Tìm kiếm
-                  </button>
+                <div class="flex flex-row items-center justify-between px-0 py-2">
+                  <input type="text" id="minValueInput"
+                    class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
+                  <i class="zmdi zmdi-long-arrow-right mx-4"></i>
+                  <input type="text" id="maxValueInput"
+                    class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
                 </div>
               </div>
-            </li>
-            <li class="flex flex-col py-1">
-              <span class="font-semibold">Tìm kiếm</span>
-              <input class="w-full rounded-lg focus:ring-0 focus:border-0 focus:outline-none" placeholder="Tìm nơi bạn muốn"></input>
-            </li>
-          </ul>
-          <!-- Tìm kiếm -->
-          <div
-            class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full aspect-square"
-          >
-            <i class="zmdi zmdi-search"></i>
-          </div>
+              <div class="relative mt-4 mx-0 mb-8">
+                <!-- Thanh màu -->
+                <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
+                <div id="progress" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
+
+                <!-- Slider Inputs -->
+                <input type="range" id="minSlider" min="0" max="8000000000" step="10000000" value="4000000000"
+                  class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
+
+                <input type="range" id="maxSlider" min="0" max="8000000000" step="10000000" value="6000000000"
+                  class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
+              </div>
+              <div class="py-3 px-3">
+                <div class="space-y-2">
+                  <label class="flex items-center justify-between gap-2 cursor-pointer">
+                    <span class="text-black font-semibold">Tất cả mức giá</span>
+                    <div>
+                      <input type="radio" name="price" class="hidden peer" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center justify-between gap-2 cursor-pointer"><span
+                      class="text-black font-medium">Dưới 1 tỷ</span>
+                    <div>
+                      <input type="radio" name="price" class="hidden peer" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </div>
+                  </label>
+
+                  <label class="flex items-center justify-between gap-2 cursor-pointer"><span
+                      class="text-black font-medium">500 triệu - 5 tỷ</span>
+                    <input type="radio" name="price" class="hidden peer" />
+                    <span
+                      class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                      <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                    </span>
+                  </label>
+
+                  <label class="flex items-center justify-between gap-2 cursor-pointer"><span
+                      class="text-black font-medium">5 - 15 tỷ</span>
+                    <input type="radio" name="price" class="hidden peer" />
+                    <span
+                      class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                      <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                    </span>
+                  </label>
+
+                  <label class="flex items-center justify-between gap-2 cursor-pointer"><span
+                      class="text-black font-medium">Trên 15 tỷ</span>
+                    <input type="radio" name="price" class="hidden peer" />
+                    <span
+                      class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                      <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between">
+                <a href="javascript:void(0)" class="underline font-semibold text-[18px]">Đặt lại <i
+                    class="zmdi zmdi-rotate-right"></i></a>
+                <button
+                  class="main-btn py-2.5 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300">
+                  Tìm kiếm
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="flex flex-col py-1">
+            <span class="font-semibold">Tìm kiếm</span>
+            <input class="w-full rounded-lg focus:ring-0 focus:border-0 focus:outline-none"
+              placeholder="Tìm nơi bạn muốn"></input>
+          </li>
+        </ul>
+        <!-- Tìm kiếm -->
+        <div
+          class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full aspect-square">
+          <i class="zmdi zmdi-search"></i>
         </div>
       </div>
     </div>
-    <!-- JS library -->
-    <script src="assets/lib/js/jquery.min.js"></script>
-    <script src="assets/lib/js/jquery-ui.min.js"></script>
-    <script src="assets/lib/js/mobile-detect.min.js"></script>
-    <script src="assets/lib/js/responsive.js"></script>
-    <script src="assets/lib/fancybox/jquery.fancybox.min.js"></script>
-    <script src="assets/lib/js/scrollspy.js"></script>
-    <script src="assets/lib/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/lib/js/wow.min.js"></script>
-    <!-- Handle custom event -->
-    <script src="assets/script/main.js"></script>
-  </body>
+  </div>
+  <!-- JS library -->
+  <script src="assets/lib/js/jquery.min.js"></script>
+  <script src="assets/lib/js/jquery-ui.min.js"></script>
+  <script src="assets/lib/js/mobile-detect.min.js"></script>
+  <script src="assets/lib/js/responsive.js"></script>
+  <script src="assets/lib/fancybox/jquery.fancybox.min.js"></script>
+  <script src="assets/lib/js/scrollspy.js"></script>
+  <script src="assets/lib/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/lib/js/wow.min.js"></script>
+  <!-- Handle custom event -->
+  <script src="assets/script/main.js"></script>
+</body>
+
 </html>

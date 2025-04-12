@@ -11,6 +11,13 @@ $primary-font: "Gilroy", sans-serif;
   --primary-700: #816141;
   --primary-800: #644b33;
   --primary-900: #4c3a27;
+  --stone-100: #F2F2F0;
+  --stone-50: #F8F7F5;
+  --stone-200: #F0EFED;
+  --zinc-800: #282828;
+  --Neutral-Gray-50: #F8FAFC;
+  --sds-color-background-default-secondary: #F5F5F5;
+  --Neutral-Gray-100: #F1F5F9;
 }
 
 @font-face {
@@ -32,7 +39,7 @@ $primary-font: "Gilroy", sans-serif;
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/SVN-Gilry/SVN-Gilroy SemiBold.otf") format("opentype");
-  font-weight: 600; 
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -44,4 +51,3 @@ $primary-font: "Gilroy", sans-serif;
   font-style: normal;
   font-display: swap;
 }
-
