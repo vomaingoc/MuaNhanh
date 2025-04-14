@@ -54,13 +54,17 @@ setupTabs(".tab-button--vision", ".tab-content--vision");
 
 // Format Utilities
 const formatCurrency = (value) => {
-  if (value >= 1_000_000_000)
-    return `${Math.floor(value / 1e9)} tỷ ${
-      (value % 1e9) / 1e6 || ""
-    } triệu`.trim();
-  if (value >= 1_000_000) return `${value / 1_000_000} triệu`;
+  if (value >= 1_000_000_000) {
+    const ty = Math.floor(value / 1_000_000_000);
+    const trieu = Math.floor((value % 1_000_000_000) / 1_000_000);
+    return trieu > 0 ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
+  }
+  if (value >= 1_000_000) {
+    return `${Math.floor(value / 1_000_000)} triệu`;
+  }
   return `${value}`;
 };
+
 const formatNumberWithRegex = (number) => number.toLocaleString();
 
 // Generic Range Slider Setup
