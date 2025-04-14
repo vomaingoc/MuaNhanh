@@ -1,14 +1,17 @@
 .swiper-pagination {
   bottom: 20px !important;
+
   .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
     background-color: #fff;
+
     &-active {
       background-color: #fff;
     }
   }
 }
+
 .arrow-animation {
   transition: all 0.4s ease-in-out;
   animation-name: scroll_down;
@@ -16,6 +19,7 @@
   animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
   animation-iteration-count: infinite;
 }
+
 .productSlider {
   padding-bottom: 20px !important;
 }
@@ -31,10 +35,158 @@
     left: auto;
   }
 }
-.swiper-slide-active{
-  .text-white{
-    @include mydevice(phone){
+
+.swiper-slide-active {
+  .text-white {
+    @include mydevice(phone) {
       opacity: 1 !important;
+    }
+  }
+}
+
+// Ẩn overlay khi từ 1 đến 5 hình
+.sum-one,
+.sum-two,
+.sum-three,
+.sum-four,
+.sum-five {
+  .gallery-more-overlay {
+    display: none !important;
+  }
+}
+
+// Hiện overlay nếu không nằm trong các trường hợp trên
+.more-image {
+  .gallery-more-overlay {
+    display: block !important;
+  }
+}
+
+// Thiết lập chung cho ảnh nhỏ
+#property-gallery {
+  height: 100%;
+
+  a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+// CASE: 1 hình
+.sum-one {
+  .lg-img {
+    width: 100%;
+  }
+
+  #property-gallery {
+    display: none !important;
+  }
+}
+
+// CASE: 2 hình
+.sum-two {
+  .lg-img {
+    width: 50%;
+  }
+
+  #property-gallery {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+
+    a {
+      flex: 1;
+      height: 50%;
+
+      &:nth-child(n+2) {
+        display: none;
+      }
+    }
+  }
+}
+
+// CASE: 3 hình
+.sum-three {
+  .lg-img {
+    width: 70%;
+  }
+
+  #property-gallery {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 30%;
+
+    a {
+      flex: 1;
+      height: 50%;
+
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
+  }
+}
+
+// CASE: 4 hình
+.sum-four {
+  .lg-img {
+    width: 50%;
+  }
+
+  #property-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 20px;
+
+    a {
+      &:nth-child(1) {
+        width: 100%;
+        height: calc(50% - 10px);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        width: calc(50% - 10px);
+        height: calc(50% - 10px);
+      }
+
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+  }
+}
+
+// CASE: 5 hình
+.sum-five {
+  .lg-img {
+    width: 50%;
+  }
+
+  #property-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 20px;
+
+    a {
+      width: calc(50% - 10px);
+      height: calc(50% - 10px);
+
+      &:nth-child(n+6) {
+        display: none;
+      }
     }
   }
 }
