@@ -14,7 +14,9 @@
     @media only screen and (orientation: portrait) {
       @content;
     }
-  } @else if $o==landscape {
+  }
+
+  @else if $o==landscape {
     @media only screen and (orientation: landscape) {
       @content;
     }
@@ -26,19 +28,27 @@
     .isDesktop & {
       @content;
     }
-  } @else if $d==mobile {
+  }
+
+  @else if $d==mobile {
     .isMobile & {
       @content;
     }
-  } @else if $d==tablet {
+  }
+
+  @else if $d==tablet {
     .isTablet & {
       @content;
     }
-  } @else if $d==phone {
+  }
+
+  @else if $d==phone {
     .isPhone & {
       @content;
     }
-  } @else if $d==safari {
+  }
+
+  @else if $d==safari {
     .isSafari & {
       @content;
     }
@@ -62,6 +72,7 @@
     @content;
   }
 }
+
 @mixin minscreenh($point) {
   @media (min-height: $point) {
     @content;
@@ -77,7 +88,9 @@
 @mixin myshadow($style) {
   @if $style==1 {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-  } @else if $style==2 {
+  }
+
+  @else if $style==2 {
     box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
       0 2px 4px rgba(0, 0, 0, 0.12);
   }

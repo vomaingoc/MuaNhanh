@@ -4,28 +4,34 @@
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+
     /* width */
     &::-webkit-scrollbar {
       display: none;
     }
+
     /* Track */
     &::-webkit-scrollbar-track {
       display: none;
     }
+
     /* Handle */
     &::-webkit-scrollbar-thumb {
       display: none;
     }
+
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
       display: none;
     }
   }
 }
+
 .time-line {
   @include mydevice(mobile) {
     min-height: 50vh;
   }
+
   min-height: 100px;
 
   &::after {
@@ -34,19 +40,20 @@
     width: 100%;
     height: 3px;
     left: 0;
-    top: 50%; /* Đưa đường line vào giữa */
+    top: 50%;
+    /* Đưa đường line vào giữa */
     transform: translateY(-50%);
     z-index: 1;
-    background: linear-gradient(
-      to right,
-      #ffffff 0%,
-      #b5895c 15%,
-      #b5895c 85%,
-      #ffffff 100%
-    );
+    background: linear-gradient(to right,
+        #ffffff 0%,
+        #b5895c 15%,
+        #b5895c 85%,
+        #ffffff 100%);
   }
+
   .milestone {
     flex: 0 0 auto;
+
     &:nth-child(odd) {
       .arrow {
         rotate: 180deg;

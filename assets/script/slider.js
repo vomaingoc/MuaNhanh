@@ -5,10 +5,7 @@ var swiper = new Swiper(".homeSlider", {
     delay: 7500,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  pagination: false,
 });
 
 var swiper_product = new Swiper(".productSlider", {
@@ -16,7 +13,7 @@ var swiper_product = new Swiper(".productSlider", {
   spaceBetween: 20,
   centeredSlides: true,
   autoHeight: true,
-  loop: true, 
+  loop: true,
   breakpoints: {
     450: {
       slidesPerView: 2,
@@ -47,10 +44,6 @@ var swiper_gallery = new Swiper(".gallerySwiper", {
     delay: 3500,
     disableOnInteraction: false,
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
   breakpoints: {
     450: {
       slidesPerView: 2,
@@ -73,10 +66,8 @@ var swiper_gallery = new Swiper(".gallerySwiper", {
 var swiper_album = new Swiper(".albumSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
-  //centeredSlides: true,
   autoHeight: true,
   loop: true,
-
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",

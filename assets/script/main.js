@@ -1,265 +1,204 @@
+// Utility Functions
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
+
+// Toggle Menu
 function toggleMenu() {
-  $("#burgerMenu, #nav-overlay, #mobileMenu").toggleClass("open");
+  ["#burgerMenu", "#nav-overlay", "#mobileMenu"].forEach((id) => {
+    document.querySelector(id)?.classList.toggle("open");
+  });
 }
-$("#mobileMenu a").click(function () {
-  var _li = $(this).parent();
-  var _submenu = _li.find("ul").first();
-  $(this).toggleClass("active");
 
-  if (_submenu.hasClass("hidden")) {
-    _submenu.removeClass("hidden");
-  } else {
-    _submenu.addClass("hidden");
-  }
+// Toggle Submenu in Mobile
+$$("#mobileMenu a").forEach((a) => {
+  a.addEventListener("click", () => {
+    a.classList.toggle("active");
+    const submenu = a.parentElement.querySelector("ul");
+    submenu?.classList.toggle("hidden");
+  });
 });
+
+// Resize Nav Overlay
 function resizeNav() {
-  // Set the circle radius to the length of the window diagonal,
-  // this way we're only making the circle as big as it needs to be.
-  var radius = Math.sqrt(
-    Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)
-  );
-  var diameter = radius * 2;
-  $("#nav-overlay").width(diameter);
-  $("#nav-overlay").height(diameter);
-  $("#nav-overlay").css({ "margin-top": -radius, "margin-left": -radius });
-}
-
-// Set up click and window resize callbacks, then init the nav.
-$(document).ready(function () {
-  $(window).resize(resizeNav);
-  resizeNav();
-});
-
-// handle nav tab news
-const tabButtons = document.querySelectorAll(".tab-button");
-const tabContents = document.querySelectorAll(".tab-content");
-
-if (tabButtons) {
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const tab = button.getAttribute("data-tab");
-
-      // Ẩn tất cả nội dung
-      tabContents.forEach((content) => content.classList.add("hidden"));
-      // Hiện tab tương ứng
-      document.getElementById(tab).classList.remove("hidden");
-
-      // Xóa class active của tất cả button
-      tabButtons.forEach((btn) => btn.classList.remove("active"));
-      // Thêm class active vào button đang chọn
-      button.classList.add("active");
-    });
-  });
-}
-
-//handle nav tab vision
-const tabButtonVision = document.querySelectorAll(".tab-button--vision");
-const tabContentVision = document.querySelectorAll(".tab-content--vision");
-
-if (tabButtonVision) {
-  tabButtonVision.forEach((button) => {
-    button.addEventListener("click", () => {
-      const tab = button.getAttribute("data-tab");
-
-      // Ẩn tất cả nội dung
-      tabContentVision.forEach((content) => content.classList.add("hidden"));
-      // Hiện tab tương ứng
-      document.getElementById(tab).classList.remove("hidden");
-
-      // Xóa class active của tất cả button
-      tabButtonVision.forEach((btn) => btn.classList.remove("active"));
-      // Thêm class active vào button đang chọn
-      button.classList.add("active");
-    });
-  });
-}
-function formatCurrency(value) {
-  if (value >= 1_000_000_000) {
-    let ty = Math.floor(value / 1_000_000_000); // Lấy số tỷ
-    let trieu = (value % 1_000_000_000) / 1_000_000; // Lấy số triệu còn lại
-    return trieu > 0 ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
-  } else if (value >= 1_000_000) {
-    return `${value / 1_000_000} triệu`;
-  } else {
-    return `${value}`;
+  const radius = Math.hypot(window.innerWidth, window.innerHeight);
+  const diameter = radius * 2;
+  const overlay = $("#nav-overlay");
+  if (overlay) {
+    overlay.style.width = `${diameter}px`;
+    overlay.style.height = `${diameter}px`;
+    overlay.style.marginTop = `-${radius}px`;
+    overlay.style.marginLeft = `-${radius}px`;
   }
 }
-function formatNumberWithRegex(number) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+window.addEventListener("resize", resizeNav);
+document.addEventListener("DOMContentLoaded", resizeNav);
+
+// Generic Tab Switcher
+function setupTabs(buttonSelector, contentSelector) {
+  const buttons = $$(buttonSelector);
+  const contents = $$(contentSelector);
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tab = btn.dataset.tab;
+      contents.forEach((el) => el.classList.add("hidden"));
+      document.getElementById(tab)?.classList.remove("hidden");
+
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
 }
-// range slider desktop
-const minSlider = document.getElementById("minSlider");
-const maxSlider = document.getElementById("maxSlider");
-const minValue = document.getElementById("minValue");
-const maxValue = document.getElementById("maxValue");
-const minValueInput = document.getElementById("minValueInput");
-const maxValueInput = document.getElementById("maxValueInput");
-const progress = document.getElementById("progress");
+setupTabs(".tab-button", ".tab-content");
+setupTabs(".tab-button--vision", ".tab-content--vision");
 
-function updateSlider() {
-  if (minSlider && maxSlider) {
-    let min = parseInt(minSlider.value);
-    let max = parseInt(maxSlider.value);
+// Format Utilities
+const formatCurrency = (value) => {
+  if (value >= 1_000_000_000)
+    return `${Math.floor(value / 1e9)} tỷ ${
+      (value % 1e9) / 1e6 || ""
+    } triệu`.trim();
+  if (value >= 1_000_000) return `${value / 1_000_000} triệu`;
+  return `${value}`;
+};
+const formatNumberWithRegex = (number) => number.toLocaleString();
 
-    if (min >= max) {
-      minSlider.value = max - 1000000;
-      min = parseInt(minSlider.value);
-    }
+// Generic Range Slider Setup
+function setupRangeSlider(
+  minId,
+  maxId,
+  valMinId,
+  valMaxId,
+  inputMinId,
+  inputMaxId,
+  progressId
+) {
+  const minSlider = $(minId);
+  const maxSlider = $(maxId);
+  const minValue = $(valMinId);
+  const maxValue = $(valMaxId);
+  const minInput = $(inputMinId);
+  const maxInput = $(inputMaxId);
+  const progress = $(progressId);
+
+  const update = () => {
+    if (!minSlider || !maxSlider) return;
+    let min = +minSlider.value;
+    let max = +maxSlider.value;
+
+    if (min >= max) (min = max - 1e6), (minSlider.value = min);
     minValue.textContent = formatCurrency(min);
     maxValue.textContent = formatCurrency(max);
-    minValueInput.value = formatNumberWithRegex(min);
-    maxValueInput.value = formatNumberWithRegex(max);
-    let minPercent = (min / 8000000000) * 100;
-    let maxPercent = (max / 8000000000) * 100;
+    minInput.value = formatNumberWithRegex(min);
+    maxInput.value = formatNumberWithRegex(max);
+    const minPercent = (min / 8e9) * 100;
+    const maxPercent = (max / 8e9) * 100;
+    progress.style.left = `${minPercent}%`;
+    progress.style.width = `${maxPercent - minPercent}%`;
+  };
 
-    progress.style.left = minPercent + "%";
-    progress.style.width = maxPercent - minPercent + "%";
+  minSlider?.addEventListener("input", update);
+  maxSlider?.addEventListener("input", update);
+  update();
+}
+
+setupRangeSlider(
+  "#minSlider",
+  "#maxSlider",
+  "#minValue",
+  "#maxValue",
+  "#minValueInput",
+  "#maxValueInput",
+  "#progress"
+);
+setupRangeSlider(
+  "#minSlider_mb",
+  "#maxSlider_mb",
+  "#minValue_mb",
+  "#maxValue_mb",
+  "#minValueInput_mb",
+  "#maxValueInput_mb",
+  "#progress_mb"
+);
+
+// Sticky Header
+const stickyHeader = $(`.sticky_header`);
+window.addEventListener("scroll", () => {
+  if (stickyHeader) {
+    stickyHeader.classList.toggle("is_sticky", window.scrollY > 0);
   }
-}
-if (minSlider && maxSlider) {
-  minSlider.addEventListener("input", updateSlider);
-  maxSlider.addEventListener("input", updateSlider);
-}
-updateSlider();
-
-// range slider mobile
-const minSlider_mb = document.getElementById("minSlider_mb");
-const maxSlider_mb = document.getElementById("maxSlider_mb");
-const minValue_mb = document.getElementById("minValue_mb");
-const maxValue_mb = document.getElementById("maxValue_mb");
-const minValueInput_mb = document.getElementById("minValueInput_mb");
-const maxValueInput_mb = document.getElementById("maxValueInput_mb");
-const progress_mb = document.getElementById("progress_mb");
-
-function updateSliderMobile() {
-  if (minSlider_mb && maxSlider_mb) {
-    let min = parseInt(minSlider_mb.value);
-    let max = parseInt(maxSlider_mb.value);
-
-    if (min >= max) {
-      minSlider_mb.value = max - 1000000;
-      min = parseInt(minSlider_mb.value);
-    }
-    minValue_mb.textContent = formatCurrency(min);
-    maxValue_mb.textContent = formatCurrency(max);
-    minValueInput_mb.value = formatNumberWithRegex(min);
-    maxValueInput_mb.value = formatNumberWithRegex(max);
-    let minPercent = (min / 8000000000) * 100;
-    let maxPercent = (max / 8000000000) * 100;
-
-    progress_mb.style.left = minPercent + "%";
-    progress_mb.style.width = maxPercent - minPercent + "%";
-  }
-}
-if (minSlider_mb && maxSlider_mb) {
-  minSlider_mb.addEventListener("input", updateSliderMobile);
-  maxSlider_mb.addEventListener("input", updateSliderMobile);
-}
-updateSliderMobile();
-
-var menutop_sticky = $(".sticky_header");
-if (menutop_sticky.length) {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 0) {
-      menutop_sticky.addClass("is_sticky");
-    } else {
-      menutop_sticky.removeClass("is_sticky");
-    }
-  });
-}
-
-var side_social = $(".side-social");
-var side_catalogue = $(".side-catalogue");
-if (side_social.length) {
-  $(window).scroll(function () {
-    var top_title = $(".intro-section").offset().top;
-    var end_article = $(".end-article").offset().top;
-    if ($(window).scrollTop() > top_title) {
-      side_social.addClass("md:block");
-      side_catalogue.addClass("md:block");
-    } else {
-      side_social.removeClass("md:block");
-      side_catalogue.removeClass("md:block");
-    }
-
-    if ($(window).scrollTop() + side_social.height() > end_article) {
-      side_social.removeClass("md:block");
-      side_catalogue.removeClass("md:block");
-    }
-  });
-}
-
-$(".chat-launcher").on("click", function () {
-  $(".chat-launcher").toggleClass("active");
-  $(".list-socials").toggleClass("active");
 });
 
-function toggleAccordion(index) {
-  const content = document.getElementById("content-" + index);
-  const icon = document.getElementById("icon-" + index);
+// Side Social + Catalogue Toggle on Scroll
+const sideSocial = $(".side-social");
+const sideCatalogue = $(".side-catalogue");
+const introSection = $(".intro-section");
+const endArticle = $(".end-article");
 
-  if (content.classList.contains("hidden")) {
+window.addEventListener("scroll", () => {
+  const show = window.scrollY > (introSection?.offsetTop || 0);
+  const hide =
+    window.scrollY + (sideSocial?.offsetHeight || 0) >
+    (endArticle?.offsetTop || Infinity);
+
+  [sideSocial, sideCatalogue].forEach((el) =>
+    el?.classList.toggle("md:block", show && !hide)
+  );
+});
+
+// Chat Launcher
+const chatLauncher = $(".chat-launcher");
+chatLauncher?.addEventListener("click", () => {
+  chatLauncher.classList.toggle("active");
+  $(".list-socials")?.classList.toggle("active");
+});
+
+// Accordion
+function toggleAccordion(index, fixed = false) {
+  const prefix = fixed ? "Fixed" : "";
+  const content = document.getElementById(`content${prefix}-${index}`);
+  const icon = document.getElementById(`icon${prefix}-${index}`);
+
+  if (content?.classList.contains("hidden")) {
     content.classList.remove("hidden");
-    content.classList.add("flex");
-    content.classList.add("flex-col");
+    content.classList.add("flex", "flex-col");
     icon.style.transform = "rotate(180deg)";
   } else {
-    content.classList.add("hidden");
+    content?.classList.add("hidden");
     icon.style.transform = "rotate(0deg)";
   }
 }
 
-function toggleAccordionFixed(index) {
-  const content = document.getElementById("contentFixed-" + index);
-  const icon = document.getElementById("iconFixed-" + index);
-
-  if (content.classList.contains("hidden")) {
-    content.classList.remove("hidden");
-    content.classList.add("flex");
-    content.classList.add("flex-col");
-    icon.style.transform = "rotate(180deg)";
-  } else {
-    content.classList.add("hidden");
-    icon.style.transform = "rotate(0deg)";
-  }
-}
-
+// Modal Filter Toggle
 function toggleFilterMobile() {
-  var modal = $("#modal-filter");
-  if (modal.hasClass("hidden")) {
-    modal.removeClass("hidden");
-    modal.addClass("block");
-  } else {
-    modal.addClass("hidden");
-    modal.removeClass("block");
-  }
+  const modal = $("#modal-filter");
+  modal?.classList.toggle("hidden");
+  modal?.classList.toggle("block");
 }
 
 function handleCloseModalFilter() {
-  $("#modal-filter").addClass("hidden");
-  $("#modal-filter").removeClass("block");
+  const modal = $("#modal-filter");
+  modal?.classList.add("hidden");
+  modal?.classList.remove("block");
 }
 
-// Handle switch button
-const switchButton = document.getElementById("switch-button");
-const optionRent = document.getElementById("option-rent");
-const optionSell = document.getElementById("option-sell");
+// Switch Button
+const optionRent = $("#option-rent");
+const optionSell = $("#option-sell");
+const switchButton = $("#switch-button");
 
-if (optionRent) {
-  optionRent.addEventListener("click", () => {
-    switchButton.style.left = "8px";
-    optionRent.classList.add("text-white");
-    optionRent.classList.remove("text-gray-500");
-    optionSell.classList.add("text-gray-500");
-    optionSell.classList.remove("text-white");
-  });
-}
-if (optionSell) {
-  optionSell.addEventListener("click", () => {
-    switchButton.style.left = "calc(100% - 98px)";
-    optionSell.classList.add("text-white");
-    optionSell.classList.remove("text-gray-500");
-    optionRent.classList.add("text-gray-500");
-    optionRent.classList.remove("text-white");
-  });
-}
+optionRent?.addEventListener("click", () => {
+  switchButton.style.left = "8px";
+  optionRent.classList.add("text-white");
+  optionRent.classList.remove("text-gray-500");
+  optionSell.classList.add("text-gray-500");
+  optionSell.classList.remove("text-white");
+});
+
+optionSell?.addEventListener("click", () => {
+  switchButton.style.left = "calc(100% - 98px)";
+  optionSell.classList.add("text-white");
+  optionSell.classList.remove("text-gray-500");
+  optionRent.classList.add("text-gray-500");
+  optionRent.classList.remove("text-white");
+});

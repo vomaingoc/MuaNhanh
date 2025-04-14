@@ -16,12 +16,12 @@ export default {
           900: "var(--primary-900)",
         },
         stone: {
-          50: "#F8F7F5",
-          100: "#F2F2F0",
-          200: "#F0EFED",
+          50: "var(--stone-50)",
+          100: "var(--stone-100)",
+          200: "var(--stone-200)",
         },
         zinc: {
-          800: "#282828",
+          800: "var(--zinc-800)",
         },
       },
     },

@@ -5,27 +5,31 @@
     left: 0;
   }
 }
+
 .main-menu {
-  > ul {
-    > li {
+  >ul {
+    >li {
       &:hover {
-        > ul {
+        >ul {
           height: auto;
           opacity: 1;
           visibility: visible;
         }
-        > a {
+
+        >a {
           &::before {
             width: 100%;
           }
         }
       }
+
       a {
         &.active {
           &::before {
             width: 100%;
           }
         }
+
         &::before {
           content: "";
           width: 0;
@@ -37,11 +41,13 @@
           transition: width 0.2s ease-in-out;
         }
       }
-      > ul {
+
+      >ul {
         li {
           &:hover {
-            > a {
+            >a {
               color: var(--primary-500);
+
               &::before {
                 width: 100%;
               }
@@ -52,36 +58,43 @@
     }
   }
 }
+
 $toggle-size: 24px;
 $bar-size: calc($toggle-size / 8);
 $bar-space: calc(($toggle-size - ($bar-size * 5)) / 2);
 $bar2-top: $bar-size + $bar-space;
 $bar3-top: $bar2-top * 2;
+
 #burgerMenu {
   display: block;
   width: 24px;
   height: 24px;
   cursor: pointer;
   transform: rotate(0deg);
+
   &.open {
     span {
       background-color: #fff;
     }
+
     span:nth-child(1) {
       transform: rotate(45deg);
       top: calc(($toggle-size / 32) * -1 + $bar-size);
       left: $bar-size;
     }
+
     span:nth-child(2) {
-      width: 0%; 
+      width: 0%;
       opacity: 0;
     }
+
     span:nth-child(3) {
       transform: rotate(-45deg);
-      top: calc( $bar3-top + ($toggle-size / 32) + $bar-size );
+      top: calc($bar3-top + ($toggle-size / 32) + $bar-size );
       left: $bar-size;
     }
   }
+
   span {
     background-color: black;
     width: 100%;
@@ -94,19 +107,23 @@ $bar3-top: $bar2-top * 2;
     // transition time and time function
     transition: 0.2s ease-in-out;
   }
+
   span:nth-child(1) {
     top: $bar-size;
     transform-origin: left center;
   }
+
   span:nth-child(2) {
     top: $bar2-top + $bar-size;
     transform-origin: left center;
   }
+
   span:nth-child(3) {
     top: $bar3-top + $bar-size;
     transform-origin: left center;
   }
 }
+
 #nav-overlay {
   position: absolute;
   top: calc($toggle-size / 2);
@@ -120,6 +137,7 @@ $bar3-top: $bar2-top * 2;
 
   transition: 1s;
   transform: scale3d(0, 0, 0);
+
   &.open {
     transform: scale3d(1, 1, 1);
   }
