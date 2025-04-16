@@ -33,106 +33,58 @@ input[type="range"]::-webkit-slider-thumb {
   width: 55px;
   height: 55px;
   z-index: 10;
-  background: #fff;
-  color: #000;
   border-radius: 50%;
   border: 1px solid #e0e0e0;
-  transition: all 0.3s;
-  cursor: pointer;
+  background: #fff;
+  color: #000;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06), 0 2px 32px rgba(0, 0, 0, 0.16);
-
-  @include mydevice(mobile) {
-    bottom: 0;
-    left: auto;
-    right: auto;
-    border-radius: 0;
-    border: none;
-    width: 100%;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:before,
-    &:after {
-      display: none;
-    }
-
-    .list-socials {
-      opacity: 1;
-      visibility: visible;
-      flex-direction: row;
-      column-gap: 32px;
-      position: relative !important;
-      top: -16px;
-      bottom: auto;
-
-      &__item {
-        width: 48px;
-        height: 48px;
-        border-radius: 100%;
-        margin: 0;
-
-        &:nth-child(2) {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-  }
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: fadeIn 0.3s ease-in-out;
 
   &:before,
   &:after {
     font-family: "Material-Design-Iconic-Font";
     font-size: 30px;
     position: absolute;
-    -webkit-transition: transform 180ms linear, opacity 130ms linear;
+    left: 20px;
+    top: 5px;
     transition: transform 180ms linear, opacity 130ms linear;
   }
 
   &:before {
     content: "\f2fc";
-    top: 5px;
-    left: 20px;
     opacity: 1;
-    -webkit-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
   }
 
   &:after {
     content: "\f2f9";
-    top: 5px;
-    left: 20px;
     opacity: 0;
-    -webkit-transform: rotate(-30deg);
     transform: rotate(-30deg);
   }
 
-  &:hover {
-    //background: lighten($third-color, 8%);
-  }
+  &.active {
+    &:before {
+      opacity: 0;
+      transform: rotate(70deg) scale(0);
+    }
 
-  &.active:before {
-    opacity: 0;
-    -webkit-transform: rotate(70deg) scale(0);
-    transform: rotate(70deg) scale(0);
-  }
-
-  &.active:after {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    &:after {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
   }
 
   .list-socials {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s;
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: 65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
 
     &.active {
       opacity: 1;
@@ -140,17 +92,64 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     &__item {
-      //background-color: #fff;
       width: 45px;
       height: 45px;
-      transition: all 0.3s;
       margin: 7px 0;
       border-radius: 10px;
       overflow: hidden;
+      transition: all 0.3s;
 
       img {
         width: 100%;
       }
     }
   }
+
+  // Mobile
+  @include mydevice(mobile) {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    border-radius: 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    .list-socials {
+      flex-direction: row;
+      column-gap: 32px;
+      position: relative !important;
+      top: -16px;
+      bottom: auto;
+      opacity: 1;
+      visibility: visible;
+
+      &__item {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin: 0;
+
+        &:nth-child(2) {
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+
+// Make sure it's visible when active globally
+#chat-launcher.show {
+  display: flex;
 }

@@ -286,6 +286,9 @@
       <div class="py-0 sm:py-12">
         <div class="container mx-auto">
           <!-- album -->
+          <!-- tuỳ vào kiểu muốn hiển thị số ảnh mà gắn class sum-one, sum-two, sum-three, sum-four, sum-five-->
+          <!-- tối đa chỉ hiện 5 hình nếu nhiều hơn 5 thì gắn class more-image -->
+          <!-- tất cả đã được css sẵn theo bố cục -->
           <div class="hidden md:flex gap-[20px] h-[60vh] relative sum-five more-image " id="album-detail">
 
             <div class="h-full lg-img">
@@ -320,7 +323,7 @@
               </a>
             </div>
 
-            <!-- ✅ Overlay ở góc -->
+            <!--  more image -->
             <div id="gallery-more-overlay"
               class="absolute bottom-2 right-2 bg-black/70 text-white px-3 py-1.5 rounded-md text-sm flex items-center gap-1 z-10 hidden">
               <i class="zmdi zmdi-collection-image text-lg relative top-[-2px]"></i>
@@ -336,33 +339,49 @@
               <img src="assets/images/icon/share.svg" alt="Back" class="w-full" loading="lazy" /></a>
             <div class="swiper albumSwiper">
               <div class="swiper-wrapper">
+
+                <!-- Slide item -->
                 <div class="swiper-slide">
-                  <a class="cursor-zoom-in z-50" data-fancybox="images" data-caption=""
-                    href="assets/images/card/image.png">
-                    <img src="assets/images/card/image.png" alt="" class="w-full" />
+                  <a class="cursor-zoom-in z-50 block aspect-[5/3] overflow-hidden" data-fancybox="images"
+                    data-caption="" href="assets/images/card/image.png">
+                    <img src="assets/images/card/image.png" alt="Hình ảnh 1" class="w-full h-full object-cover"
+                      loading="lazy" />
                   </a>
                 </div>
+
+                <!-- Slide item -->
                 <div class="swiper-slide">
-                  <a class="cursor-zoom-in z-50" data-fancybox="images" data-caption=""
-                    href="assets/images/card/image-1.png">
-                    <img src="assets/images/card/image-1.png" alt="" class="w-full" />
+                  <a class="cursor-zoom-in z-50 block aspect-[5/3] overflow-hidden" data-fancybox="images"
+                    data-caption="" href="assets/images/card/image-1.png">
+                    <img src="assets/images/card/image-1.png" alt="Hình ảnh 2" class="w-full h-full object-cover"
+                      loading="lazy" />
                   </a>
                 </div>
+
+                <!-- Slide item -->
                 <div class="swiper-slide">
-                  <a class="cursor-zoom-in z-50" data-fancybox="images" data-caption=""
-                    href="assets/images/card/image-2.png">
-                    <img src="assets/images/card/image-2.png" alt="" class="w-full" />
+                  <a class="cursor-zoom-in z-50 block aspect-[5/3] overflow-hidden" data-fancybox="images"
+                    data-caption="" href="assets/images/card/image-2.png">
+                    <img src="assets/images/card/image-2.png" alt="Hình ảnh 3" class="w-full h-full object-cover"
+                      loading="lazy" />
                   </a>
                 </div>
+
+                <!-- Slide item -->
                 <div class="swiper-slide">
-                  <a class="cursor-zoom-in z-50" data-fancybox="images" data-caption=""
-                    href="assets/images/card/image-3.png">
-                    <img src="assets/images/card/image-3.png" alt="" class="w-full" />
+                  <a class="cursor-zoom-in z-50 block aspect-[5/3] overflow-hidden" data-fancybox="images"
+                    data-caption="" href="assets/images/card/image-3.png">
+                    <img src="assets/images/card/image-3.png" alt="Hình ảnh 4" class="w-full h-full object-cover"
+                      loading="lazy" />
                   </a>
                 </div>
+
               </div>
+
+              <!-- Optional pagination -->
               <div class="swiper-pagination"></div>
             </div>
+
           </div>
           <!-- detail -->
           <div class="flex md:flex-row flex-col md:py-10 py-5 px-5 md:px-0">
@@ -498,11 +517,11 @@
               </div>
               <div class="md:py-10 py-[24px]">
                 <div class="md:text-2xl mb-5 font-semibold text-[22px]">
-                  Từ khóa tìm kiếm
+                  Từ khóa liên quan
                 </div>
                 <div class="flex flex-row flex-wrap items-center gap-3">
                   <span class="bg-primary-50 text-primary-500 py-1 px-4 rounded-2xl">Hoạt động công ty</span>
-                  <span class="bg-slate-50 text-gray-600 py-1 px-4 rounded-2xl">Thuê nhà giá tốt</span>
+                  <span class="bg-slate-50 text-gray-600 py-1 px-4 rounded-2xl">Mua bán nhà giá tốt</span>
                   <span class="bg-slate-50 text-gray-600 py-1 px-4 rounded-2xl">Thuê nhà Hồ Chí Minh</span>
                   <span class="bg-slate-50 text-gray-600 py-1 px-4 rounded-2xl">Trung tâm thành phố</span>
                   <span class="bg-slate-50 text-gray-600 py-1 px-4 rounded-2xl">Tòa nhà trung tâm Hồ Chí Minh</span>
@@ -1017,352 +1036,258 @@
             Có thể bạn quan tâm
           </h3>
           <div class="grid md:grid-cols-4 sm:grid-cols-1 md:gap-5 gap-3">
-            <!-- product -->
-            <div
-              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b-1 border-gray-300 md:pb-0 pb-3">
+            <!-- Card Product 1 -->
+            <article
+              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b border-gray-300 md:pb-0 pb-3">
+              <!-- Tiêu đề (mobile) -->
               <a href="detail-product.html" class="md:hidden block">
-                <h3
-                  class="text-[14px] md:text-[16px] font-semibold hover:text-primary-500 ease-in-out transition-all mb-1 md:mb-3">
+                <h3 class="mb-1 md:mb-3 text-[14px] md:text-[16px] font-semibold hover:text-primary-500 transition-all">
                   Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                 </h3>
               </a>
+
+              <!-- Nội dung chính -->
               <div class="flex md:flex-col flex-row">
-                <div class="overflow-hidden relative w-[30%] sm:w-auto a">
-                  <a href="detail-product.html" class="spect-square rounded-[16px]">
-                    <img src="assets/images/card/pro1.png" alt="" class="w-full" />
+                <!-- Hình ảnh -->
+                <div class="overflow-hidden relative w-[30%] sm:w-auto">
+                  <a href="detail-product.html" class="block aspect-square rounded-[16px] overflow-hidden">
+                    <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
+                      class="w-full h-full object-cover" loading="lazy" />
                   </a>
+
+                  <!-- Tag mặt tiền (desktop) -->
                   <div class="absolute top-3 left-3 hidden md:block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                    <span
+                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
                       <span class="relative top-[1px]">Mặt tiền</span>
                       <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
+                        src="assets/images/icon/local_fire_department.svg" alt="vote" loading="lazy" />
+                    </span>
                   </div>
                 </div>
-                <div class="pl-3 md:p-3">
+
+                <!-- Thông tin -->
+                <section class="pl-3 md:p-3 flex-1">
+                  <!-- Top info (desktop) -->
                   <div class="hidden md:flex flex-row items-center">
                     <span>Quận Gò Vấp</span>
                     <span class="mx-2"><i class="zmdi zmdi-circle text-[6px]"></i></span>
-                    <a href="" class="text-red-400 underline">Nổi bật</a>
+                    <a href="products.html" class="text-red-400 underline">Nổi bật</a>
                   </div>
-                  <div class="md:hidden block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                  <div class="md:mt-0 mt-[8px]">
+
+                  <!-- Tiêu đề (desktop) -->
+                  <div class="md:mt-2 mt-[8px]">
                     <a href="detail-product.html" class="hidden md:block mb-[8px]">
-                      <h3 class="text-lg font-semibold hover:text-primary-500 ease-in-out transition-all">
+                      <h3 class="text-lg font-semibold hover:text-primary-500 transition-all">
                         Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                       </h3>
                     </a>
 
-                    <div class="flex flex-row items-start">
-                      <span class="relative top-[2px] md:w-[20px] w-[12px] flex-shrink-0">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/location_on_grey.svg"
-                          alt="Địa chỉ" />
+                    <!-- Địa chỉ -->
+                    <div class="flex flex-row items-start mt-1">
+                      <img class="w-[12px] md:w-[20px] flex-shrink-0" src="assets/images/icon/location_on_grey.svg"
+                        alt="Địa chỉ" loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">
+                        318 - 320 Nguyễn Oanh, Phường 17, Quận Gò Vấp
                       </span>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">318 - 320 Nguyễn Oanh,
-                        Phường 17, Quận Gò Vấp</span>
                     </div>
-                    <div class="flex flex-row items-center">
-                      <div class="relative top-[-2px]">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/square_foot_grey.svg"
-                          alt="Diện tích" />
+
+                    <!-- Diện tích -->
+                    <div class="flex flex-row items-center mt-1">
+                      <img class="w-[12px] md:w-[20px]" src="assets/images/icon/square_foot_grey.svg" alt="Diện tích"
+                        loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">900 m²</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <!-- Giá -->
+                      <p class="mt-2 md:mt-3">
+                        <span class="font-semibold text-[13px] md:text-[18px]">39 Tỷ</span>
+                        <span class="font-normal text-[11px] md:text-[14px]">/ Tháng</span>
+                      </p>
+                      <!-- Tag mobile -->
+                      <div class="md:hidden block mt-2">
+                        <span
+                          class="tag bg-white rounded-full shadow-md pl-[8px] pr-[4px] py-[3px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                          <span class="relative top-[1px]">Mặt tiền</span>
+                          <img class="ml-1 w-[12px] md:w-[20px]" src="assets/images/icon/local_fire_department.svg"
+                            alt="Mặt tiền" loading="lazy" />
+                        </span>
                       </div>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">900 m2</span>
                     </div>
-                    <p class="mt-[8px] md:mt-[12px]">
-                      <span class="font-semibold md:text-[18px] text-[13px]">39 Tỷ</span><span
-                        class="font-normal md:text-[14px] text-[11px]">/ Tháng</span>
-                    </p>
+
                   </div>
-                </div>
+                </section>
               </div>
-            </div>
-            <!-- product -->
-            <div
-              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b-1 border-gray-300 md:pb-0 pb-3">
+            </article>
+
+
+            <!-- Card Product 1 -->
+            <article
+              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b border-gray-300 md:pb-0 pb-3">
+              <!-- Tiêu đề (mobile) -->
               <a href="detail-product.html" class="md:hidden block">
-                <h3
-                  class="text-[14px] md:text-[16px] font-semibold hover:text-primary-500 ease-in-out transition-all mb-1 md:mb-3">
+                <h3 class="mb-1 md:mb-3 text-[14px] md:text-[16px] font-semibold hover:text-primary-500 transition-all">
                   Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                 </h3>
               </a>
+
+              <!-- Nội dung chính -->
               <div class="flex md:flex-col flex-row">
-                <div class="overflow-hidden relative w-[30%] sm:w-auto a">
-                  <a href="detail-product.html" class="spect-square rounded-[16px]">
-                    <img src="assets/images/card/pro2.png" alt="" class="w-full" />
+                <!-- Hình ảnh -->
+                <div class="overflow-hidden relative w-[30%] sm:w-auto">
+                  <a href="detail-product.html" class="block aspect-square rounded-[16px] overflow-hidden">
+                    <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
+                      class="w-full h-full object-cover" loading="lazy" />
                   </a>
+
+                  <!-- Tag mặt tiền (desktop) -->
                   <div class="absolute top-3 left-3 hidden md:block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Đường nội bộ</span>
+                    <span
+                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                      <span class="relative top-[1px]">Mặt tiền</span>
                       <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/where_to_vote.svg" alt="close" />
-                    </button>
+                        src="assets/images/icon/local_fire_department.svg" alt="vote" loading="lazy" />
+                    </span>
                   </div>
                 </div>
-                <div class="pl-3 md:p-3">
+
+                <!-- Thông tin -->
+                <section class="pl-3 md:p-3 flex-1">
+                  <!-- Top info (desktop) -->
                   <div class="hidden md:flex flex-row items-center">
                     <span>Quận Gò Vấp</span>
                     <span class="mx-2"><i class="zmdi zmdi-circle text-[6px]"></i></span>
-                    <a href="" class="text-red-400 underline">Nổi bật</a>
+                    <a href="products.html" class="text-red-400 underline">Nổi bật</a>
                   </div>
-                  <div class="md:hidden block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                  <div class="md:mt-0 mt-[8px]">
+
+                  <!-- Tiêu đề (desktop) -->
+                  <div class="md:mt-2 mt-[8px]">
                     <a href="detail-product.html" class="hidden md:block mb-[8px]">
-                      <h3 class="text-lg font-semibold hover:text-primary-500 ease-in-out transition-all">
+                      <h3 class="text-lg font-semibold hover:text-primary-500 transition-all">
                         Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                       </h3>
                     </a>
 
-                    <div class="flex flex-row items-start">
-                      <span class="relative top-[2px] md:w-[20px] w-[12px] flex-shrink-0">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/location_on_grey.svg"
-                          alt="Địa chỉ" />
+                    <!-- Địa chỉ -->
+                    <div class="flex flex-row items-start mt-1">
+                      <img class="w-[12px] md:w-[20px] flex-shrink-0" src="assets/images/icon/location_on_grey.svg"
+                        alt="Địa chỉ" loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">
+                        318 - 320 Nguyễn Oanh, Phường 17, Quận Gò Vấp
                       </span>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">318 - 320 Nguyễn Oanh,
-                        Phường 17, Quận Gò Vấp</span>
                     </div>
-                    <div class="flex flex-row items-center">
-                      <div class="relative top-[-2px]">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/square_foot_grey.svg"
-                          alt="Diện tích" />
+
+                    <!-- Diện tích -->
+                    <div class="flex flex-row items-center mt-1">
+                      <img class="w-[12px] md:w-[20px]" src="assets/images/icon/square_foot_grey.svg" alt="Diện tích"
+                        loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">900 m²</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <!-- Giá -->
+                      <p class="mt-2 md:mt-3">
+                        <span class="font-semibold text-[13px] md:text-[18px]">39 Tỷ</span>
+                        <span class="font-normal text-[11px] md:text-[14px]">/ Tháng</span>
+                      </p>
+                      <!-- Tag mobile -->
+                      <div class="md:hidden block mt-2">
+                        <span
+                          class="tag bg-white rounded-full shadow-md pl-[8px] pr-[4px] py-[3px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                          <span class="relative top-[1px]">Mặt tiền</span>
+                          <img class="ml-1 w-[12px] md:w-[20px]" src="assets/images/icon/local_fire_department.svg"
+                            alt="Mặt tiền" loading="lazy" />
+                        </span>
                       </div>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">900 m2</span>
                     </div>
-                    <p class="mt-[8px] md:mt-[12px]">
-                      <span class="font-semibold md:text-[18px] text-[13px]">39 Tỷ</span><span
-                        class="font-normal md:text-[14px] text-[11px]">/ Tháng</span>
-                    </p>
+
                   </div>
-                </div>
+                </section>
               </div>
-            </div>
-            <!-- product -->
-            <div
-              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b-1 border-gray-300 md:pb-0 pb-3">
+            </article>
+
+            <!-- Card Product 1 -->
+            <article
+              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b border-gray-300 md:pb-0 pb-3">
+              <!-- Tiêu đề (mobile) -->
               <a href="detail-product.html" class="md:hidden block">
-                <h3
-                  class="text-[14px] md:text-[16px] font-semibold hover:text-primary-500 ease-in-out transition-all mb-1 md:mb-3">
+                <h3 class="mb-1 md:mb-3 text-[14px] md:text-[16px] font-semibold hover:text-primary-500 transition-all">
                   Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                 </h3>
               </a>
+
+              <!-- Nội dung chính -->
               <div class="flex md:flex-col flex-row">
-                <div class="overflow-hidden relative w-[30%] sm:w-auto a">
-                  <a href="detail-product.html" class="spect-square rounded-[16px]">
-                    <img src="assets/images/card/pro1.png" alt="" class="w-full" />
+                <!-- Hình ảnh -->
+                <div class="overflow-hidden relative w-[30%] sm:w-auto">
+                  <a href="detail-product.html" class="block aspect-square rounded-[16px] overflow-hidden">
+                    <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
+                      class="w-full h-full object-cover" loading="lazy" />
                   </a>
+
+                  <!-- Tag mặt tiền (desktop) -->
                   <div class="absolute top-3 left-3 hidden md:block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                    <span
+                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
                       <span class="relative top-[1px]">Mặt tiền</span>
                       <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
+                        src="assets/images/icon/local_fire_department.svg" alt="vote" loading="lazy" />
+                    </span>
                   </div>
                 </div>
-                <div class="pl-3 md:p-3">
+
+                <!-- Thông tin -->
+                <section class="pl-3 md:p-3 flex-1">
+                  <!-- Top info (desktop) -->
                   <div class="hidden md:flex flex-row items-center">
                     <span>Quận Gò Vấp</span>
                     <span class="mx-2"><i class="zmdi zmdi-circle text-[6px]"></i></span>
-                    <a href="" class="text-red-400 underline">Nổi bật</a>
+                    <a href="products.html" class="text-red-400 underline">Nổi bật</a>
                   </div>
-                  <div class="md:hidden block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                  <div class="md:mt-0 mt-[8px]">
+
+                  <!-- Tiêu đề (desktop) -->
+                  <div class="md:mt-2 mt-[8px]">
                     <a href="detail-product.html" class="hidden md:block mb-[8px]">
-                      <h3 class="text-lg font-semibold hover:text-primary-500 ease-in-out transition-all">
+                      <h3 class="text-lg font-semibold hover:text-primary-500 transition-all">
                         Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
                       </h3>
                     </a>
 
-                    <div class="flex flex-row items-start">
-                      <span class="relative top-[2px] md:w-[20px] w-[12px] flex-shrink-0">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/location_on_grey.svg"
-                          alt="Địa chỉ" />
+                    <!-- Địa chỉ -->
+                    <div class="flex flex-row items-start mt-1">
+                      <img class="w-[12px] md:w-[20px] flex-shrink-0" src="assets/images/icon/location_on_grey.svg"
+                        alt="Địa chỉ" loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">
+                        318 - 320 Nguyễn Oanh, Phường 17, Quận Gò Vấp
                       </span>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">318 - 320 Nguyễn Oanh,
-                        Phường 17, Quận Gò Vấp</span>
                     </div>
-                    <div class="flex flex-row items-center">
-                      <div class="relative top-[-2px]">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/square_foot_grey.svg"
-                          alt="Diện tích" />
+
+                    <!-- Diện tích -->
+                    <div class="flex flex-row items-center mt-1">
+                      <img class="w-[12px] md:w-[20px]" src="assets/images/icon/square_foot_grey.svg" alt="Diện tích"
+                        loading="lazy" />
+                      <span class="pl-2 text-gray-800 text-[11px] md:text-[14px]">900 m²</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <!-- Giá -->
+                      <p class="mt-2 md:mt-3">
+                        <span class="font-semibold text-[13px] md:text-[18px]">39 Tỷ</span>
+                        <span class="font-normal text-[11px] md:text-[14px]">/ Tháng</span>
+                      </p>
+                      <!-- Tag mobile -->
+                      <div class="md:hidden block mt-2">
+                        <span
+                          class="tag bg-white rounded-full shadow-md pl-[8px] pr-[4px] py-[3px] flex items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
+                          <span class="relative top-[1px]">Mặt tiền</span>
+                          <img class="ml-1 w-[12px] md:w-[20px]" src="assets/images/icon/local_fire_department.svg"
+                            alt="Mặt tiền" loading="lazy" />
+                        </span>
                       </div>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">900 m2</span>
                     </div>
-                    <p class="mt-[8px] md:mt-[12px]">
-                      <span class="font-semibold md:text-[18px] text-[13px]">39 Tỷ</span><span
-                        class="font-normal md:text-[14px] text-[11px]">/ Tháng</span>
-                    </p>
+
                   </div>
-                </div>
+                </section>
               </div>
-            </div>
-            <!-- product -->
-            <div
-              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b-1 border-gray-300 md:pb-0 pb-3">
-              <a href="detail-product.html" class="md:hidden block">
-                <h3
-                  class="text-[14px] md:text-[16px] font-semibold hover:text-primary-500 ease-in-out transition-all mb-1 md:mb-3">
-                  Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
-                </h3>
-              </a>
-              <div class="flex md:flex-col flex-row">
-                <div class="overflow-hidden relative w-[30%] sm:w-auto a">
-                  <a href="detail-product.html" class="spect-square rounded-[16px]">
-                    <img src="assets/images/card/pro2.png" alt="" class="w-full" />
-                  </a>
-                  <div class="absolute top-3 left-3 hidden md:block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Đường nội bộ</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/where_to_vote.svg" alt="close" />
-                    </button>
-                  </div>
-                </div>
-                <div class="pl-3 md:p-3">
-                  <div class="hidden md:flex flex-row items-center">
-                    <span>Quận Gò Vấp</span>
-                    <span class="mx-2"><i class="zmdi zmdi-circle text-[6px]"></i></span>
-                    <a href="" class="text-red-400 underline">Nổi bật</a>
-                  </div>
-                  <div class="md:hidden block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                  <div class="md:mt-0 mt-[8px]">
-                    <a href="detail-product.html" class="hidden md:block mb-[8px]">
-                      <h3 class="text-lg font-semibold hover:text-primary-500 ease-in-out transition-all">
-                        Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
-                      </h3>
-                    </a>
-
-                    <div class="flex flex-row items-start">
-                      <span class="relative top-[2px] md:w-[20px] w-[12px] flex-shrink-0">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/location_on_grey.svg"
-                          alt="Địa chỉ" />
-                      </span>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">318 - 320 Nguyễn Oanh,
-                        Phường 17, Quận Gò Vấp</span>
-                    </div>
-                    <div class="flex flex-row items-center">
-                      <div class="relative top-[-2px]">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/square_foot_grey.svg"
-                          alt="Diện tích" />
-                      </div>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">900 m2</span>
-                    </div>
-                    <p class="mt-[8px] md:mt-[12px]">
-                      <span class="font-semibold md:text-[18px] text-[13px]">39 Tỷ</span><span
-                        class="font-normal md:text-[14px] text-[11px]">/ Tháng</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- product -->
-            <div
-              class="product hover:bg-white hover:rounded-2xl hover:shadow-lg ease-in-out transition-all duration-300 md:border-none border-b-1 border-gray-300 md:pb-0 pb-3">
-              <a href="detail-product.html" class="md:hidden block">
-                <h3
-                  class="text-[14px] md:text-[16px] font-semibold hover:text-primary-500 ease-in-out transition-all mb-1 md:mb-3">
-                  Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
-                </h3>
-              </a>
-              <div class="flex md:flex-col flex-row">
-                <div class="overflow-hidden relative w-[30%] sm:w-auto a">
-                  <a href="detail-product.html" class="spect-square rounded-[16px]">
-                    <img src="assets/images/card/pro1.png" alt="" class="w-full" />
-                  </a>
-                  <div class="absolute top-3 left-3 hidden md:block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                </div>
-                <div class="pl-3 md:p-3">
-                  <div class="hidden md:flex flex-row items-center">
-                    <span>Quận Gò Vấp</span>
-                    <span class="mx-2"><i class="zmdi zmdi-circle text-[6px]"></i></span>
-                    <a href="" class="text-red-400 underline">Nổi bật</a>
-                  </div>
-                  <div class="md:hidden block">
-                    <button
-                      class="tag bg-white rounded-full shadow-md pl-[8px] py-0 pr-[4px] md:pl-[12px] md:pr-[8px] md:py-[5px] flex flex-row items-center border-2 border-white bg-gradient-to-br from-gray-100 md:text-[14px] text-[12px]">
-                      <span class="relative top-[1px]">Mặt tiền</span>
-                      <img class="ml-0 w-[12px] md:w-[20px] relative top-[-2px]"
-                        src="assets/images/icon/local_fire_department.svg" alt="close" />
-                    </button>
-                  </div>
-                  <div class="md:mt-0 mt-[8px]">
-                    <a href="detail-product.html" class="hidden md:block mb-[8px]">
-                      <h3 class="text-lg font-semibold hover:text-primary-500 ease-in-out transition-all">
-                        Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10
-                      </h3>
-                    </a>
-
-                    <div class="flex flex-row items-start">
-                      <span class="relative top-[2px] md:w-[20px] w-[12px] flex-shrink-0">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/location_on_grey.svg"
-                          alt="Địa chỉ" />
-                      </span>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">318 - 320 Nguyễn Oanh,
-                        Phường 17, Quận Gò Vấp</span>
-                    </div>
-                    <div class="flex flex-row items-center">
-                      <div class="relative top-[-2px]">
-                        <img class="ml-0 md:w-[20px] w-[12px]" src="assets/images/icon/square_foot_grey.svg"
-                          alt="Diện tích" />
-                      </div>
-
-                      <span class="pl-2 md:text-[14px] text-[11px] text-gray-800 font-normal">900 m2</span>
-                    </div>
-                    <p class="mt-[8px] md:mt-[12px]">
-                      <span class="font-semibold md:text-[18px] text-[13px]">39 Tỷ</span><span
-                        class="font-normal md:text-[14px] text-[11px]">/ Tháng</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            </article>
 
           </div>
 
@@ -1453,7 +1378,7 @@
     </footer>
   </div>
   <!-- chat  bot -->
-  <div class="chat-launcher hidden md:block">
+  <div class="chat-launcher" id="chat-launcher">
     <div class="list-socials">
       <div class="list-socials__item shadow-md">
         <a href="#"><img src="assets/images/icon/zalo.png" alt="Zalo" loading="lazy" />
@@ -1497,7 +1422,7 @@
         5: "five",
       };
 
-      let count = images.length + 1; // Trừ 1 vì có 1 ảnh lớn
+      let count = images.length + 1;
       const clampedCount = Math.min(count, 5);
       const wordClass = `sum-${numberToWord[clampedCount]}`;
 
@@ -1525,9 +1450,11 @@
         overlay.classList.add("hidden");
       }
     });
+
+
+
+
   </script>
-
-
 
 </body>
 
