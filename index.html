@@ -169,7 +169,8 @@
           </button>
         </div>
         <div class="md:hidden relative block z-50 ml-auto">
-          <div id="mobileMenu" class="md:hidden px-5 fixed top-0 right-0 w-4/5 h-full bg-white overflow-y-scroll pt-5 pb-8"
+          <div id="mobileMenu"
+            class="md:hidden px-5 fixed top-0 right-0 w-4/5 h-full bg-white overflow-y-scroll pt-5 pb-8"
             aria-label="Mobile Navigation">
             <div class="w-full flex items-end justify-end mb-2">
               <a id="burgerMenu" class="close" onclick="toggleMenu()" aria-label="Open mobile menu">
@@ -421,37 +422,81 @@
               <span class="text-gray-400">Tất cả</span>
               <div
                 class="range-price absolute p-4 opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all">
-                <div class="text-center py-4 px-3 border-b-2 border-gray-300">
+                <!-- <div class="text-center py-4 px-3 border-b-2 border-gray-300">
                   <span class="font-semibold">Mức giá</span>
-                </div>
-                <div class="flex flex-col items-center">
-                  <div class="flex flex-row items-center justify-between px-0 pt-2 w-full">
-                    <span class="mb-1">Từ:
-                      <span id="minValue" class="text-primary-500">0 triệu</span></span>
-                    <span class="mb-1">Đến:
-                      <span id="maxValue" class="text-primary-500">8 tỷ</span></span>
+                </div> -->
+                <!-- Mức giá -->
+                <section class="py-3 ">
+                  <!-- <label class="block font-semibold mb-2">Mức giá</label> -->
+                  <div class="flex justify-between w-full mb-2">
+                    <span>Từ: <strong id="minValue_mb" class="text-primary-500">0 triệu</strong></span>
+                    <span>Đến: <strong id="maxValue_mb" class="text-primary-500">8 tỷ</strong></span>
                   </div>
-                  <div class="flex flex-row items-center justify-between px-0 py-2">
-                    <input type="text" id="minValueInput"
-                      class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
+                  <div class="flex justify-between items-center mb-4">
+                    <input type="text" id="minValueInput_mb"
+                      class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
                     <i class="zmdi zmdi-long-arrow-right mx-4"></i>
-                    <input type="text" id="maxValueInput"
-                      class="w-full border-1 border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
+                    <input type="text" id="maxValueInput_mb"
+                      class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
                   </div>
-                </div>
-                <div class="relative mt-4 mx-0 mb-8">
-                  <!-- Thanh màu -->
-                  <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
-                  <div id="progress" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
+                  <div class=" min-h-[40px]">
+                    <div class="relative mb-4">
+                      <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
+                      <div id="progress_mb" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
+                      <input type="range" id="minSlider_mb" min="0" max="100000000000" step="10000000" value="0"
+                        class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
+                      <input type="range" id="maxSlider_mb" min="0" max="100000000000" step="10000000"
+                        value="100000000000"
+                        class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
+                    </div>
+                  </div>
 
-                  <!-- Slider Inputs -->
-                  <input type="range" id="minSlider" min="0" max="8000000000" step="10000000" value="4000000000"
-                    class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
-                    aria-label="Thanh kéo min" />
-                  <input type="range" id="maxSlider" min="0" max="8000000000" step="10000000" value="6000000000"
-                    class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none"
-                    aria-label="Thanh kéo max" />
-                </div>
+
+                  <!-- Các mức giá -->
+                  <fieldset class="space-y-2">
+                    <legend class="sr-only">Chọn khoảng giá</legend>
+                    <label class="flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-black font-medium">Tất cả mức giá</span>
+                      <input type="radio" name="price" class="hidden peer" checked value="all" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </label>
+                    <label class="flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-black font-medium">Dưới 1 tỷ</span>
+                      <input type="radio" name="price" class="hidden peer" value="under1ty" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </label>
+                    <label class="flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-black font-medium">500 triệu - 5 tỷ</span>
+                      <input type="radio" name="price" class="hidden peer" value="500m-5ty" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </label>
+                    <label class="flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-black font-medium">5 - 15 tỷ</span>
+                      <input type="radio" name="price" class="hidden peer" value="5-15ty" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </label>
+                    <label class="flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-black font-medium">Trên 15 tỷ</span>
+                      <input type="radio" name="price" class="hidden peer" value="over15ty" />
+                      <span
+                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                      </span>
+                    </label>
+                  </fieldset>
+                </section>
                 <div class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between">
                   <button class="underline font-semibold text-[18px]">Đặt lại <i
                       class="zmdi zmdi-rotate-right"></i></button>
@@ -494,7 +539,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -578,7 +624,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -662,7 +709,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -746,7 +794,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -830,7 +879,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -914,7 +964,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -998,7 +1049,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -1082,7 +1134,8 @@
             <div class="flex md:flex-col flex-row">
               <!-- Hình ảnh -->
               <div class="overflow-hidden relative w-[30%] sm:w-auto">
-                <a href="detail-product.html" class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
+                <a href="detail-product.html"
+                  class="block aspect-square md:rounded-[16px] ounded-[12px] overflow-hidden">
                   <img src="assets/images/card/pro1.png" alt="Bán Nhà Mặt tiền Đường Lạc Long Quân, Quận 10"
                     class="w-full h-full object-cover" loading="lazy" />
                 </a>
@@ -1202,7 +1255,8 @@
               <!-- Danh sách bài viết lớn -->
               <div class="grid grid-cols-2 md:gap-6 gap-4">
                 <!-- news item 1 -->
-                <article class="bg-white md:rounded-[16px] rounded-[12px] overflow-hidden hover:shadow-md transition-shadow">
+                <article
+                  class="bg-white md:rounded-[16px] rounded-[12px] overflow-hidden hover:shadow-md transition-shadow">
                   <!-- Ảnh có tỷ lệ 16:9 cố định -->
                   <a href="detail-news.html" class="block relative w-full pb-[56.25%]"
                     aria-label="Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam">
@@ -1228,7 +1282,8 @@
                 </article>
 
                 <!-- news item 2 -->
-                <article class="bg-white md:rounded-[16px] rounded-[12px] overflow-hidden hover:shadow-md transition-shadow">
+                <article
+                  class="bg-white md:rounded-[16px] rounded-[12px] overflow-hidden hover:shadow-md transition-shadow">
                   <!-- Ảnh có tỷ lệ 16:9 cố định -->
                   <a href="detail-news.html" class="block relative w-full pb-[56.25%]"
                     aria-label="Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam">
@@ -1271,7 +1326,8 @@
                   <!-- Right: Text content -->
                   <div class="flex-1">
                     <a href="detail-news.html">
-                      <h3 class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
+                      <h3
+                        class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
                         Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
                       </h3>
                     </a>
@@ -1295,7 +1351,8 @@
                   <!-- Right: Text content -->
                   <div class="flex-1">
                     <a href="detail-news.html">
-                      <h3 class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
+                      <h3
+                        class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
                         Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
                       </h3>
                     </a>
@@ -1318,7 +1375,8 @@
                   <!-- Right: Text content -->
                   <div class="flex-1">
                     <a href="detail-news.html">
-                      <h3 class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
+                      <h3
+                        class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
                         Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
                       </h3>
                     </a>
@@ -1342,7 +1400,8 @@
                   <!-- Right: Text content -->
                   <div class="flex-1">
                     <a href="detail-news.html">
-                      <h3 class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
+                      <h3
+                        class="font-semibold text-[12px] md:text-[16px] hover:text-primary-500 transition-all duration-300">
                         Thue nhanh - Hệ sinh thái căn hộ hàng đầu Việt Nam
                       </h3>
                     </a>
@@ -1971,9 +2030,9 @@
               <div class="relative mb-4">
                 <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
                 <div id="progress_mb" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
-                <input type="range" id="minSlider_mb" min="0" max="8000000000" step="10000000" value="4000000000"
+                <input type="range" id="minSlider_mb" min="0" max="100000000000" step="10000000" value="0"
                   class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
-                <input type="range" id="maxSlider_mb" min="0" max="8000000000" step="10000000" value="6000000000"
+                <input type="range" id="maxSlider_mb" min="0" max="100000000000" step="10000000" value="100000000000"
                   class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
               </div>
             </div>
@@ -1984,7 +2043,7 @@
               <legend class="sr-only">Chọn khoảng giá</legend>
               <label class="flex items-center justify-between gap-2 cursor-pointer">
                 <span class="text-black font-medium">Tất cả mức giá</span>
-                <input type="radio" name="price" class="hidden peer" />
+                <input type="radio" name="price" class="hidden peer" checked value="all" />
                 <span
                   class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
                   <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
@@ -1992,7 +2051,7 @@
               </label>
               <label class="flex items-center justify-between gap-2 cursor-pointer">
                 <span class="text-black font-medium">Dưới 1 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" />
+                <input type="radio" name="price" class="hidden peer" value="under1ty" />
                 <span
                   class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
                   <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
@@ -2000,7 +2059,7 @@
               </label>
               <label class="flex items-center justify-between gap-2 cursor-pointer">
                 <span class="text-black font-medium">500 triệu - 5 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" />
+                <input type="radio" name="price" class="hidden peer" value="500m-5ty" />
                 <span
                   class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
                   <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
@@ -2008,7 +2067,7 @@
               </label>
               <label class="flex items-center justify-between gap-2 cursor-pointer">
                 <span class="text-black font-medium">5 - 15 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" />
+                <input type="radio" name="price" class="hidden peer" value="5-15ty" />
                 <span
                   class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
                   <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
@@ -2016,7 +2075,7 @@
               </label>
               <label class="flex items-center justify-between gap-2 cursor-pointer">
                 <span class="text-black font-medium">Trên 15 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" />
+                <input type="radio" name="price" class="hidden peer" value="over15ty" />
                 <span
                   class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
                   <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
