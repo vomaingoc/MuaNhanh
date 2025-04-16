@@ -1,8 +1,6 @@
 .time-line-wrapper {
   @include mydevice(mobile) {
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 
     /* width */
@@ -28,11 +26,7 @@
 }
 
 .time-line {
-  @include mydevice(mobile) {
-    min-height: 50vh;
-  }
-
-  min-height: 100px;
+  height: 300px;
 
   &::after {
     position: absolute;
@@ -41,7 +35,6 @@
     height: 3px;
     left: 0;
     top: 50%;
-    /* Đưa đường line vào giữa */
     transform: translateY(-50%);
     z-index: 1;
     background: linear-gradient(to right,
@@ -49,15 +42,5 @@
         #b5895c 15%,
         #b5895c 85%,
         #ffffff 100%);
-  }
-
-  .milestone {
-    flex: 0 0 auto;
-
-    &:nth-child(odd) {
-      .arrow {
-        rotate: 180deg;
-      }
-    }
   }
 }

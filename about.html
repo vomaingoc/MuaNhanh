@@ -268,8 +268,8 @@
     </header>
     <main id="main_page">
       <!-- breadcrumb -->
-      <div class="container mx-auto md:pt-12 pt-6 px-5 md:px-0 hidden md:block">
-        <ul class="bread_crumb flex flex-row items-center">
+      <div class="container mx-auto md:pt-8 pt-4 px-5 md:px-0 hidden md:block">
+        <ul class="breadcrumb flex flex-row items-center">
           <li class="text-gray-600"><a href="#">Trang chủ</a></li>
           <li class="text-gray-600 active"><a href="#">Về chúng tôi</a></li>
         </ul>
@@ -313,7 +313,8 @@
                   <span>Đối tác đồng hành</span>
                 </div>
               </div>
-              <div class="grid md:grid-cols-2 grid-cols-1 gap-5 md:p-[28px] p-[20px] rounded-2xl bg-stone-100">
+              <div
+                class="grid md:grid-cols-2 grid-cols-1 gap-5 md:p-[28px] p-[20px] rounded-2xl bg-stone-100 items-start">
                 <div class="md:order-1 order-2">
                   <p class="mb-10">
                     Khi nói đến Thue Nhanh là nói đến sự an toàn, văn minh và
@@ -326,10 +327,13 @@
                     Liên hệ hợp tác
                   </button>
                 </div>
-                <div class="rounded-2xl overflow-hidden md:order-2 order-1">
-                  <img src="assets/images/card/about.png" alt="" class="w-full" loading="lazy" />
-                </div>
+                <figure class="aspect-[3/4] w-full overflow-hidden rounded-2xl md:order-2 order-1">
+                  <img src="assets/images/card/about.png" alt="Thông tin về chương trình eGift"
+                    class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                </figure>
               </div>
+
+
             </div>
           </div>
           <!-- tam nhin su menh -->
@@ -338,16 +342,19 @@
               <!-- content -->
               <div class="hidden md:block">
                 <div class="tab-content--vision" id="tab1">
-                  <div class="max-h-[464px] overflow-hidden rounded-4xl">
-                    <img src="assets/images/banner/5.png" alt="" class="w-full" loading="lazy" />
-                  </div>
+                  <figure class="h-[464px] w-full overflow-hidden rounded-4xl">
+                    <img src="assets/images/banner/5.png" alt="Banner giới thiệu chương trình eGift"
+                      class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  </figure>
                 </div>
                 <div class="tab-content--vision hidden" id="tab2">
-                  <div class="max-h-[464px] overflow-hidden rounded-4xl">
-                    <img src="assets/images/banner/4.png" alt="" class="w-full" loading="lazy" />
-                  </div>
+                  <figure class="h-[464px] w-full overflow-hidden rounded-4xl">
+                    <img src="assets/images/banner/4.png" alt="Banner quảng bá dịch vụ TingTong"
+                      class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  </figure>
                 </div>
               </div>
+
               <!-- tab -->
               <div class="grid grid-cols-1">
                 <div data-tab="tab1"
@@ -400,7 +407,7 @@
         </div>
       </div>
       <!-- gia tri va kinh nghiem -->
-      <div class="md:my-12 my-0 bg-cover bg-no-repeat bg-top pt-5 md:pb-20 pb-0 px-5 md:px-0"
+      <div class="md:my-8 my-0 bg-cover bg-no-repeat bg-top   px-5 md:px-0"
         style="background-image: url(assets/images/banner/Map.png)">
         <!-- gia tri -->
         <div class="container mx-auto md:py-12 py-5">
@@ -473,428 +480,517 @@
             </div>
           </div>
         </div>
-        <!-- kinh nghiem -->
-        <div class="md:py-20 py-0">
-          <h3 class="font-bold md:text-4xl text-2xl text-center md:mb-40 mb-10">
+        <!-- Hành trình phát triển-->
+        <section class="md:py-8 py-4">
+          <h2 class="font-bold md:text-4xl text-2xl text-center md:mb-4 mb-2">
             Hành trình phát triển
-          </h3>
-          <!-- Đường timeline -->
-          <div class="time-line-wrapper">
-            <div class="time-line relative flex items-center justify-between min-w-[900px] md:mt-12 mt-0">
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
-                    </div>
-                  </div>
-                </div>
-                <div class="year absolute top-14 left-1/2 transform -translate-x-1/2 text-center">
-                  <span class="text-primary-500 font-semibold md:text-3xl text-xl">2018</span>
-                </div>
-                <div
-                  class="description absolute text-center min-w-[100px] md:-top-24 -top-30 text-[13px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                  <span class="text-center">
+          </h2>
+
+          <div class="time-line-wrapper overflow-x-auto overflow-y-visible">
+            <ul class="relative time-line relative flex items-center justify-between min-w-[900px] ">
+              <!--  -->
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+
+                <!-- Div 1 -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
                     Công ty được thành lập với tên gọi là City Land Việt Nam
-                  </span>
+                  </p>
                 </div>
-              </div>
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180" />
                     </div>
-                  </div>
+                  </figure>
                 </div>
-                <div class="year absolute -top-14 left-1/2 transform -translate-x-1/2 text-center">
-                  <span class="text-primary-500 font-semibold md:text-3xl text-xl">2019</span>
+
+                <!-- Div 3 -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2018</span>
                 </div>
-                <div
-                  class="description absolute text-center min-w-[100px] md:top-24 top-16 text-[12px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                  <span class="text-center">
-                    BẮT ĐẦU XUẤT KHẨU LÔ HÀNG CHÍNH NGẠCH ĐẦU TIÊN SANG TRUNG
-                    QUỐC
-                  </span>
+
+              </li>
+
+
+
+              <!-- Mốc 2019 -->
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+
+                <!-- Div 1 -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2019</span>
                 </div>
-              </div>
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                     </div>
-                  </div>
+                  </figure>
                 </div>
-                <div class="year absolute top-14 left-1/2 transform -translate-x-1/2 text-center">
-                  <span class="text-primary-500 font-semibold md:text-3xl text-xl">2020</span>
+
+                <!-- Div 3  -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
+                    Công ty được thành lập với tên gọi là City Land Việt Nam
+                  </p>
                 </div>
-                <div
-                  class="description absolute text-center min-w-[100px] md:-top-24 -top-30 text-[13px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                  <span class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </span>
+
+              </li>
+
+              <!-- Mốc 2020 -->
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+
+                <!-- Div 1 : -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
+                    Mở rộng quy mô sang lĩnh vực bất động sản khu vực TP.HCM
+                  </p>
                 </div>
-              </div>
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180" />
                     </div>
-                  </div>
+                  </figure>
                 </div>
-                <div class="year absolute -top-14 left-1/2 transform -translate-x-1/2 text-center">
-                  <span class="text-primary-500 font-semibold md:text-3xl text-xl">2021</span>
+
+                <!-- Div 3 -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2020</span>
                 </div>
-                <div
-                  class="description absolute text-center min-w-[100px] md:top-24 top-16 text-[12px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                  <span class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </span>
+              </li>
+
+
+              <!-- Mốc 2021 -->
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+                <!-- Div 1 -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2021</span>
                 </div>
-              </div>
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                     </div>
-                  </div>
+                  </figure>
                 </div>
-                <div class="year absolute top-14 left-1/2 transform -translate-x-1/2 text-center">
-                  <span class="text-primary-500 font-semibold md:text-3xl text-xl">2022</span>
+
+                <!-- Div 3  -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
+                    Thiết lập chi nhánh đầu tiên tại Đà Nẵng và Hồ Chí Minh
+                  </p>
                 </div>
-                <div
-                  class="description absolute text-center min-w-[100px] md:-top-24 -top-30 text-[13px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                  <span class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </span>
+              </li>
+
+
+              <!-- Mốc 2022 -->
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+
+                <!-- Div 1 : -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
+                    Đạt cột mốc 1000+ khách hàng doanh nghiệp
+                  </p>
                 </div>
-              </div>
-              <!-- Mốc thời gian -->
-              <div class="milestone relative flex justify-center w-1/6 z-10">
-                <div class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
-                  <div class="w-5 h-5 bg-primary-500 rounded-full relative">
-                    <div class="arrow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img src="assets/images/card/line.png" alt="Mốc thời gian" loading="lazy" />
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180" />
                     </div>
-                  </div>
-                  <div class="year absolute -top-14 left-1/2 transform -translate-x-1/2 text-center">
-                    <span class="text-primary-500 font-semibold md:text-3xl text-xl">2024</span>
-                  </div>
-                  <div
-                    class="description absolute text-center min-w-[100px] md:top-24 top-16 text-[12px] md:text-[14px] left-1/2 transform -translate-x-1/2 max-w-[220px] text-wrap">
-                    <span class="text-center">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    </span>
-                  </div>
+                  </figure>
                 </div>
-              </div>
-            </div>
+
+                <!-- Div 3 -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2022</span>
+                </div>
+              </li>
+
+              <!-- Mốc 2024 -->
+
+              <li class="relative flex-col items-center justify-center w-[200px] h-[100%] text-center z-2">
+                <!-- Div 1 -->
+                <div class="flex-1 flex items-end h-[50%] justify-center pb-12 w-full">
+                  <span class="text-primary-500 font-semibold text-xl md:text-3xl">2024</span>
+                </div>
+
+                <!-- Div 2: Mốc thời gian -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <figure class="w-7 h-7 bg-primary-500/50 rounded-full flex items-center justify-center">
+                    <div class="w-5 h-5 bg-primary-500 rounded-full relative">
+                      <img src="assets/images/card/line.png" alt="Mốc thời gian"
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                    </div>
+                  </figure>
+                </div>
+
+                <!-- Div 3  -->
+                <div class="flex-1 flex items-start justify-center h-[50%] pt-12 w-full">
+                  <p class="text-[12px] md:text-[14px] leading-snug w-full text-center break-words px-6">
+                    Mở rộng sang lĩnh vực thanh toán số và quản lý tài chính cho doanh nghiệp
+                  </p>
+                </div>
+              </li>
+
+
+            </ul>
           </div>
-        </div>
+        </section>
+
+        <!-- / -->
       </div>
-      <!-- service -->
-      <div class="py-12">
+      <!-- SECTION: Lĩnh Vực Hoạt Động -->
+      <section class="md:py-8 py-[24px]">
         <div
-          class="container px-5 md:px-0 mx-auto flex md:flex-row flex-col md:items-center items-start md:justify-between justify-start">
-          <h1 class="font-bold md:text-4xl text-2xl md:w-1/2 w-full md:mb-0 mb-3">
+          class="container mx-auto px-5 md:px-0 flex md:flex-row flex-col md:items-center items-start md:justify-between justify-start">
+          <h2 class="font-bold md:text-4xl text-2xl md:w-1/2 w-full md:mb-0 mb-3">
             Lĩnh Vực Hoạt Động
-          </h1>
+          </h2>
           <p class="text-gray-500 justify-center md:w-1/2 w-full line-clamp-2 md:line-clamp-none">
             Mong muốn đem lại cho khách hàng dịch vụ tốt, nhanh và chuyên
             nghiệp nhất. Quý khách hài lòng chính là thành công của chúng tôi.
-            Bạn đang cần tìm văn phòng. Hay cần tư vấn thêm các vấn đề liên
-            quan đến văn phòng.
           </p>
         </div>
         <div class="mt-10">
-          <div class="swiper gallerySwiper w-full h-auto">
+          <div class="swiper gallerySwiper md:w-full w-auto">
             <div class="swiper-wrapper">
+              <!-- Slide lĩnh vực -->
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/1.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/1.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/3.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/3.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/4.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/4.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/5.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/5.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/1.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/1.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/3.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/3.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div class="swiper-slide">
-                <div class="relative group rounded-2xl overflow-hidden">
-                  <img src="assets/images/banner/4.png" alt="Ký gửi nhà đất" class="w-full" />
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/4.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
                   <div
-                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-[16px] p-[10px] mx-3 mb-3 rounded-2xl group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-                    <div class="flex flex-row items-center justify-between">
-                      <h3 class="md:text-xl md:text-[18px] text-white uppercase text-[12px]">
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
                         Ký gửi nhà đất
                       </h3>
-                      <a href=""
-                        class="flex flex-row items-center bg-primary-500 rounded-full text-white justify-center aspect-square md:w-[48px] w-[28px]">
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
                         <i class="zmdi zmdi-arrow-right-top"></i>
                       </a>
                     </div>
-                    <p class="line-clamp-3 mt-2 md:text-[16px] text-[12px]">
-                      Thue nhanh tự hào là đơn vị tiên phong trong lĩnh vực
-                      cho thuê phòng tại Hà Nội, với kinh nghiệm hoạt động
-                      trong lĩnh vực cho thuê căn hộ bước sang năm thứ 6. Cung
-                      cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini
-                      và căn hộ dịch vụ. Phòng của TingTong đảm bảo những tiêu
-                      chuẩn riêng
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
                     </p>
                   </div>
-                </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="relative group rounded-2xl overflow-hidden">
+                  <!-- Wrapper giữ tỉ lệ 1:2 -->
+                  <div class="relative w-full pb-[128%]">
+                    <img src="assets/images/banner/5.png" alt="Ký gửi nhà đất" loading="lazy"
+                      class="absolute top-0 left-0 w-full h-full object-cover" />
+                  </div>
+
+                  <!-- Overlay nội dung -->
+                  <div
+                    class="absolute bottom-0 inset-x-0 bg-zinc-800 text-white md:p-4 p-2 mx-3 mb-3 rounded-[16px] group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+                    <div class="flex items-center justify-between">
+                      <h3 class="uppercase text-[12px] md:text-[18px] font-semibold text-white">
+                        Ký gửi nhà đất
+                      </h3>
+                      <a href="products.html"
+                        class="flex items-center justify-center aspect-square w-[28px] md:w-[48px] bg-primary-500 rounded-full text-white"
+                        aria-label="Xem chi tiết Ký gửi nhà đất">
+                        <i class="zmdi zmdi-arrow-right-top"></i>
+                      </a>
+                    </div>
+                    <p class="line-clamp-3 mt-2 text-[12px] md:text-[16px]">
+                      Đơn vị tiên phong trong lĩnh vực ký gửi, hỗ trợ định giá, tư vấn và kết nối giao dịch nhanh chóng,
+                      minh bạch...
+                    </p>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- reason -->
-      <div class="container mx-auto md:py-12 py-10 px-5 md:px-0">
-        <div class="flex flex-col items-center justify-center">
-          <h1 class="font-bold md:text-4xl text-2xl mb-3">
+      </section>
+
+      <!-- SECTION: Lý do chọn chúng tôi -->
+      <section id="ly-do-chon-chung-toi" class="container mx-auto md:py-12 py-6 px-5 md:px-0"
+        aria-labelledby="why-us-heading">
+        <div class="flex flex-col items-center text-center">
+          <h2 id="why-us-heading" class="font-bold text-2xl md:text-4xl mb-3">
             Lý do chọn chúng tôi
-          </h1>
-          <div class="grid md:grid-cols-4 grid-cols-2 md:gap-6 gap-4 mt-5">
-            <!-- item -->
-            <div class="flex flex-col items-center justify-center bg-white p-5 rounded-2xl shadow-lg">
+          </h2>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-5 w-full">
+
+            <!-- Item 1 -->
+            <article class="flex flex-col items-center bg-white p-5 rounded-2xl shadow-lg text-center">
               <div class="bg-primary-500 rounded-full p-4 mb-3">
-                <img src="assets/images/icon/r1.svg" alt="Giá cả cạnh tranh" class="md:w-auto w-10" />
+                <img src="assets/images/icon/r1.svg" alt="Giá cả cạnh tranh" class="w-10 md:w-auto" loading="lazy" />
               </div>
-              <div class="flex flex-col items-center justify-center">
-                <h3 class="md:text-xl text-[14px] text-center font-bold">
-                  Giá cả cạnh tranh
-                </h3>
-                <p class="md:text-[14px] text-[12px] text-gray-500 text-center mt-2 line-clamp-3 md:line-clamp-none">
-                  Tối ưu hóa quy trình, chính xác để đạt được giá thành cạnh
-                  tranh nhất.
-                </p>
-              </div>
-            </div>
-            <!-- end item -->
-            <!-- item -->
-            <div class="flex flex-col items-center justify-center bg-white p-5 rounded-2xl shadow-lg">
+              <h3 class="text-[14px] md:text-xl font-bold">Giá cả cạnh tranh</h3>
+              <p class="text-[12px] md:text-[14px] text-gray-500 mt-2 line-clamp-3 md:line-clamp-none">
+                Tối ưu hóa quy trình, chính xác để đạt được giá thành cạnh tranh nhất.
+              </p>
+            </article>
+
+            <!-- Item 2 -->
+            <article class="flex flex-col items-center bg-white p-5 rounded-2xl shadow-lg text-center">
               <div class="bg-primary-500 rounded-full p-4 mb-3">
-                <img src="assets/images/icon/r2.svg" alt="Chuyên nghiệp" class="md:w-auto w-10" />
+                <img src="assets/images/icon/r2.svg" alt="Chuyên nghiệp" class="w-10 md:w-auto" loading="lazy" />
               </div>
-              <div class="flex flex-col items-center justify-center">
-                <h3 class="md:text-xl text-[14px] text-center font-bold">
-                  Chuyên nghiệp
-                </h3>
-                <p class="md:text-[14px] text-[12px] text-gray-500 text-center mt-2 line-clamp-3 md:line-clamp-none">
-                  Kinh nghiệm làm việc hơn
-                  <span class="font-semibold">8 năm</span>. và đội ngũ nhân
-                  viên chuyên nghiệp, uy tín.
-                </p>
-              </div>
-            </div>
-            <!-- end item -->
-            <!-- item -->
-            <div class="flex flex-col items-center justify-center bg-white p-5 rounded-2xl shadow-lg">
+              <h3 class="text-[14px] md:text-xl font-bold">Chuyên nghiệp</h3>
+              <p class="text-[12px] md:text-[14px] text-gray-500 mt-2 line-clamp-3 md:line-clamp-none">
+                Kinh nghiệm làm việc hơn <span class="font-semibold">8 năm</span>, đội ngũ nhân viên chuyên nghiệp, uy
+                tín.
+              </p>
+            </article>
+
+            <!-- Item 3 -->
+            <article class="flex flex-col items-center bg-white p-5 rounded-2xl shadow-lg text-center">
               <div class="bg-primary-500 rounded-full p-4 mb-3">
-                <img src="assets/images/icon/r3.svg" alt="Chính sách hậu mãi tốt" class="md:w-auto w-10" />
+                <img src="assets/images/icon/r3.svg" alt="Chính sách hậu mãi tốt" class="w-10 md:w-auto"
+                  loading="lazy" />
               </div>
-              <div class="flex flex-col items-center justify-center">
-                <h3 class="md:text-xl text-[14px] text-center font-bold">
-                  Chính sách hậu mãi tốt
-                </h3>
-                <p class="md:text-[14px] text-[12px] text-gray-500 text-center mt-2 line-clamp-3 md:line-clamp-none">
-                  Giúp quý khách có được văn phòng phù hợp NHẤT trong các văn
-                  phòng đã xem.
-                </p>
-              </div>
-            </div>
-            <!-- end item -->
-            <!-- item -->
-            <div class="flex flex-col items-center justify-center bg-white p-5 rounded-2xl shadow-lg">
+              <h3 class="text-[14px] md:text-xl font-bold">Chính sách hậu mãi tốt</h3>
+              <p class="text-[12px] md:text-[14px] text-gray-500 mt-2 line-clamp-3 md:line-clamp-none">
+                Giúp quý khách có được văn phòng phù hợp nhất trong các lựa chọn đã xem.
+              </p>
+            </article>
+
+            <!-- Item 4 -->
+            <article class="flex flex-col items-center bg-white p-5 rounded-2xl shadow-lg text-center">
               <div class="bg-primary-500 rounded-full p-4 mb-3">
-                <img src="assets/images/icon/r4.svg" alt="Dịch vụ chu đáo" class="md:w-auto w-10" />
+                <img src="assets/images/icon/r4.svg" alt="Dịch vụ chu đáo" class="w-10 md:w-auto" loading="lazy" />
               </div>
-              <div class="flex flex-col items-center justify-center">
-                <h3 class="md:text-xl text-[14px] text-center font-bold">
-                  Dịch vụ chu đáo
-                </h3>
-                <p class="md:text-[14px] text-[12px] text-gray-500 text-center mt-2 line-clamp-3 md:line-clamp-none">
-                  Hỗ trợ 24/7 (cả CN và ngày lễ). Luôn lấy tôn chỉ sự hài lòng
-                  của khách hàng lên hàng đầu
-                </p>
-              </div>
-            </div>
-            <!-- end item -->
+              <h3 class="text-[14px] md:text-xl font-bold">Dịch vụ chu đáo</h3>
+              <p class="text-[12px] md:text-[14px] text-gray-500 mt-2 line-clamp-3 md:line-clamp-none">
+                Hỗ trợ 24/7 (cả chủ nhật và ngày lễ). Luôn đặt sự hài lòng của khách hàng lên hàng đầu.
+              </p>
+            </article>
+
           </div>
         </div>
-      </div>
-      <!-- contact -->
-      <div style="background-image: url(assets/images/banner/Map.png)" class="bg-cover bg-no-repeat md:mt-12 mt-[24px]">
+      </section>
+
+
+      <!-- SECTION: Contact -->
+      <section class="md:mt-12 mt-[24px] bg-cover bg-no-repeat"
+        style="background-image: url('assets/images/banner/Map.png')" aria-labelledby="contact-us">
         <div class="relative w-full">
+          <!-- Position form -->
           <div class="md:absolute md:top-1/8 md:right-1/12 px-5 md:px-0">
             <div class="bg-primary-500 md:p-8 p-5 rounded-3xl w-full max-w-lg sm:max-w-2xl shadow-lg">
               <h2 class="text-white md:text-3xl text-xl font-semibold text-center mb-6">
-                HÃY ĐỂ CHÚNG TÔI GIÚP BẠN
+                LIÊN HỆ NGAY
               </h2>
-
-              <form action="#" class="space-y-4">
+              <form action="#" class="space-y-4" aria-label="Gửi thông tin">
                 <input type="text" placeholder="Họ và tên *"
-                  class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white" />
+                  class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                  aria-label="Họ và tên" required />
 
                 <div class="grid grid-cols-2 gap-3">
                   <input type="text" placeholder="Số điện thoại *"
-                    class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white" />
+                    class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    aria-label="Số điện thoại" required />
                   <input type="email" placeholder="Email"
-                    class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white" />
+                    class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                    aria-label="Email" />
                 </div>
 
                 <div class="grid grid-cols-2 gap-3">
                   <div class="relative">
                     <select
-                      class="w-full p-3 pr-10 rounded-full border-none focus:outline-none text-gray-700 appearance-none bg-white">
+                      class="w-full p-3 pr-10 rounded-full border-none focus:outline-none text-gray-700 appearance-none bg-white"
+                      aria-label="Khu vực/quận cần tìm">
                       <option hidden>Khu vực/quận cần tìm</option>
                       <option>Quận 1</option>
                       <option>Quận 2</option>
@@ -906,7 +1002,8 @@
                   </div>
                   <div class="relative">
                     <select
-                      class="w-full p-3 rounded-full border-none focus:outline-none text-gray-700 appearance-none bg-white">
+                      class="w-full p-3 rounded-full border-none focus:outline-none text-gray-700 appearance-none bg-white"
+                      aria-label="Khoảng giá mua">
                       <option hidden>Khoảng giá mua</option>
                       <option>Dưới 1 tỷ</option>
                       <option>1 - 3 tỷ</option>
@@ -919,56 +1016,54 @@
                 </div>
 
                 <input type="text" placeholder="Vấn đề bạn cần hỗ trợ"
-                  class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white" />
-
-                <button class="w-full bg-black text-white p-3 rounded-full font-semibold">
+                  class="w-full py-3 px-4 rounded-full border-none focus:outline-none text-gray-700 bg-white"
+                  aria-label="Vấn đề cần hỗ trợ" />
+                <button type="submit" class="w-full bg-black text-white p-3 rounded-full font-semibold">
                   Gửi thông tin
                 </button>
               </form>
             </div>
           </div>
-          <img src="assets/images/banner/couple.png" alt="" class="w-full" />
+          <!-- Background couple -->
+          <img src="assets/images/banner/couple.png" alt="Hình ảnh cặp đôi minh họa" class="w-full" loading="lazy" />
         </div>
-      </div>
+      </section>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-white shadow-md shadow-black/20 shadow-top pt-[24px] md:pt-10 md:pb-10 pb-20">
       <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] md:gap-8 gap-[24px] text-gray-700">
-        <!-- Cột 1: Logo & giới thiệu -->
         <div class="md:order-1 order-3">
           <a class="flex items-center" href="index.html">
             <img src="assets/images/logo/logo-footer.svg" alt="Mua Nhanh" class="mr-4 w-[70%]" loading="lazy" />
           </a>
-          <p class="mt-3 text-sm">
-            <b>Thue Nhanh</b> cung cấp đa dạng loại phòng, bao gồm phòng trọ,
-            chung cư mini và căn hộ dịch vụ.
+          <p class="mt-[24px] text-sm">
+            <b>Thue Nhanh</b> cung cấp đa dạng loại phòng, bao gồm phòng trọ, chung cư mini và căn hộ dịch vụ.
           </p>
-          <!-- Mạng xã hội -->
           <div class="flex space-x-3 mt-[24px] text-[24px] text-gray-500">
-            <a href="#" class="hover:opacity-80">
+            <a href="products.html" class="hover:opacity-80">
               <img src="assets/images/icon/facebook.svg" alt="Facebook" loading="lazy" class="w-[20px]" />
             </a>
-            <a href="#" class="hover:opacity-80"><img src="assets/images/icon/in.svg" alt="Linkedin" loading="lazy"
-                class="w-[20px]" />
+            <a href="products.html" class="hover:opacity-80">
+              <img src="assets/images/icon/in.svg" alt="Linkedin" loading="lazy" class="w-[20px]" />
             </a>
-            <a href="#" class="hover:opacity-80"><img src="assets/images/icon/x.svg" alt="X" loading="lazy"
-                class="w-[20px]" />
+            <a href="products.html" class="hover:opacity-80">
+              <img src="assets/images/icon/x.svg" alt="X" loading="lazy" class="w-[20px]" />
             </a>
-            <a href="#" class="hover:opacity-80"><img src="assets/images/icon/instagram.svg" alt="Instagram"
-                loading="lazy" class="w-[20px]" />
+            <a href="products.html" class="hover:opacity-80">
+              <img src="assets/images/icon/instagram.svg" alt="Instagram" loading="lazy" class="w-[20px]" />
             </a>
           </div>
         </div>
-
         <div class="grid grid-cols-2 gap-4 md:order-2 order-1">
-          <!-- Cột 2: Khám phá -->
-          <div class="">
+          <div>
             <h3 class="text-lg font-semibold">KHÁM PHÁ</h3>
             <ul class="mt-3 space-y-2 text-sm">
               <li>
                 <a href="about.html" class="hover:text-primary-500 hover:underline">Về chúng tôi</a>
               </li>
               <li>
-                <a href="products.html" class="hover:text-primary-500 hover:underline">Nhà bán</a>
+                <a href="products.html" class="hover:text-primary-500 hover:underline">Mua bán nhà đất</a>
               </li>
               <li>
                 <a href="contact.html" class="hover:text-primary-500 hover:underline">Liên hệ</a>
@@ -978,33 +1073,29 @@
               </li>
             </ul>
           </div>
-
-          <!-- Cột 3: Cảm hứng -->
-          <div class="">
+          <div>
             <h3 class="text-lg font-semibold">CẢM HỨNG</h3>
             <ul class="mt-3 space-y-2 text-sm">
               <li>
-                <a href="#" class="hover:text-primary-500 hover:underline">Kiến trúc</a>
+                <a href="products.html" class="hover:text-primary-500 hover:underline">Kiến trúc</a>
               </li>
               <li>
-                <a href="#" class="hover:text-primary-500 hover:underline">Phong cách</a>
+                <a href="products.html" class="hover:text-primary-500 hover:underline">Phong cách</a>
               </li>
               <li>
-                <a href="news.html" class="hover:text-primary-500 hover:underline">Tin tức & sự kiện</a>
+                <a href="news.html" class="hover:text-primary-500 hover:underline">Kinh nghiệm</a>
               </li>
               <li>
-                <a href="#" class="hover:text-primary-500 hover:underline">Dự án</a>
+                <a href="products.html" class="hover:text-primary-500 hover:underline">Dự án</a>
               </li>
             </ul>
           </div>
         </div>
-
-        <!-- Cột 4: Liên hệ -->
         <div class="md:order-3 order-2">
           <h3 class="text-lg font-semibold">LIÊN HỆ</h3>
           <p class="mt-3 text-sm">
-            <strong>Địa chỉ:</strong> Tầng 1, Tòa nhà TSG Euroland, Đường
-            Nguyễn Văn Lộc, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
+            <strong>Địa chỉ:</strong> Tầng 1, Tòa nhà TSG Euroland, Đường Nguyễn Văn Lộc, Khu đô thị Mỗ Lao, Hà Đông, Hà
+            Nội
           </p>
           <p class="mt-2 text-sm">
             <strong>Hotline:</strong>
@@ -1015,8 +1106,6 @@
           </p>
         </div>
       </div>
-
-      <!-- Copyright -->
       <div class="mt-8 text-center text-sm text-gray-500 border-t-2 border-t-gray-200 pt-5">
         © All Right Reserved
         <span class="font-semibold text-gray-700">JUANMIN</span>

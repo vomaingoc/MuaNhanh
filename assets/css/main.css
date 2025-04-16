@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-50: #f8f3ef;
   --primary-100: #e8dacc;
@@ -7234,27 +7233,25 @@ input[type=range]::-webkit-slider-thumb {
   background-color: black;
 }
 
-.bread_crumb li:hover a {
+.breadcrumb li:hover a {
   color: var(--primary-500);
 }
-.bread_crumb li::after {
+.breadcrumb li::after {
   padding: 0 10px;
   content: "/";
 }
-.bread_crumb li:last-child::after {
+.breadcrumb li:last-child::after {
   display: none;
 }
-.bread_crumb li.active a {
+.breadcrumb li.active a {
   color: var(--primary-500);
 }
-.bread_crumb li a {
+.breadcrumb li a {
   transition: all 0.3s ease-in-out;
 }
 
 .isMobile .time-line-wrapper {
   overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   /* width */
   /* Track */
@@ -7275,10 +7272,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .time-line {
-  min-height: 100px;
-}
-.isMobile .time-line {
-  min-height: 50vh;
+  height: 300px;
 }
 .time-line::after {
   position: absolute;
@@ -7287,16 +7281,9 @@ input[type=range]::-webkit-slider-thumb {
   height: 3px;
   left: 0;
   top: 50%;
-  /* Đưa đường line vào giữa */
   transform: translateY(-50%);
   z-index: 1;
   background: linear-gradient(to right, #ffffff 0%, #b5895c 15%, #b5895c 85%, #ffffff 100%);
-}
-.time-line .milestone {
-  flex: 0 0 auto;
-}
-.time-line .milestone:nth-child(odd) .arrow {
-  rotate: 180deg;
 }
 
 .filter-box > li {
