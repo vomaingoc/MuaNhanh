@@ -114,83 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Currency Format
-  // const formatCurrency = (val) => {
-  //   if (val >= 1_000_000_000) {
-  //     const ty = Math.floor(val / 1_000_000_000);
-  //     const trieu = Math.floor((val % 1_000_000_000) / 1_000_000);
-  //     return trieu ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
-  //   }
-  //   if (val >= 1_000_000) return `${Math.floor(val / 1_000_000)} triệu`;
-  //   return `${val}`;
-  // };
-
-  // const formatNumber = (num) => num.toLocaleString();
-
-  // // Range Slider
-
-  // function setupRangeSlider(
-  //   minId,
-  //   maxId,
-  //   valMinId,
-  //   valMaxId,
-  //   inputMinId,
-  //   inputMaxId,
-  //   progressId
-  // ) {
-  //   const min = document.querySelector(minId),
-  //     max = document.querySelector(maxId),
-  //     minVal = document.querySelector(valMinId),
-  //     maxVal = document.querySelector(valMaxId),
-  //     minInput = document.querySelector(inputMinId),
-  //     maxInput = document.querySelector(inputMaxId),
-  //     progress = document.querySelector(progressId);
-
-  //   const update = () => {
-  //     let minValue = +min.value;
-  //     let maxValue = +max.value;
-  //     if (minValue >= maxValue) {
-  //       minValue = maxValue - 1e6;
-  //       min.value = minValue;
-  //     }
-
-  //     const minPercent = (minValue / 1e11) * 100;
-  //     const maxPercent = (maxValue / 1e11) * 100;
-
-  //     minVal.textContent = formatCurrency(minValue);
-  //     maxVal.textContent = formatCurrency(maxValue);
-  //     minInput.value = formatNumber(minValue);
-  //     maxInput.value = formatNumber(maxValue);
-
-  //     progress.style.left = `${minPercent}%`;
-  //     progress.style.width = `${maxPercent - minPercent}%`;
-  //   };
-
-  //   min?.addEventListener("input", update);
-  //   max?.addEventListener("input", update);
-  //   update();
-
-  //   return update; // 👈 return để radio dùng lại
-  // }
-
-  // setupRangeSlider(
-  //   "#minSlider",
-  //   "#maxSlider",
-  //   "#minValue",
-  //   "#maxValue",
-  //   "#minValueInput",
-  //   "#maxValueInput",
-  //   "#progress"
-  // );
-  // setupRangeSlider(
-  //   "#minSlider_mb",
-  //   "#maxSlider_mb",
-  //   "#minValue_mb",
-  //   "#maxValue_mb",
-  //   "#minValueInput_mb",
-  //   "#maxValueInput_mb",
-  //   "#progress_mb"
-  // );
+ 
 
   // Switch Rent/Sell
   const optionRent = $("#option-rent"),
@@ -213,106 +137,131 @@ document.addEventListener("DOMContentLoaded", () => {
     optionRent.classList.add("text-gray-500");
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const formatCurrency = (val) => {
-    if (val >= 1_000_000_000) {
-      const ty = Math.floor(val / 1_000_000_000);
-      const trieu = Math.floor((val % 1_000_000_000) / 1_000_000);
-      return trieu ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
+ 
+const formatCurrency = (val) => {
+  if (val >= 1_000_000_000) {
+    const ty = Math.floor(val / 1_000_000_000);
+    const trieu = Math.floor((val % 1_000_000_000) / 1_000_000);
+    return trieu ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
+  }
+  if (val >= 1_000_000) return `${Math.floor(val / 1_000_000)} triệu`;
+  return `${val}`;
+};
+
+const formatNumber = (num) => num.toLocaleString();
+
+document.querySelectorAll(".price-form").forEach((form) => {
+  const minSlider = form.querySelector(".min-slider");
+  const maxSlider = form.querySelector(".max-slider");
+  const minText = form.querySelector(".min-text");
+  const maxText = form.querySelector(".max-text");
+  const minInput = form.querySelector(".min-input");
+  const maxInput = form.querySelector(".max-input");
+  const progress = form.querySelector(".slider-progress");
+  const radios = form.querySelectorAll('input[type="radio"]');
+
+  const update = () => {
+    let minValue = +minSlider.value;
+    let maxValue = +maxSlider.value;
+
+    if (minValue >= maxValue) {
+      minValue = maxValue - 1e6;
+      minSlider.value = minValue;
     }
-    if (val >= 1_000_000) return `${Math.floor(val / 1_000_000)} triệu`;
-    return `${val}`;
+
+    const minPercent = (minValue / 1e11) * 100;
+    const maxPercent = (maxValue / 1e11) * 100;
+
+    progress.style.left = `${minPercent}%`;
+    progress.style.width = `${maxPercent - minPercent}%`;
+
+    minText.textContent = formatCurrency(minValue);
+    maxText.textContent = formatCurrency(maxValue);
+    minInput.value = formatNumber(minValue);
+    maxInput.value = formatNumber(maxValue);
   };
 
-  const formatNumber = (num) => num.toLocaleString();
+  minSlider.addEventListener("input", update);
+  maxSlider.addEventListener("input", update);
+  update();
 
-  function setupRangeSlider(minId, maxId, valMinId, valMaxId, inputMinId, inputMaxId, progressId) {
-    const min = document.querySelector(minId),
-      max = document.querySelector(maxId),
-      minVal = document.querySelector(valMinId),
-      maxVal = document.querySelector(valMaxId),
-      minInput = document.querySelector(inputMinId),
-      maxInput = document.querySelector(inputMaxId),
-      progress = document.querySelector(progressId);
+  radios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      let minValue = 0;
+      let maxValue = 1e11;
 
-    const update = () => {
-      let minValue = +min.value;
-      let maxValue = +max.value;
-      if (minValue >= maxValue) {
-        minValue = maxValue - 1e6;
-        min.value = minValue;
+      switch (radio.value) {
+        case "under1ty":
+          minValue = 0;
+          maxValue = 1e9;
+          break;
+        case "500m-5ty":
+          minValue = 5e8;
+          maxValue = 5e9;
+          break;
+        case "5-15ty":
+          minValue = 5e9;
+          maxValue = 15e9;
+          break;
+        case "over15ty":
+          minValue = 15e9;
+          maxValue = 1e11;
+          break;
+        default:
+          minValue = 0;
+          maxValue = 1e11;
       }
 
-      const minPercent = (minValue / 1e11) * 100;
-      const maxPercent = (maxValue / 1e11) * 100;
-
-      minVal.textContent = formatCurrency(minValue);
-      maxVal.textContent = formatCurrency(maxValue);
-      minInput.value = formatNumber(minValue);
-      maxInput.value = formatNumber(maxValue);
-
-      progress.style.left = `${minPercent}%`;
-      progress.style.width = `${maxPercent - minPercent}%`;
-    };
-
-    min.addEventListener("input", update);
-    max.addEventListener("input", update);
-    update();
-    return update;
-  }
-
-  function setupRadioPriceControls(minId, maxId, updateFunc) {
-    const radios = document.querySelectorAll('input[name="price"]');
-    const minSlider = document.querySelector(minId);
-    const maxSlider = document.querySelector(maxId);
-
-    radios.forEach((radio) => {
-      radio.addEventListener("change", () => {
-        if (!radio.checked) return;
-
-        const value = radio.value;
-        let minValue = 0;
-        let maxValue = 1e11;
-
-        switch (value) {
-          case "under1ty":
-            minValue = 0;
-            maxValue = 1e9;
-            break;
-          case "500m-5ty":
-            minValue = 5e8;
-            maxValue = 5e9;
-            break;
-          case "5-15ty":
-            minValue = 5e9;
-            maxValue = 15e9;
-            break;
-          case "over15ty":
-            minValue = 15e9;
-            maxValue = 1e11;
-            break;
-          case "all":
-          default:
-            minValue = 0;
-            maxValue = 1e11;
-        }
-
-        minSlider.value = minValue;
-        maxSlider.value = maxValue;
-        updateFunc();
-      });
+      minSlider.value = minValue;
+      maxSlider.value = maxValue;
+      update();
     });
-  }
-
-  const updateMbSlider = setupRangeSlider(
-    "#minSlider_mb",
-    "#maxSlider_mb",
-    "#minValue_mb",
-    "#maxValue_mb",
-    "#minValueInput_mb",
-    "#maxValueInput_mb",
-    "#progress_mb"
-  );
-
-  setupRadioPriceControls("#minSlider_mb", "#maxSlider_mb", updateMbSlider);
+  });
 });
+
+// const track = document.querySelector('.slider-track');
+//   const minSlider = track.querySelector('.min-slider');
+//   const maxSlider = track.querySelector('.max-slider');
+//   const progress = track.querySelector('.slider-progress');
+//   const maxRange = 100000000000;
+
+//   const minInput = document.querySelector('.min-input');
+//   const maxInput = document.querySelector('.max-input');
+//   const minLabel = document.querySelector('.min-label');
+//   const maxLabel = document.querySelector('.max-label');
+
+//   const formatCurrency = (val) => {
+//     if (val >= 1_000_000_000) {
+//       const ty = Math.floor(val / 1_000_000_000);
+//       const trieu = Math.floor((val % 1_000_000_000) / 1_000_000);
+//       return trieu ? `${ty} tỷ ${trieu} triệu` : `${ty} tỷ`;
+//     }
+//     if (val >= 1_000_000) return `${Math.floor(val / 1_000_000)} triệu`;
+//     return `${val}`;
+//   };
+
+//   const update = () => {
+//     let minVal = parseInt(minSlider.value);
+//     let maxVal = parseInt(maxSlider.value);
+//     if (minVal > maxVal) [minVal, maxVal] = [maxVal, minVal];
+
+//     const trackWidth = track.offsetWidth;
+//     const minPercent = minVal / maxRange;
+//     const maxPercent = maxVal / maxRange;
+
+//     const leftPx = minPercent * trackWidth;
+//     const rightPx = maxPercent * trackWidth;
+
+//     progress.style.left = `${leftPx}px`;
+//     progress.style.width = `${rightPx - leftPx}px`;
+
+//     minInput.value = minVal.toLocaleString();
+//     maxInput.value = maxVal.toLocaleString();
+//     minLabel.textContent = formatCurrency(minVal);
+//     maxLabel.textContent = formatCurrency(maxVal);
+//   };
+
+//   minSlider.addEventListener('input', update);
+//   maxSlider.addEventListener('input', update);
+//   window.addEventListener('resize', update);
+//   update();

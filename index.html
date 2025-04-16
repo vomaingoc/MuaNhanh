@@ -422,81 +422,79 @@
               <span class="text-gray-400">Tất cả</span>
               <div
                 class="range-price absolute p-4 opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all">
-                <!-- <div class="text-center py-4 px-3 border-b-2 border-gray-300">
-                  <span class="font-semibold">Mức giá</span>
-                </div> -->
                 <!-- Mức giá -->
-                <section class="py-3 ">
-                  <!-- <label class="block font-semibold mb-2">Mức giá</label> -->
-                  <div class="flex justify-between w-full mb-2">
-                    <span>Từ: <strong id="minValue_mb" class="text-primary-500">0 triệu</strong></span>
-                    <span>Đến: <strong id="maxValue_mb" class="text-primary-500">8 tỷ</strong></span>
+                <div class="form-wrapper price-form" data-id="form1">
+                  <h3>Mức giá</h3>
+      
+                  <!-- Hiển thị giá -->
+                  <div class="flex justify-between text-sm mb-2">
+                    <span>Từ: <strong class="min-text">0 triệu</strong></span>
+                    <span>Đến: <strong class="max-text">8 tỷ</strong></span>
                   </div>
-                  <div class="flex justify-between items-center mb-4">
-                    <input type="text" id="minValueInput_mb"
-                      class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
-                    <i class="zmdi zmdi-long-arrow-right mx-4"></i>
-                    <input type="text" id="maxValueInput_mb"
-                      class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
+      
+                  <!-- Ô nhập -->
+                  <div class="flex items-center gap-3 mb-3">
+                    <input type="text" class="min-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                      value="0" />
+                    <span class="text-gray-500">→</span>
+                    <input type="text" class="max-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                      value="0" />
                   </div>
-                  <div class=" min-h-[40px]">
-                    <div class="relative mb-4">
-                      <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
-                      <div id="progress_mb" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
-                      <input type="range" id="minSlider_mb" min="0" max="100000000000" step="10000000" value="0"
-                        class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
-                      <input type="range" id="maxSlider_mb" min="0" max="100000000000" step="10000000"
-                        value="100000000000"
-                        class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
-                    </div>
+                 
+                   <div class="slider-track relative h-2 bg-gray-300 rounded-full my-8">
+                    <div class="slider-progress absolute top-1/2 h-2 bg-primary-500 rounded-full -translate-y-1/2 z-10" style="width: 100%;"></div>
+                
+                    <input type="range" class="min-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                      min="0" max="100000000000" step="10000000" value="0" />
+                    <input type="range" class="max-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                      min="0" max="100000000000" step="10000000" value="1000000000000" />
                   </div>
-
-
-                  <!-- Các mức giá -->
-                  <fieldset class="space-y-2">
-                    <legend class="sr-only">Chọn khoảng giá</legend>
-                    <label class="flex items-center justify-between gap-2 cursor-pointer">
-                      <span class="text-black font-medium">Tất cả mức giá</span>
-                      <input type="radio" name="price" class="hidden peer" checked value="all" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                  
+                  
+                  <!-- Radio presets -->
+                  <fieldset class="price-radio-group">
+                    <label>
+                      <span>Tất cả mức giá</span>
+                      <input type="radio" name="price-form1" class="peer" value="all" checked />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
                       </span>
                     </label>
-                    <label class="flex items-center justify-between gap-2 cursor-pointer">
-                      <span class="text-black font-medium">Dưới 1 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" value="under1ty" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                  
+                    <label>
+                      <span>Dưới 1 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="under1ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
                       </span>
                     </label>
-                    <label class="flex items-center justify-between gap-2 cursor-pointer">
-                      <span class="text-black font-medium">500 triệu - 5 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" value="500m-5ty" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                  
+                    <label>
+                      <span>500 triệu – 5 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="500m-5ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
                       </span>
                     </label>
-                    <label class="flex items-center justify-between gap-2 cursor-pointer">
-                      <span class="text-black font-medium">5 - 15 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" value="5-15ty" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                  
+                    <label>
+                      <span>5 – 15 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="5-15ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
                       </span>
                     </label>
-                    <label class="flex items-center justify-between gap-2 cursor-pointer">
-                      <span class="text-black font-medium">Trên 15 tỷ</span>
-                      <input type="radio" name="price" class="hidden peer" value="over15ty" />
-                      <span
-                        class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+                  
+                    <label>
+                      <span>Trên 15 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="over15ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
                       </span>
                     </label>
                   </fieldset>
-                </section>
+                  
+                </div>
                 <div class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between">
                   <button class="underline font-semibold text-[18px]">Đặt lại <i
                       class="zmdi zmdi-rotate-right"></i></button>
@@ -2013,76 +2011,78 @@
           </section>
 
           <!-- Mức giá -->
-          <section class="pt-3 ">
-            <label class="block font-semibold mb-2">Mức giá</label>
-            <div class="flex justify-between w-full mb-2">
-              <span>Từ: <strong id="minValue_mb" class="text-primary-500">0 triệu</strong></span>
-              <span>Đến: <strong id="maxValue_mb" class="text-primary-500">8 tỷ</strong></span>
-            </div>
-            <div class="flex justify-between items-center mb-4">
-              <input type="text" id="minValueInput_mb"
-                class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
-              <i class="zmdi zmdi-long-arrow-right mx-4"></i>
-              <input type="text" id="maxValueInput_mb"
-                class="w-full border border-gray-300 rounded-md px-2 py-1 text-center" placeholder="0" />
-            </div>
-            <div class=" min-h-[40px]">
-              <div class="relative mb-4">
-                <div class="absolute top-1/2 h-2 w-full bg-gray-300 rounded-full"></div>
-                <div id="progress_mb" class="absolute top-1/2 h-2 bg-primary-500 rounded-full"></div>
-                <input type="range" id="minSlider_mb" min="0" max="100000000000" step="10000000" value="0"
-                  class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
-                <input type="range" id="maxSlider_mb" min="0" max="100000000000" step="10000000" value="100000000000"
-                  class="absolute w-full h-2 bg-transparent appearance-none pointer-events-none" />
-              </div>
+          <div class="form-wrapper price-form" data-id="form1">
+            <h3>Mức giá</h3>
+
+            <!-- Hiển thị giá -->
+            <div class="flex justify-between text-sm mb-2">
+              <span>Từ: <strong class="min-text">0 triệu</strong></span>
+              <span>Đến: <strong class="max-text">8 tỷ</strong></span>
             </div>
 
-
-            <!-- Các mức giá -->
-            <fieldset class="space-y-2">
-              <legend class="sr-only">Chọn khoảng giá</legend>
-              <label class="flex items-center justify-between gap-2 cursor-pointer">
-                <span class="text-black font-medium">Tất cả mức giá</span>
-                <input type="radio" name="price" class="hidden peer" checked value="all" />
-                <span
-                  class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                  <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+            <!-- Ô nhập -->
+            <div class="flex items-center gap-3 mb-3">
+              <input type="text" class="min-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                value="0" />
+              <span class="text-gray-500">→</span>
+              <input type="text" class="max-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                value="0" />
+            </div>
+           
+             <div class="slider-track relative h-2 bg-gray-300 rounded-full my-8">
+              <div class="slider-progress absolute top-1/2 h-2 bg-primary-500 rounded-full -translate-y-1/2 z-10" style="width: 100%;"></div>
+          
+              <input type="range" class="min-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                min="0" max="100000000000" step="10000000" value="0" />
+              <input type="range" class="max-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                min="0" max="100000000000" step="10000000" value="100000000000" />
+            </div>
+            
+            
+            <!-- Radio presets -->
+            <fieldset class="price-radio-group">
+              <label>
+                <span>Tất cả mức giá</span>
+                <input type="radio" name="price-form1" class="peer" value="all" checked />
+                <span class="custom-radio">
+                  <span class="dot"></span>
                 </span>
               </label>
-              <label class="flex items-center justify-between gap-2 cursor-pointer">
-                <span class="text-black font-medium">Dưới 1 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" value="under1ty" />
-                <span
-                  class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                  <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+            
+              <label>
+                <span>Dưới 1 tỷ</span>
+                <input type="radio" name="price-form1" class="peer" value="under1ty" />
+                <span class="custom-radio">
+                  <span class="dot"></span>
                 </span>
               </label>
-              <label class="flex items-center justify-between gap-2 cursor-pointer">
-                <span class="text-black font-medium">500 triệu - 5 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" value="500m-5ty" />
-                <span
-                  class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                  <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+            
+              <label>
+                <span>500 triệu – 5 tỷ</span>
+                <input type="radio" name="price-form1" class="peer" value="500m-5ty" />
+                <span class="custom-radio">
+                  <span class="dot"></span>
                 </span>
               </label>
-              <label class="flex items-center justify-between gap-2 cursor-pointer">
-                <span class="text-black font-medium">5 - 15 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" value="5-15ty" />
-                <span
-                  class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                  <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+            
+              <label>
+                <span>5 – 15 tỷ</span>
+                <input type="radio" name="price-form1" class="peer" value="5-15ty" />
+                <span class="custom-radio">
+                  <span class="dot"></span>
                 </span>
               </label>
-              <label class="flex items-center justify-between gap-2 cursor-pointer">
-                <span class="text-black font-medium">Trên 15 tỷ</span>
-                <input type="radio" name="price" class="hidden peer" value="over15ty" />
-                <span
-                  class="w-5 h-5 border-2 border-primary-500 rounded-full flex items-center justify-center peer-checked:bg-primary-500">
-                  <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+            
+              <label>
+                <span>Trên 15 tỷ</span>
+                <input type="radio" name="price-form1" class="peer" value="over15ty" />
+                <span class="custom-radio">
+                  <span class="dot"></span>
                 </span>
               </label>
             </fieldset>
-          </section>
+            
+          </div>
         </div>
 
         <!-- Footer -->
