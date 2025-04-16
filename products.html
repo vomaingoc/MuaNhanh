@@ -320,43 +320,88 @@
                 <li class="py-2 px-3"><span>Bạc Liêu</span></li>
               </ul>
             </li>
+            <!-- Mức giá -->
             <li class="flex flex-col py-1 relative">
               <span class="font-semibold">Mức giá</span>
               <span class="text-gray-400">Tất cả</span>
               <div
                 class="range-price absolute p-4 opacity-0 invisible top-[44px] left-[-100px] inset-x-0 bg-white shadow-md rounded-xl min-w-80 z-10 ease-in-out duration-300 transition-all">
                 <!-- Mức giá -->
-                <section class="price-form space-y-4 mb-10" data-id="mb">
-                  <h3 class="font-semibold text-lg">Mức giá (Mobile)</h3>
-                  <div class="flex justify-between text-sm">
-                    <span>Từ: <strong class="min-value text-blue-600">0</strong></span>
-                    <span>Đến: <strong class="max-value text-blue-600">100 tỷ</strong></span>
+                <div class="form-wrapper price-form" data-id="form1">
+                  <h3>Mức giá</h3>
+      
+                  <!-- Hiển thị giá -->
+                  <div class="flex justify-between text-sm mb-2">
+                    <span>Từ: <strong class="min-text">0 triệu</strong></span>
+                    <span>Đến: <strong class="max-text">8 tỷ</strong></span>
                   </div>
-                  <div class="flex items-center gap-4">
-                    <input type="text" class="min-input w-full border rounded px-2 py-1 text-center" />
-                    <span>→</span>
-                    <input type="text" class="max-input w-full border rounded px-2 py-1 text-center" />
+      
+                  <!-- Ô nhập -->
+                  <div class="flex items-center gap-3 mb-3">
+                    <input type="text" class="min-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                      value="0" />
+                    <span class="text-gray-500">→</span>
+                    <input type="text" class="max-input w-full px-3 py-1.5 border border-gray-300 rounded-md text-center"
+                      value="0" />
                   </div>
-                  <div class="relative h-4 my-4">
-                    <div class="absolute top-1/2 left-0 w-full h-2 bg-gray-300 rounded-full -translate-y-1/2"></div>
-                    <div class="progress-bar absolute top-1/2 left-0 h-2 bg-blue-500 rounded-full -translate-y-1/2 transition-all" style="width: 100%;"></div>
-                    <input type="range" class="min-slider absolute top-0 w-full h-4 bg-transparent appearance-none z-10" min="0" max="100000000000" step="10000000" value="0" />
-                    <input type="range" class="max-slider absolute top-0 w-full h-4 bg-transparent appearance-none z-10" min="0" max="100000000000" step="10000000" value="100000000000" />
+                 
+                   <div class="slider-track relative h-2 bg-gray-300 rounded-full my-8">
+                    <div class="slider-progress absolute top-1/2 h-2 bg-primary-500 rounded-full -translate-y-1/2 z-10" style="width: 100%;"></div>
+                
+                    <input type="range" class="min-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                      min="0" max="100000000000" step="10000000" value="0" />
+                    <input type="range" class="max-slider absolute w-full h-6 appearance-none bg-transparent z-20"
+                      min="0" max="100000000000" step="10000000" value="1000000000000" />
                   </div>
-                  <fieldset class="space-y-2">
-                    <label><input type="radio" name="price-mb" value="all" checked class="accent-blue-600" /> Tất cả mức giá</label>
-                    <label><input type="radio" name="price-mb" value="under1ty" class="accent-blue-600" /> Dưới 1 tỷ</label>
-                    <label><input type="radio" name="price-mb" value="500m-5ty" class="accent-blue-600" /> 500 triệu - 5 tỷ</label>
-                    <label><input type="radio" name="price-mb" value="5-15ty" class="accent-blue-600" /> 5 - 15 tỷ</label>
-                    <label><input type="radio" name="price-mb" value="over15ty" class="accent-blue-600" /> Trên 15 tỷ</label>
+                  
+                  
+                  <!-- Radio presets -->
+                  <fieldset class="price-radio-group">
+                    <label>
+                      <span>Tất cả mức giá</span>
+                      <input type="radio" name="price-form1" class="peer" value="all" checked />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
+                      </span>
+                    </label>
+                  
+                    <label>
+                      <span>Dưới 1 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="under1ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
+                      </span>
+                    </label>
+                  
+                    <label>
+                      <span>500 triệu – 5 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="500m-5ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
+                      </span>
+                    </label>
+                  
+                    <label>
+                      <span>5 – 15 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="5-15ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
+                      </span>
+                    </label>
+                  
+                    <label>
+                      <span>Trên 15 tỷ</span>
+                      <input type="radio" name="price-form1" class="peer" value="over15ty" />
+                      <span class="custom-radio">
+                        <span class="dot"></span>
+                      </span>
+                    </label>
                   </fieldset>
-                </section>
-                
-                <!-- Có thể lặp lại thêm một form khác dùng data-id khác: "pc", "tablet", v.v. -->
-                
+                  
+                </div>
                 <div class="border-t-2 border-gray-300 py-2 px-3 flex flex-row items-center justify-between">
-                  <a href="javascript:void(0)" class="underline font-semibold text-[18px]">Đặt lại <i
-                      class="zmdi zmdi-rotate-right"></i></a>
+                  <button class="underline font-semibold text-[18px]">Đặt lại <i
+                      class="zmdi zmdi-rotate-right"></i></button>
                   <button
                     class="main-btn py-2.5 px-6 text-white rounded-full bg-primary-500 hover:bg-primary-900 ease-in-out transition-all duration-300">
                     Tìm kiếm
