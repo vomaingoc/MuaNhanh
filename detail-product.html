@@ -26,7 +26,7 @@
 
 <body>
   <div id="main">
-    <header class="sticky_header block w-full bg-white z-50">
+    <header class="sticky_header hidden w-full bg-white z-50 md:block">
       <div class="relative mx-auto flex justify-between items-center px-4 shadow-md md:h-[80px]">
         <nav class="main-menu hidden md:flex w-1/2" aria-label="Main Navigation">
           <ul class="flex flex-row items-center justify-start gap-[24px] w-full">
@@ -172,7 +172,7 @@
           </button>
         </div>
         <div class="md:hidden relative block z-50 ml-auto">
-          <div id="mobileMenu" class="md:hidden px-5 fixed top-0 right-0 w-4/5 h-full bg-white overflow-y-scroll pt-5"
+          <div id="mobileMenu" class="md:hidden px-5 fixed top-0 right-0 w-4/5 h-full bg-white overflow-y-scroll pt-5 pb-8"
             aria-label="Mobile Navigation">
             <div class="w-full flex items-end justify-end mb-2">
               <a id="burgerMenu" class="close" onclick="toggleMenu()" aria-label="Open mobile menu">
@@ -312,10 +312,10 @@
 
           <!-- album slide mobile-->
           <div class="md:hidden block relative">
-            <a class="absolute top-[12px] left-[12px] w-[36px] h-[36px] z-10" href="/">
-              <img src="assets/images/icon/back.svg" alt="Back" class="w-full" loading="lazy" /></a>
-            <a class="absolute top-[12px] right-[12px] w-[36px] h-[36px] z-10">
-              <img src="assets/images/icon/share.svg" alt="Back" class="w-full" loading="lazy" /></a>
+            <a class="absolute top-[12px] left-[12px] w-[36px] h-[36px] z-10 rounded-full bg-white flex items-center justify-center" href="/">
+              <img src="assets/images/icon/back.svg" alt="Back" class="w-[14px] h-[14px]" loading="lazy" /></a>
+            <a class="absolute top-[12px] right-[12px] w-[36px] h-[36px] z-10 rounded-full bg-white flex items-center justify-center">
+              <img src="assets/images/icon/share.svg" alt="Back" class="w-[14px] h-[14px]" loading="lazy" /></a>
             <div class="swiper albumSwiper">
               <div class="swiper-wrapper">
 
