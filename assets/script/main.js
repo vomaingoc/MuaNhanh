@@ -79,23 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         : "rotate(180deg)";
   };
 
-  // Resize Navigation Circle
-  // function resizeNav() {
-  //   const radius = Math.hypot(window.innerWidth, window.innerHeight);
-  //   const diameter = radius * 2;
-  //   const overlay = $("#nav-overlay");
-  //   if (overlay) {
-  //     Object.assign(overlay.style, {
-  //       width: `${diameter}px`,
-  //       height: `${diameter}px`,
-  //       marginTop: `-${radius}px`,
-  //       marginLeft: `-${radius}px`,
-  //     });
-  //   }
-  // }
-  // resizeNav();
-  // window.addEventListener("resize", resizeNav);
-
   // Tab Switcher
   function setupTabs(buttonSelector, contentSelector) {
     const buttons = $$(buttonSelector);
