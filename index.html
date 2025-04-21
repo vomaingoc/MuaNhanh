@@ -280,7 +280,7 @@
           <span
             class="md:w-[164px] md:h-[96px] w-[174px] z-20 flex items-center md:justify-center justify-start md:absolute md:left-[50%] top-0 md:transform md:translate-x-[-50%]"
           >
-          <!-- Logo Desktop -->
+            <!-- Logo Desktop -->
             <a
               href="index.html"
               class="z-20 hidden md:flex w-full flex-col items-center bg-primary-500 py-4 rounded-bl-4xl rounded-br-4xl"
@@ -292,9 +292,7 @@
                 alt="Mua Nhanh Logo White"
                 loading="lazy"
               />
-              <h2 class="mt-2 text-[18px] font-bold text-white">
-                MUA NHANH
-              </h2>
+              <h2 class="mt-2 text-[18px] font-bold text-white">MUA NHANH</h2>
             </a>
 
             <!-- Logo Mobile -->
@@ -309,16 +307,20 @@
                 alt="Mua Nhanh Logo Color"
                 loading="lazy"
               />
-              <h2 class="text-[24px] font-bold text-primary-500 whitespace-nowrap relative top-[6px]">
+              <h2
+                class="text-[24px] font-bold text-primary-500 whitespace-nowrap relative top-[6px]"
+              >
                 MUA NHANH
               </h2>
             </a>
           </span>
           <div class="hidden md:flex items-center w-1/3 justify-end">
             <button
-              class="flex items-center justify-center rounded-full bg-primary-500 text-white p-5 size-10 aspect-square cursor-pointer" onclick="toggleFilterMobile()" aria-label="Search"
+              class="flex items-center justify-center rounded-full bg-primary-500 text-white p-5 size-10 aspect-square cursor-pointer"
+              onclick="toggleFilterMobile()"
+              aria-label="Search"
             >
-                <i class="zmdi zmdi-search"></i>
+              <i class="zmdi zmdi-search"></i>
             </button>
             <div class="flex flex-row items-center justify-center mx-6">
               <div class="mr-3">
@@ -585,7 +587,7 @@
                     class="filter-box flex flex-row items-center justify-between w-full"
                   >
                     <li
-                      class="flex flex-col py-1 px-4"
+                      class="flex flex-col px-4"
                       onclick="toggleFilterMobile()"
                     >
                       <span class="font-semibold">Tìm kiếm</span>
@@ -597,13 +599,12 @@
                     </li>
                   </ul>
                   <!-- Search icon -->
-                  <div
+                  <button
                     class="relative flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full aspect-square"
+                    onclick="toggleFilterMobile()"
                   >
-                    <button onclick="toggleFilterMobile()">
-                      <i class="zmdi zmdi-search"></i>
-                    </button>
-                  </div>
+                    <i class="zmdi zmdi-search"></i>
+                  </button>
                 </div>
               </div>
               <!-- Scroll arrow -->
@@ -659,20 +660,16 @@
                   aria-label="Tìm kiếm"
                 />
                 <button
-                  class="flex w-[34px] h-[34px] aspect-square justify-center items-center rounded-[24px] bg-primary-500 cursor-pointer"
+                  class="relative flex items-center justify-center p-4 w-10 h-10 bg-primary-500 text-white rounded-full aspect-square"
                 >
-                  <img
-                    src="./assets/images/icon/search-white.svg"
-                    alt="Search"
-                    class="w-[24px] h-[24px]"
-                  />
+                  <i class="zmdi zmdi-search"></i>
                 </button>
               </div>
               <div
-                class="flex items-center gap-2 bg-white px-1 py-1 rounded-full  w-full"
+                class="flex items-center gap-2 bg-white px-1 py-1 rounded-full w-full"
               >
                 <ul
-                  class="filter-box flex flex-row items-center justify-between w-full "
+                  class="filter-box flex flex-row items-center justify-between w-full"
                 >
                   <!-- Vị trí -->
                   <li class="flex flex-1 flex-col relative py-1 px-6">
@@ -900,7 +897,6 @@
                     </div>
                   </li>
                   <!-- Tìm kiếm chung -->
-                  
                 </ul>
               </div>
             </form>
@@ -909,7 +905,7 @@
 
         <!-- SECTION: Product list -->
         <section
-          class="container mx-auto md:my-12 my-6 px-5 md:px-0"
+          class="container mx-auto md:mb-8 md:mt-8 mb-4 mt-2 px-5 md:px-0"
           aria-labelledby="danh-sach-noi-bat"
         >
           <div class="grid md:grid-cols-4 sm:grid-cols-1 md:gap-5 gap-3">
@@ -961,9 +957,16 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
 
                   <!-- Tiêu đề (desktop) -->
@@ -1085,11 +1088,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1210,11 +1219,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1335,11 +1350,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1460,11 +1481,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1585,11 +1612,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1710,11 +1743,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1835,11 +1874,17 @@
                 <!-- Thông tin -->
                 <section class="pl-3 md:p-3 flex-1">
                   <!-- Top info (desktop) -->
-                  <div class=" flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold">
+                  <div
+                    class="flex flex-row items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+                  >
                     <span>Quận Gò Vấp</span>
-                    <img src="./assets/images/icon/icon-noi-bat.svg" alt="Nổi bật" loading="lazy" class="md:h-[18px] h-[14px] relative top-[-1px]" />
+                    <img
+                      src="./assets/images/icon/icon-noi-bat.svg"
+                      alt="Nổi bật"
+                      loading="lazy"
+                      class="md:h-[18px] h-[14px] relative top-[-1px]"
+                    />
                   </div>
-                  
 
                   <!-- Tiêu đề (desktop) -->
                   <div class="md:mt-2 mt-[8px]">
@@ -1927,53 +1972,58 @@
 
         <!-- SECTION: Tin tức & Sự kiện -->
         <section
-          class="py-12 bg-slate-50 px-5 md:px-0"
+          class="md:py-12 py-6 bg-slate-50 px-5 md:px-0"
           aria-labelledby="tin-tuc-su-kien"
         >
           <div class="container mx-auto">
             <!-- Tab header -->
             <div
-              class="container mx-auto flex flex-row items-center justify-between md:border-b-2 md:border-gray-300 pb-4 md:mb-10 mb-5"
+              class="md:flex md:flex-row md:items-end md:justify-between block md:border-b-2 md:border-gray-300 md:mb-10 mb-0"
             >
-              <h2 class="font-semibold md:text-4xl text-2xl md:w-1/2 w-full">
+              <h2
+                class="font-semibold md:text-4xl text-3xl md:w-1/2 w-full md:py-6 py-2"
+              >
                 Tin tức & Sự kiện
               </h2>
-              <!-- Tabs Desktop -->
-              <div class="hidden md:block">
-                <ul
-                  class="flex flex-row items-center justify-end gap-x-5 text-[18px]"
+              <div class="tab-container md:mb-0 mb-5">
+                <div
+                  class="flex flex-row items-center justify-start gap-x-5 md:border-b-0 border-b-1 border-gray-300"
                 >
-                  <li
-                    class="tab-button active relative px-2 text-gray-600 hover:text-primary-500"
-                    data-tab="tab1"
+                  <ul
+                    class="relative flex flex-row items-center justify-start gap-x-5 text-[18px] w-full"
                   >
-                    Tin nổi bật
-                  </li>
-                  <li
-                    class="tab-button relative px-2 text-gray-600 hover:text-primary-500"
-                    data-tab="tab2"
-                  >
-                    Kiến thức
-                  </li>
-                  <li
-                    class="tab-button relative px-2 text-gray-600 hover:text-primary-500"
-                    data-tab="tab3"
-                  >
-                    Hoạt động công đoàn
-                  </li>
-                  <li
-                    class="tab-button relative px-2 text-gray-600 hover:text-primary-500"
-                    data-tab="tab4"
-                  >
-                    Dự án
-                  </li>
-                  <li
-                    class="tab-button relative px-2 text-gray-600 hover:text-primary-500"
-                    data-tab="tab5"
-                  >
-                    Tất cả
-                  </li>
-                </ul>
+                    <li
+                      class="tab-button active flex-none relative px-2 text-gray-600 hover:text-primary-500 md:py-6 py-2"
+                      data-tab="tab1"
+                    >
+                      Tin nổi bật
+                    </li>
+                    <li
+                      class="tab-button relative flex-none px-2 text-gray-600 hover:text-primary-500 md:py-6 py-2"
+                      data-tab="tab2"
+                    >
+                      Kiến thức
+                    </li>
+                    <li
+                      class="tab-button relative flex-none px-2 text-gray-600 hover:text-primary-500 md:py-6 py-2"
+                      data-tab="tab3"
+                    >
+                      Hoạt động công đoàn
+                    </li>
+                    <li
+                      class="tab-button relative flex-none px-2 text-gray-600 hover:text-primary-500 md:py-6 py-2"
+                      data-tab="tab4"
+                    >
+                      Dự án
+                    </li>
+                    <li
+                      class="tab-button relative flex-none px-2 text-gray-600 hover:text-primary-500 md:py-6 py-2"
+                      data-tab="tab5"
+                    >
+                      Tất cả
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <!-- Tab Content -->
@@ -2774,7 +2824,7 @@
         class="bg-white shadow-md shadow-black/20 shadow-top pt-[24px] md:pt-10 md:pb-10 pb-20"
       >
         <div
-          class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] md:gap-8 gap-[24px] text-gray-700"
+          class="container mx-auto px-5 grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] md:gap-8 gap-[24px] text-gray-700"
         >
           <div class="md:order-1 order-3">
             <a class="flex items-center" href="index.html">
@@ -2784,7 +2834,9 @@
                 class="mr-4 w-[39px]"
                 loading="lazy"
               />
-              <h2 class="text-[32px] relative top-[10px] font-bold text-primary-500 whitespace-nowrap">
+              <h2
+                class="text-[32px] relative top-[10px] font-bold text-primary-500 whitespace-nowrap"
+              >
                 MUA NHANH
               </h2>
             </a>
@@ -2972,28 +3024,15 @@
           <!-- Body -->
           <div class="pb-5 px-3 max-h-[60vh] overflow-y-auto">
             <!-- Tìm kiếm -->
-            <section class="mt-5">
-              <div
-                class="flex items-center gap-2 bg-white px-2 py-2 border border-gray-300 rounded-full mb-2"
+            <section class="mt-5 mb-2">
+              <label class="block font-semibold mb-1" for="viTriSelect"
+                >Tìm kiếm</label
               >
-                <div class="w-full px-[20px]">
-                  <label class="block font-semibold mb-1" for="searchInput"
-                    >Tìm kiếm</label
-                  >
-                  <input
-                    id="searchInput"
-                    class="w-full rounded-lg focus:ring-0 focus:border-0 focus:outline-none"
-                    placeholder="Tìm nơi bạn muốn"
-                  />
-                </div>
-                <button
-                  type="button"
-                  class="flex items-center justify-center p-4 w-12 h-12 bg-primary-500 text-white rounded-full aspect-square"
-                  aria-label="Tìm kiếm"
-                >
-                  <i class="zmdi zmdi-search"></i>
-                </button>
-              </div>
+              <input
+                id="searchInput"
+                class="w-full p-3 pr-10 rounded-xl border border-gray-300 text-gray-700 appearance-none bg-white"
+                placeholder="Tìm nơi bạn muốn"
+              />
             </section>
 
             <!-- Vị trí -->

@@ -49,13 +49,13 @@
     height: 2px;
     content: "";
     position: absolute;
-    bottom: -24px;
+    bottom: -2px;
     left: 0;
     background-color: var(--primary-500);
     transition: ease-in-out 0.3s;
 
     @include mydevice(phone) {
-      bottom: -12px;
+      bottom: -2px;
     }
   }
 

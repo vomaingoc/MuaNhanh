@@ -7208,13 +7208,13 @@ body.show-menu {
   height: 2px;
   content: "";
   position: absolute;
-  bottom: -24px;
+  bottom: -2px;
   left: 0;
   background-color: var(--primary-500);
   transition: ease-in-out 0.3s;
 }
 .isPhone .tab-button::before {
-  bottom: -12px;
+  bottom: -2px;
 }
 .tab-button--vision {
   opacity: 0.5;
