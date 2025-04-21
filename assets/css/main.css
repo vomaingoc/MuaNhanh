@@ -7357,6 +7357,9 @@ body.show-menu {
   background-color: var(--sds-color-background-default-secondary);
 }
 
+.price-form {
+  padding-bottom: 12px;
+}
 .price-form .max-text,
 .price-form .min-text {
   color: var(--primary-500);
