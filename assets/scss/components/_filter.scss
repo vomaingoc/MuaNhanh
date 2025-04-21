@@ -1,27 +1,30 @@
 .filter-box {
+  gap: 12px;
   >li {
-    padding: 0 20px;
     position: relative;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    background-color: #fff;
+    border-radius: 100px;
 
     &:after {
       content: "";
       position: absolute;
-      right: -10px;
-      top: 10px;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 1px;
-      height: 60%;
-      background-color: #b3b3b3;
+      height: 50%;
+      background-color: #dbdada;
     }
 
     &:hover {
       background-color: var(--sds-color-background-default-secondary);
       border-radius: 35px;
 
-      &::after {
-        display: none;
-      }
+      // &::after {
+      //   display: none;
+      // }
 
       >ul {
         opacity: 1;

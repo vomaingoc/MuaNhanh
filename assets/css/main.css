@@ -7295,27 +7295,29 @@ body.show-menu {
   background: linear-gradient(to right, #ffffff 0%, #b5895c 15%, #b5895c 85%, #ffffff 100%);
 }
 
+.filter-box {
+  gap: 12px;
+}
 .filter-box > li {
-  padding: 0 20px;
   position: relative;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  background-color: #fff;
+  border-radius: 100px;
 }
 .filter-box > li:after {
   content: "";
   position: absolute;
-  right: -10px;
-  top: 10px;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1px;
-  height: 60%;
-  background-color: #b3b3b3;
+  height: 50%;
+  background-color: #dbdada;
 }
 .filter-box > li:hover {
   background-color: var(--sds-color-background-default-secondary);
   border-radius: 35px;
-}
-.filter-box > li:hover::after {
-  display: none;
 }
 .filter-box > li:hover > ul {
   opacity: 1;
